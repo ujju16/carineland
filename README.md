@@ -1,77 +1,164 @@
 # Carineland
 
-> Site vitrine pour "Le Monde de Carine", créations artisanales à base de lierre et autres éléments de la nature.
+Site vitrine pour "Le Monde de Carine" - Créations artisanales à base de lierre et autres éléments de la nature.
 
-Ce projet est un site web portfolio développé avec Next.js pour présenter les créations uniques de Carineland. L'accent est mis sur un design épuré, minimaliste et une expérience utilisateur optimisée pour tous les appareils.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ujju16/carineland)
 
-## 🎨 Prototypage et Conception
+## 🌐 Démo en Ligne
 
-La conception du site a été pensée pour refléter l'esprit naturel et artisanal des créations de Carine.
+- **Production**: [À venir sur Vercel]
+- **GitHub**: [https://github.com/ujju16/carineland](https://github.com/ujju16/carineland)
 
-### Charte Graphique
+## ✨ Fonctionnalités
 
--   **Couleurs Principales** :
-    -   `#2F4F4F` (Vert Lierre Foncé) - Pour les textes et les éléments importants.
-    -   `#F5F5DC` (Beige Nature) - Couleur de fond principale pour une sensation douce et organique.
-    -   `#8B4513` (Brun Écorce) - Pour les accents, les bordures ou les pieds de page.
-    -   `#FFFFFF` (Blanc Pur) - Pour les espaces négatifs et les fonds de cartes.
+- ✅ Design minimaliste et épuré
+- ✅ Mobile-first responsive
+- ✅ Typographie soignée (Montserrat + Lora)
+- ✅ Charte graphique naturelle
+- ✅ Pages: Accueil, À Propos, Galerie
+- ✅ Navigation sticky
+- ✅ Tests automatisés
+- ✅ CI/CD avec GitHub Actions
+- ✅ Optimisé pour Vercel
 
--   **Typographie** :
-    -   **Titres** : `Montserrat`, une police moderne et élégante qui apporte de la clarté.
-    -   **Paragraphes** : `Lora`, une police avec empattements bien équilibrée, optimisée pour la lisibilité sur les écrans.
+## 🚀 Déploiement Rapide
 
-### UI/UX (Interface et Expérience Utilisateur)
+### Déployer sur Vercel en un clic
 
--   **Design Minimaliste** : L'interface est conçue pour être simple et intuitive, mettant en valeur les images des créations.
--   **Mobile-First** : Le site est entièrement responsive et conçu en priorité pour une expérience parfaite sur mobile.
--   **Composants Material Design** : Utilisation de la bibliothèque [Material-UI (MUI)](https://mui.com/) pour garantir des composants cohérents, accessibles et esthétiques, tout en suivant les principes du Material Design.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ujju16/carineland)
+
+### Ou via la CLI
+
+```bash
+npm install -g vercel
+vercel
+```
+
+Voir [DEPLOYMENT.md](./DEPLOYMENT.md) pour plus de détails.
 
 ## 🛠️ Stack Technique
 
--   **Framework** : [Next.js](https://nextjs.org/)
--   **Langage** : [TypeScript](https://www.typescriptlang.org/)
--   **Bibliothèque UI** : [Material-UI (MUI)](https://mui.com/)
--   **Tests** : [Jest](https://jestjs.io/) et [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
--   **CI/CD** : [GitHub Actions](https://github.com/features/actions)
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Langage**: [TypeScript](https://www.typescriptlang.org/)
+- **UI**: [Material-UI (MUI)](https://mui.com/)
+- **Tests**: [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/)
+- **CI/CD**: [GitHub Actions](https://github.com/features/actions)
+- **Déploiement**: [Vercel](https://vercel.com)
 
-## 🚀 Démarrage Rapide
+## 🎨 Charte Graphique
 
-Pour lancer le projet en local, suivez ces étapes :
+### Couleurs
+- **Vert Lierre Foncé** (`#2F4F4F`) - Textes
+- **Beige Nature** (`#F5F5DC`) - Fond
+- **Brun Écorce** (`#8B4513`) - Accents
+- **Blanc Pur** (`#FFFFFF`) - Surfaces
 
-1.  **Prérequis** : Assurez-vous d'avoir [Node.js](https://nodejs.org/) (version 18.x ou supérieure) installé.
+### Typographie
+- **Titres**: Montserrat
+- **Corps**: Lora
 
-2.  **Cloner le dépôt** :
-    ```bash
-    git clone https://github.com/ujju16/carineland.git
-    cd carineland
-    ```
+## 🚀 Démarrage Local
 
-3.  **Installer les dépendances** :
-    ```bash
-    npm install
-    ```
+```bash
+# Cloner le projet
+git clone https://github.com/ujju16/carineland.git
+cd carineland
 
-4.  **Lancer le serveur de développement** :
-    ```bash
-    npm run dev
-    ```
+# Installer les dépendances
+npm install
 
-    Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
+# Lancer en développement
+npm run dev
+```
 
-## 📜 Scripts Disponibles
+Ouvrir [http://localhost:3000](http://localhost:3000)
 
--   `npm run dev`: Lance l'application en mode développement.
--   `npm run build`: Compile l'application pour la production.
--   `npm run start`: Démarre un serveur de production.
--   `npm run lint`: Lance ESLint pour analyser le code.
--   `npm run test`: Exécute les tests avec Jest.
+## 📜 Scripts
 
-## ⚙️ CI/CD (Intégration et Déploiement Continus)
+```bash
+npm run dev      # Développement
+npm run build    # Build production
+npm start        # Serveur production
+npm run lint     # Linting
+npm test         # Tests
+```
 
-Le projet est configuré avec GitHub Actions. À chaque `push` ou `pull request` vers la branche `main`, les actions suivantes sont automatiquement exécutées :
-1.  **Linting** : Vérification de la qualité du code.
-2.  **Tests** : Exécution de la suite de tests pour prévenir les régressions.
-3.  **Build** : Compilation du projet pour s'assurer qu'il se déploie sans erreur.
+## 📁 Structure
+
+```
+carineland/
+├── app/                    # Pages et composants (App Router)
+│   ├── about/             # Page À Propos
+│   ├── gallery/           # Page Galerie
+│   ├── components/        # Composants réutilisables
+│   ├── theme/             # Design tokens
+│   ├── layout.tsx         # Layout principal
+│   └── page.tsx           # Page d'accueil
+├── __tests__/             # Tests
+├── public/                # Assets statiques
+├── .github/workflows/     # CI/CD
+├── DOCUMENTATION.md       # Documentation complète
+└── DEPLOYMENT.md          # Guide de déploiement
+```
+
+## 🧪 Tests et Qualité
+
+- **Linting**: ESLint configuré
+- **Tests**: Jest + React Testing Library
+- **CI/CD**: Automated via GitHub Actions
+- **Build**: Validé avant chaque merge
+
+## 📖 Documentation
+
+- [DOCUMENTATION.md](./DOCUMENTATION.md) - Documentation technique complète
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Guide de déploiement Vercel
+
+## 🔧 Configuration Vercel
+
+Le projet est pré-configuré pour Vercel:
+- `vercel.json` - Configuration du build
+- `.vercelignore` - Fichiers à ignorer
+- `.env.example` - Exemple de variables d'environnement
+
+## 📊 Performance
+
+- ✅ Optimisation des images Next.js
+- ✅ Code splitting automatique
+- ✅ Compression gzip/brotli
+- ✅ Cache optimisé
+- ✅ Polices optimisées (Google Fonts)
+
+## 🌍 Variables d'Environnement
+
+Copier `.env.example` vers `.env.local`:
+
+```bash
+cp .env.example .env.local
+```
+
+Variables disponibles:
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+## 📝 Licence
+
+Ce projet est sous licence MIT. Voir [LICENSE](./LICENSE).
+
+## 👤 Auteur
+
+**Carine** - Créatrice artisanale
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues! N'hésitez pas à ouvrir une issue ou une pull request.
+
+## 📞 Support
+
+Pour toute question ou suggestion:
+- Ouvrir une [issue GitHub](https://github.com/ujju16/carineland/issues)
+- Consulter la [documentation](./DOCUMENTATION.md)
 
 ---
-*Ce README a été généré pour le projet Carineland.*
+
+*Fait avec ❤️ par Carine pour partager ses créations naturelles*
