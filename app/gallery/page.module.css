@@ -1,0 +1,145 @@
+.main {
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-white);
+  border-bottom: 3px solid var(--color-brown);
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark-green);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-brown);
+  font-style: italic;
+}
+
+.gallery {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-white);
+  border: 2px solid var(--color-brown);
+  color: var(--color-dark-green);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  background: var(--color-brown);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--color-brown);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(47, 79, 79, 0.15);
+}
+
+.imagePlaceholder {
+  height: 250px;
+  background: linear-gradient(135deg, var(--color-beige) 0%, #d4c5a9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--color-brown);
+}
+
+.imagePlaceholder span {
+  font-size: 1.5rem;
+  color: var(--color-brown);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  color: var(--color-dark-green);
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  color: var(--color-brown);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.cardContent p:last-child {
+  color: var(--color-dark-green);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .gallery {
+    padding: 3rem 1rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters {
+    gap: 0.5rem;
+  }
+  
+  .filterBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}

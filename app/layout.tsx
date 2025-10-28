@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat, Lora } from 'next/font/google'
+import Navigation from './components/Navigation'
 import './globals.css'
 
 const montserrat = Montserrat({ 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${montserrat.variable} ${lora.variable}`}>
+        <Navigation />
         {children}
       </body>
     </html>

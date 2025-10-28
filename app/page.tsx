@@ -14,9 +14,9 @@ export default function Home() {
       <section className={styles.about}>
         <h2>À Propos</h2>
         <p>
-          Bienvenue dans l'univers de Carine, où la nature rencontre l'artisanat. 
-          Chaque création est unique et façonnée avec passion à partir d'éléments naturels, 
-          principalement du lierre et d'autres trésors de la nature.
+          Bienvenue dans l&apos;univers de Carine, où la nature rencontre l&apos;artisanat. 
+          Chaque création est unique et façonnée avec passion à partir d&apos;éléments naturels, 
+          principalement du lierre et d&apos;autres trésors de la nature.
         </p>
       </section>
 
