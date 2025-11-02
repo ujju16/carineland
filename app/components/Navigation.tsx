@@ -5,7 +5,6 @@ import {
   Box,
   Toolbar,
   IconButton,
-  Typography,
   Container,
   Button,
   Drawer,
@@ -50,10 +49,10 @@ export default function Navigation() {
       aria-label="Menu mobile"
     >
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', my: 2 }}>
-        <Image 
-          src="/logo.png" 
-          alt="Logo Carineland" 
-          width={120} 
+        <Image
+          src="/logo.png"
+          alt="Logo Carineland"
+          width={120}
           height={120}
           style={{ objectFit: 'contain' }}
         />
@@ -128,23 +127,38 @@ export default function Navigation() {
                 alignItems: 'center',
                 flexGrow: isMobile ? 1 : 0,
                 textDecoration: 'none',
+                position: 'relative',
                 borderRadius: '50%',
+                padding: '8px',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  inset: 0,
+                  borderRadius: '50%',
+                  background: 'transparent',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  zIndex: -1,
+                },
                 '&:hover': {
-                  transform: 'translateY(-2px) rotate(5deg)',
-                  boxShadow: '0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
+                  transform: 'scale(1.1)',
+                  '&::before': {
+                    background: 'rgba(74, 144, 226, 0.08)',
+                  },
                 },
                 '&:active': {
-                  transform: 'translateY(0) rotate(0deg)',
-                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.08)',
+                  transform: 'scale(0.95)',
+                  '&::before': {
+                    background: 'rgba(74, 144, 226, 0.16)',
+                  },
                 },
               }}
             >
               <Image
                 src="/logo.png"
                 alt="Logo Carineland"
-                width={150}
-                height={150}
+                width={64}
+                height={64}
                 priority
                 style={{
                   objectFit: 'contain',
