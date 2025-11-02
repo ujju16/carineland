@@ -128,10 +128,15 @@ export default function Navigation() {
                 alignItems: 'center',
                 flexGrow: isMobile ? 1 : 0,
                 textDecoration: 'none',
+                borderRadius: '50%',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                  transform: 'scale(1.15)',
-                  filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15))',
+                  transform: 'translateY(-2px) rotate(5deg)',
+                  boxShadow: '0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
+                },
+                '&:active': {
+                  transform: 'translateY(0) rotate(0deg)',
+                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.08)',
                 },
               }}
             >
@@ -143,6 +148,7 @@ export default function Navigation() {
                 priority
                 style={{
                   objectFit: 'contain',
+                  display: 'block',
                 }}
               />
             </Box>
