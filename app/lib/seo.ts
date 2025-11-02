@@ -27,7 +27,7 @@ export const defaultSEO: SEOConfig = {
     'décoration écologique',
   ],
   image: '/og-image.jpg',
-  url: 'https://carineland.com',
+  url: 'https://carineland.fr',
   type: 'website',
   author: 'Carine',
 }
@@ -86,7 +86,7 @@ export function generateMetadata(config: Partial<SEOConfig> = {}) {
     alternates: {
       canonical: seo.url,
       languages: {
-        'fr-FR': seo.url || 'https://carineland.com',
+        'fr-FR': seo.url || 'https://carineland.fr',
       },
     },
   }

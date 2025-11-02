@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import MUIRegistry from './lib/MUIRegistry'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import { generateMetadata as generateSEOMetadata } from './lib/seo'
 import './globals.css'
 
 export const metadata: Metadata = {
   ...generateSEOMetadata(),
-  metadataBase: new URL('https://carineland.com'),
+  metadataBase: new URL('https://carineland.fr'),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -15,13 +16,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Carineland',
-    url: 'https://carineland.com',
+    url: 'https://carineland.fr',
     description: 'Créations artisanales à base de lierre et autres éléments de la nature',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://carineland.com/gallery?search={search_term_string}',
+        urlTemplate: 'https://carineland.fr/gallery?search={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
@@ -31,8 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Carineland',
-    url: 'https://carineland.com',
-    logo: 'https://carineland.com/logo.png',
+    url: 'https://carineland.fr',
+    logo: 'https://carineland.fr/logo.png',
     description: 'Créations artisanales à base de lierre et autres éléments de la nature',
     founder: {
       '@type': 'Person',
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <MUIRegistry>
             <Navigation />
             {children}
+            <Footer />
           </MUIRegistry>
         </AppRouterCacheProvider>
       </body>
