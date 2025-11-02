@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import MUIRegistry from './lib/MUIRegistry'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import RainbowAnimation from './components/RainbowAnimation'
 import { generateMetadata as generateSEOMetadata } from './lib/seo'
 import './globals.css'
 
@@ -59,8 +61,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <AppRouterCacheProvider>
           <MUIRegistry>
+            <RainbowAnimation />
             <Navigation />
             {children}
+            <Footer />
           </MUIRegistry>
         </AppRouterCacheProvider>
       </body>
