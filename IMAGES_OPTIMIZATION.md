@@ -6,11 +6,11 @@ This project uses automated image optimization to reduce file sizes and improve 
 
 ## Optimization Results
 
-| Metric | Before | After | Savings |
-|--------|--------|-------|---------|
-| Total Size | 43 MB | 3.6 MB | **91.6%** |
-| Largest File | 6.11 MB | 0.42 MB | 93.2% |
-| Average File | 2.87 MB | 0.24 MB | 91.6% |
+| Metric       | Before  | After   | Savings   |
+| ------------ | ------- | ------- | --------- |
+| Total Size   | 43 MB   | 3.6 MB  | **91.6%** |
+| Largest File | 6.11 MB | 0.42 MB | 93.2%     |
+| Average File | 2.87 MB | 0.24 MB | 91.6%     |
 
 ### Individual File Results
 
@@ -59,8 +59,7 @@ Next.js automatically optimizes images at request time using the `<Image>` compo
 
 ```jsx
 import Image from 'next/image'
-
-<Image
+;<Image
   src="/images/photo.jpg"
   alt="Description"
   width={800}
@@ -79,11 +78,13 @@ import Image from 'next/image'
 ## Performance Impact
 
 ### Before Optimization
+
 - Initial page load: ~43 MB of images
 - Gallery load time: 8-12 seconds
 - Lighthouse Performance: ~65
 
 ### After Optimization
+
 - Initial page load: ~3.6 MB of images
 - Gallery load time: 1-2 seconds
 - Lighthouse Performance: ~95

@@ -3,16 +3,20 @@
 ## Scripts Disponibles
 
 ### Quality Check Complete
+
 ```bash
 npm run quality
 ```
+
 Lance tous les checks de qualité :
+
 - Type checking (TypeScript)
 - Linting (ESLint)
 - Format checking (Prettier)
 - Tests (Jest)
 
 ### Tests
+
 ```bash
 npm test              # Run all tests
 npm run test:watch    # Watch mode
@@ -20,12 +24,14 @@ npm run test:coverage # With coverage report
 ```
 
 ### Lighthouse
+
 ```bash
 npm run lighthouse     # Run Lighthouse on local server
 npm run lighthouse:ci  # Run Lighthouse CI
 ```
 
 ### Dev avec Turbopack
+
 ```bash
 npm run dev  # Utilise automatiquement --turbo
 ```
@@ -33,19 +39,24 @@ npm run dev  # Utilise automatiquement --turbo
 ## Configuration
 
 ### Turbopack (Next.js 15)
+
 Activé par défaut dans `npm run dev`
+
 - Compilation ultra-rapide
 - Hot Module Replacement optimisé
 - Support SVG avec @svgr/webpack
 
 ### Lighthouse CI
+
 Configuration dans `lighthouserc.js`
+
 - Performance: min 90%
 - Accessibility: min 90%
 - Best Practices: min 90%
 - SEO: min 90%
 
 ### Tests Coverage
+
 - Navigation component
 - Footer component
 - SEO utilities
@@ -56,6 +67,7 @@ Configuration dans `lighthouserc.js`
 **Domaine principal**: carineland.fr
 
 Tous les liens et metadata utilisent maintenant `carineland.fr` :
+
 - Sitemap: https://carineland.fr/sitemap.xml
 - Robots.txt: https://carineland.fr/robots.txt
 - Open Graph URLs
@@ -64,6 +76,7 @@ Tous les liens et metadata utilisent maintenant `carineland.fr` :
 ## CI/CD Integration
 
 Le workflow GitHub Actions inclut maintenant :
+
 1. Quality checks (type-check, lint, format)
 2. Tests automatisés
 3. Build validation
@@ -73,6 +86,7 @@ Le workflow GitHub Actions inclut maintenant :
 ## Vercel Configuration
 
 Pour configurer le domaine sur Vercel :
+
 1. Aller dans Project Settings
 2. Domains
 3. Ajouter `carineland.fr`
@@ -80,7 +94,6 @@ Pour configurer le domaine sur Vercel :
    - Type: A
    - Name: @
    - Value: 76.76.21.21
-   
    - Type: CNAME
    - Name: www
    - Value: cname.vercel-dns.com

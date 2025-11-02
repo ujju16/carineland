@@ -31,6 +31,7 @@ Carineland (Root)
 ## 🏷️ Taxonomie des Contenus
 
 ### Niveau 1 : Catégories Principales
+
 ```
 1. Créations
    └── Types de produits artisanaux
@@ -43,6 +44,7 @@ Carineland (Root)
 ```
 
 ### Niveau 2 : Catégories de Créations
+
 ```
 Créations/
 ├── Couronnes
@@ -62,6 +64,7 @@ Créations/
 ```
 
 ### Niveau 3 : Attributs des Créations
+
 ```
 Chaque Création possède:
 ├── ID unique
@@ -78,7 +81,9 @@ Chaque Création possède:
 ## 🔍 Mots-clés SEO par Page
 
 ### Homepage (/)
+
 **Mots-clés principaux:**
+
 - Carineland
 - Créations artisanales
 - Lierre naturel
@@ -86,6 +91,7 @@ Chaque Création possède:
 - Fait main
 
 **Mots-clés secondaires:**
+
 - Décoration naturelle
 - Artisan français
 - Éco-responsable
@@ -93,42 +99,51 @@ Chaque Création possède:
 - Passion nature
 
 **Long-tail:**
+
 - "Créations artisanales à base de lierre"
 - "Décoration naturelle fait main"
 - "Artisan créations nature France"
 
 ### Galerie (/gallery)
+
 **Mots-clés principaux:**
+
 - Galerie créations
 - Couronnes lierre
 - Compositions florales
 - Décorations nature
 
 **Mots-clés secondaires:**
+
 - Artisanat végétal
 - Créations uniques
 - Fait main nature
 - Décor écologique
 
 **Long-tail:**
+
 - "Couronne de lierre naturel fait main"
 - "Composition florale artisanale"
 - "Décoration murale nature écologique"
 
 ### À Propos (/about)
+
 **Mots-clés principaux:**
+
 - Artisan nature
 - Histoire Carineland
 - Passion artisanat
 - Engagement écologique
 
 **Mots-clés secondaires:**
+
 - Créateur
 - Philosophie
 - Développement durable
 - Artisanat responsable
 
 **Long-tail:**
+
 - "Artisan passionné par la nature"
 - "Créations écologiques et durables"
 - "Histoire d'un artisan français"
@@ -136,29 +151,34 @@ Chaque Création possède:
 ## 📋 Balises Meta par Page
 
 ### Homepage
+
 ```html
-Title: Carineland - Créations Artisanales Naturelles
-Description: Découvrez les créations artisanales uniques de Carine : couronnes de lierre, compositions florales et décorations naturelles faites main.
-Keywords: artisanat, nature, lierre, créations artisanales, fait main, décoration naturelle
+Title: Carineland - Créations Artisanales Naturelles Description: Découvrez les créations
+artisanales uniques de Carine : couronnes de lierre, compositions florales et décorations naturelles
+faites main. Keywords: artisanat, nature, lierre, créations artisanales, fait main, décoration
+naturelle
 ```
 
 ### Galerie
+
 ```html
-Title: Galerie - Créations Artisanales | Carineland
-Description: Toutes nos créations : couronnes de lierre naturel, compositions florales uniques et décorations écologiques faites main.
-Keywords: galerie, créations artisanales, couronnes lierre, compositions florales, décorations nature
+Title: Galerie - Créations Artisanales | Carineland Description: Toutes nos créations : couronnes de
+lierre naturel, compositions florales uniques et décorations écologiques faites main. Keywords:
+galerie, créations artisanales, couronnes lierre, compositions florales, décorations nature
 ```
 
 ### À Propos
+
 ```html
-Title: À Propos - Notre Histoire | Carineland
-Description: Découvrez l'histoire de Carineland, notre passion pour l'artisanat naturel et notre engagement écologique.
-Keywords: à propos, histoire, artisan, passion nature, écologique, développement durable
+Title: À Propos - Notre Histoire | Carineland Description: Découvrez l'histoire de Carineland, notre
+passion pour l'artisanat naturel et notre engagement écologique. Keywords: à propos, histoire,
+artisan, passion nature, écologique, développement durable
 ```
 
 ## 🌐 Open Graph Structure
 
 ### Homepage
+
 ```json
 {
   "og:type": "website",
@@ -174,6 +194,7 @@ Keywords: à propos, histoire, artisan, passion nature, écologique, développem
 ```
 
 ### Création Individuelle
+
 ```json
 {
   "og:type": "product",
@@ -216,21 +237,21 @@ Sitemap: https://carineland.fr/sitemap.xml
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- Galerie - Mise à jour quotidienne -->
   <url>
     <loc>https://carineland.fr/gallery</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- À Propos - Stable -->
   <url>
     <loc>https://carineland.fr/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Créations individuelles (dynamique) -->
   <url>
     <loc>https://carineland.fr/gallery/[creation-id]</loc>
@@ -243,6 +264,7 @@ Sitemap: https://carineland.fr/sitemap.xml
 ## 🏗️ Schema.org / JSON-LD
 
 ### Organization
+
 ```json
 {
   "@context": "https://schema.org",
@@ -263,6 +285,7 @@ Sitemap: https://carineland.fr/sitemap.xml
 ```
 
 ### Product (pour chaque création)
+
 ```json
 {
   "@context": "https://schema.org",
@@ -284,6 +307,7 @@ Sitemap: https://carineland.fr/sitemap.xml
 ```
 
 ### BreadcrumbList
+
 ```json
 {
   "@context": "https://schema.org",
@@ -314,6 +338,7 @@ Sitemap: https://carineland.fr/sitemap.xml
 ## 📊 Priorités SEO
 
 ### Pages Publiques (Indexées)
+
 ```
 Priority 1.0 - Homepage (/)
 Priority 0.9 - Galerie (/gallery)
@@ -322,6 +347,7 @@ Priority 0.7 - Créations individuelles
 ```
 
 ### Pages Privées (Non-indexées)
+
 ```
 noindex, nofollow - Admin (/admin)
 noindex, nofollow - API routes (/api/*)
@@ -330,6 +356,7 @@ noindex, nofollow - API routes (/api/*)
 ## 🎯 Stratégie de Contenu SEO
 
 ### Optimisations On-Page
+
 ✓ Balises title uniques par page
 ✓ Meta descriptions optimisées
 ✓ Heading hierarchy (H1 → H6)
@@ -340,6 +367,7 @@ noindex, nofollow - API routes (/api/*)
 ✓ Performance optimale (Core Web Vitals)
 
 ### Rich Snippets
+
 ✓ Product markup (créations)
 ✓ Organization markup
 ✓ BreadcrumbList
@@ -347,6 +375,7 @@ noindex, nofollow - API routes (/api/*)
 ✓ Local Business (si applicable)
 
 ### Social Sharing
+
 ✓ Open Graph tags
 ✓ Twitter Card
 ✓ Images optimisées 1200x630px

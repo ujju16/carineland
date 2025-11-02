@@ -32,12 +32,14 @@ carineland/
 ### Couleurs
 
 #### Palette Principale
+
 - **Vert Lierre Foncé** (`#2F4F4F`): Couleur principale pour textes et éléments importants
 - **Beige Nature** (`#F5F5DC`): Fond principal pour une sensation douce et organique
 - **Brun Écorce** (`#8B4513`): Accents, bordures et éléments de navigation
 - **Blanc Pur** (`#FFFFFF`): Espaces négatifs et fonds de cartes
 
 #### Usage Sémantique
+
 - **Background**: Beige Nature
 - **Surface**: Blanc Pur
 - **Text**: Vert Lierre Foncé
@@ -47,10 +49,12 @@ carineland/
 ### Typographie
 
 #### Polices
+
 - **Titres**: `Montserrat` - Police moderne et élégante pour la clarté
 - **Corps de texte**: `Lora` - Police avec empattements pour la lisibilité
 
 #### Hiérarchie
+
 - **H1**: 3rem (48px) - Titre principal
 - **H2**: 2rem (32px) - Sections
 - **H3**: 1.5rem (24px) - Sous-sections
@@ -62,6 +66,7 @@ carineland/
 Les tokens de design sont centralisés dans `app/theme/tokens.ts` et incluent:
 
 ### Colors
+
 ```typescript
 colors.primary.darkGreen
 colors.primary.beige
@@ -70,6 +75,7 @@ colors.primary.white
 ```
 
 ### Typography
+
 ```typescript
 typography.fontFamily.heading
 typography.fontFamily.body
@@ -78,20 +84,22 @@ typography.fontWeight.*
 ```
 
 ### Spacing
+
 ```typescript
-spacing.xs    // 0.25rem (4px)
-spacing.sm    // 0.5rem (8px)
-spacing.md    // 1rem (16px)
-spacing.lg    // 1.5rem (24px)
-spacing.xl    // 2rem (32px)
+spacing.xs // 0.25rem (4px)
+spacing.sm // 0.5rem (8px)
+spacing.md // 1rem (16px)
+spacing.lg // 1.5rem (24px)
+spacing.xl // 2rem (32px)
 ```
 
 ### Breakpoints
+
 ```typescript
-breakpoints.mobile   // 640px
-breakpoints.tablet   // 768px
-breakpoints.desktop  // 1024px
-breakpoints.wide     // 1280px
+breakpoints.mobile // 640px
+breakpoints.tablet // 768px
+breakpoints.desktop // 1024px
+breakpoints.wide // 1280px
 ```
 
 ## Composants
@@ -115,6 +123,7 @@ Tous les composants sont conçus avec une approche mobile-first:
 ```
 
 Styles correspondants:
+
 ```css
 .card {
   background: var(--color-beige);
@@ -136,6 +145,7 @@ Styles correspondants:
 Le projet utilise Jest avec React Testing Library pour les tests unitaires.
 
 #### Lancer les tests
+
 ```bash
 npm test                    # Mode watch
 npm test -- --coverage      # Avec couverture
@@ -143,6 +153,7 @@ npm test -- --watchAll=false # Run once
 ```
 
 #### Structure d'un test
+
 ```tsx
 import { render, screen } from '@testing-library/react'
 import Component from '@/app/component'
@@ -156,6 +167,7 @@ describe('Component', () => {
 ```
 
 ### Bonnes Pratiques
+
 - Tester le comportement utilisateur, pas l'implémentation
 - Utiliser les queries accessibles (getByRole, getByLabelText)
 - Viser une couverture de code > 80%
@@ -166,12 +178,13 @@ describe('Component', () => {
 ### GitHub Actions
 
 Le pipeline CI/CD s'exécute automatiquement sur:
+
 - Push vers `main`, `develop`, `install-project`
 - Pull requests vers `main`
 
 #### Jobs
 
-1. **Lint** 
+1. **Lint**
    - Vérifie la qualité du code avec ESLint
    - Assure la cohérence du style
 
@@ -188,6 +201,7 @@ Le pipeline CI/CD s'exécute automatiquement sur:
 ### Configuration Manuelle
 
 Pour tester localement le pipeline:
+
 ```bash
 npm run lint     # Linting
 npm test         # Tests
@@ -223,6 +237,7 @@ Ouvrir [http://localhost:3000](http://localhost:3000)
 ### Variables d'Environnement
 
 Créer un fichier `.env.local` pour les variables locales:
+
 ```env
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
@@ -230,6 +245,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ### Convention de Commits
 
 Utiliser les préfixes Conventional Commits:
+
 - `feat:` - Nouvelle fonctionnalité
 - `fix:` - Correction de bug
 - `docs:` - Documentation
@@ -241,17 +257,20 @@ Utiliser les préfixes Conventional Commits:
 ### Workflow Git
 
 1. Créer une branche depuis `main`
+
    ```bash
    git checkout -b feature/ma-fonctionnalite
    ```
 
 2. Développer et committer
+
    ```bash
    git add .
    git commit -m "feat: add new feature"
    ```
 
 3. Pousser et créer une PR
+
    ```bash
    git push -u origin feature/ma-fonctionnalite
    ```
@@ -267,4 +286,4 @@ Utiliser les préfixes Conventional Commits:
 
 ---
 
-*Documentation maintenue pour le projet Carineland*
+_Documentation maintenue pour le projet Carineland_

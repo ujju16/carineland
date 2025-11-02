@@ -6,13 +6,13 @@ const OUTPUT_FILE = path.join(__dirname, '..', 'app', 'data', 'creations.json')
 
 function categorizeCreation(description) {
   const descLower = description.toLowerCase()
-  
+
   if (descLower.includes('peinture')) return 'peinture'
   if (descLower.includes('racines') || descLower.includes('bois')) return 'sculpture'
   if (descLower.includes('composition') || descLower.includes('vinyles')) return 'composition'
   if (descLower.includes('insecte')) return 'sculpture'
   if (descLower.includes('table') || descLower.includes('tabouret')) return 'mobilier'
-  
+
   return 'autre'
 }
 
@@ -37,7 +37,8 @@ function extractMaterials(description) {
   if (descLower.includes('peinture')) materials.push('peinture acrylique')
   if (descLower.includes('vinyles')) materials.push('vinyles')
   if (descLower.includes('verre')) materials.push('verre')
-  if (descLower.includes('contreplaqué') || descLower.includes('contreplaque')) materials.push('contreplaqué')
+  if (descLower.includes('contreplaqué') || descLower.includes('contreplaque'))
+    materials.push('contreplaqué')
 
   return materials.length > 0 ? materials : ['matériaux naturels']
 }
@@ -50,7 +51,7 @@ function extractDimensions(description) {
   if (descLower.includes('peinture')) {
     return 'Format standard (40x50 cm)'
   }
-  
+
   return 'Variable'
 }
 
@@ -68,9 +69,9 @@ function generateTags(description) {
   if (descLower.includes('décorative') || descLower.includes('decorative')) tags.push('décoration')
   if (descLower.includes('orange') || descLower.includes('jaune')) tags.push('couleurs chaudes')
   if (descLower.includes('bleu') || descLower.includes('vert')) tags.push('couleurs froides')
-  
+
   tags.push('artisanat', 'fait main', 'unique')
-  
+
   return [...new Set(tags)]
 }
 
@@ -78,8 +79,8 @@ function processCreations() {
   console.log('🎨 Processing Carineland Creations...\n')
 
   const csvContent = fs.readFileSync(CSV_FILE, 'utf-8')
-  const lines = csvContent.split('\n').filter(line => line.trim())
-  
+  const lines = csvContent.split('\n').filter((line) => line.trim())
+
   const creations = []
 
   for (let i = 1; i < lines.length; i++) {
@@ -110,7 +111,7 @@ function processCreations() {
       featured: i <= 3,
       tags: generateTags(description),
       createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      updatedAt: new Date().toISOString(),
     }
 
     creations.push(creation)
@@ -123,9 +124,9 @@ function processCreations() {
 
   console.log(`\n✅ Success! Created ${creations.length} creations`)
   console.log(`📄 Data: ${OUTPUT_FILE}`)
-  
+
   const stats = {}
-  creations.forEach(c => {
+  creations.forEach((c) => {
     stats[c.category] = (stats[c.category] || 0) + 1
   })
   console.log('\n📊 Categories:')

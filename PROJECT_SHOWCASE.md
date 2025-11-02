@@ -19,17 +19,20 @@
 ### 1. 🏠 Homepage (`/`)
 
 **Design**:
+
 - Hero section avec gradient vert
 - Section "Pourquoi Choisir Carineland" avec 3 cards
 - Appels à l'action (CTA)
 - Footer avec crédits
 
 **Animations**:
+
 - Fade-in sur le hero
 - Cards qui apparaissent au scroll
 - Hover effects élégants
 
 **Mobile**:
+
 - Stack vertical sur mobile
 - Boutons full-width
 - Navigation drawer
@@ -39,6 +42,7 @@
 ### 2. 🖼️ Galerie (`/gallery`)
 
 **Features**:
+
 - ✅ Filtres par catégorie (Tout, Couronnes, Compositions, Décorations)
 - ✅ Barre de recherche dynamique
 - ✅ Layout grid responsive
@@ -46,6 +50,7 @@
 - ✅ Badges "À la une" pour créations featured
 
 **Layout**:
+
 ```
 [Recherche...] [Tout] [Couronnes] [Compositions] [Décorations]
 
@@ -62,11 +67,13 @@
 ### 3. ℹ️ À Propos (`/about`)
 
 **Sections**:
+
 1. **Notre Histoire** - Origines de Carineland
 2. **Notre Passion** - Philosophie artisanale
 3. **Engagement Écologique** - Valeurs environnementales
 
 **Design**:
+
 - Cards avec avatars Material-UI
 - Icônes thématiques (Nature, Cœur, Éco)
 - Background gradients
@@ -77,6 +84,7 @@
 ### 4. 👑 Admin Panel (`/admin`)
 
 **Fonctionnalités**:
+
 - ✅ Liste toutes les créations
 - ✅ Bouton "Nouvelle Création"
 - ✅ Formulaire d'édition modal
@@ -87,6 +95,7 @@
 - ✅ État vide avec illustration
 
 **Formulaire**:
+
 ```
 ┌────────────────────────────────┐
 │  Titre: _________________      │
@@ -143,6 +152,7 @@ Button: 1rem (16px)    SemiBold 600
 ### Composants
 
 **Buttons**
+
 ```css
 Border Radius: 24px
 Padding: 10px 24px
@@ -151,6 +161,7 @@ Pas de text-transform
 ```
 
 **Cards**
+
 ```css
 Border Radius: 16px
 Shadow subtle
@@ -205,6 +216,7 @@ carineland/
 ## 🚀 Stack Technique Complète
 
 ### Frontend
+
 - **Framework**: Next.js 15.0.3 (App Router)
 - **UI Library**: Material-UI v6
 - **Animations**: Framer Motion 11
@@ -212,18 +224,21 @@ carineland/
 - **Styling**: Emotion (CSS-in-JS)
 
 ### Developer Experience
+
 - **Linting**: ESLint + Next.js rules
 - **Formatting**: Prettier
 - **Type Checking**: TypeScript strict mode
 - **Testing**: Jest + React Testing Library
 
 ### CI/CD
+
 - **Version Control**: Git + GitHub
 - **CI**: GitHub Actions
 - **Hosting**: Vercel
 - **Preview Deploys**: Branche dev
 
 ### Build & Performance
+
 - **SSR**: Server-Side Rendering
 - **SSG**: Static Site Generation
 - **Code Splitting**: Automatique avec Next.js
@@ -234,6 +249,7 @@ carineland/
 ## 📊 Métriques de Performance
 
 ### Lighthouse Score (Estimé)
+
 ```
 Performance:    🟢 95+
 Accessibility:  🟢 95+
@@ -242,6 +258,7 @@ SEO:           🟢 95+
 ```
 
 ### Build Stats
+
 ```
 Route (app)              Size     First Load JS
 ┌ ○ /                    2.57 kB  189 kB
@@ -257,6 +274,7 @@ Route (app)              Size     First Load JS
 ## 🎯 Features Clés
 
 ### ✅ Implémenté
+
 - [x] Next.js 15 avec App Router
 - [x] Material Design 3
 - [x] Thème personnalisé nature
@@ -270,6 +288,7 @@ Route (app)              Size     First Load JS
 - [x] Documentation complète
 
 ### 🔮 À Venir (Recommandations)
+
 - [ ] Base de données (Prisma)
 - [ ] Authentification (NextAuth.js)
 - [ ] Upload images (Cloudinary)
@@ -286,30 +305,35 @@ Route (app)              Size     First Load JS
 ## 🌟 Points Forts du Projet
 
 ### 🎨 Design
+
 ✓ Material Design 3 moderne
 ✓ Palette nature apaisante
 ✓ Animations fluides et élégantes
 ✓ 100% responsive mobile-first
 
 ### 💻 Code Quality
+
 ✓ TypeScript strict mode
 ✓ ESLint + Prettier configurés
 ✓ Architecture modulaire
 ✓ Code réutilisable et maintenable
 
 ### ⚡ Performance
+
 ✓ Static Site Generation
 ✓ Code splitting automatique
 ✓ Images optimisées (Next.js Image)
 ✓ Bundle size minimal
 
 ### 🚀 DevOps
+
 ✓ CI/CD automatisé
 ✓ Preview deployments
 ✓ Type checking automatique
 ✓ Tests automatisés
 
 ### 📱 UX
+
 ✓ Navigation intuitive
 ✓ Transitions smooth
 ✓ Feedback visuel
@@ -320,6 +344,7 @@ Route (app)              Size     First Load JS
 ## 👨‍💻 Développé par @ujju16
 
 **Technologies maîtrisées**:
+
 - Next.js 15 & React 18/19
 - Material-UI & Design Systems
 - TypeScript avancé
@@ -327,6 +352,7 @@ Route (app)              Size     First Load JS
 - Performance optimization
 
 **Philosophie**:
+
 - Code propre et maintenable
 - Documentation complète
 - Best practices

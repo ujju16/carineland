@@ -26,7 +26,7 @@ async function convertImageToWebP(inputPath, outputPath) {
       .webp({ quality: 85 })
       .resize(1200, 1200, { fit: 'inside', withoutEnlargement: true })
       .toFile(outputPath)
-    
+
     console.log(`✓ Converted: ${path.basename(inputPath)} → ${path.basename(outputPath)}`)
     return true
   } catch (error) {
@@ -37,13 +37,13 @@ async function convertImageToWebP(inputPath, outputPath) {
 
 function categorizeCreation(description) {
   const descLower = description.toLowerCase()
-  
+
   if (descLower.includes('peinture')) return 'peinture'
   if (descLower.includes('racines') || descLower.includes('bois')) return 'sculpture'
   if (descLower.includes('composition') || descLower.includes('vinyles')) return 'composition'
   if (descLower.includes('insecte')) return 'sculpture'
   if (descLower.includes('table') || descLower.includes('tabouret')) return 'mobilier'
-  
+
   return 'autre'
 }
 
@@ -66,7 +66,7 @@ async function processCreations() {
   const records = parse(csvContent, {
     columns: true,
     skip_empty_lines: true,
-    trim: true
+    trim: true,
   })
 
   const creations = []
@@ -75,7 +75,7 @@ async function processCreations() {
   for (let i = 0; i < records.length; i++) {
     const record = records[i]
     const originalFile = record['Image Originale (Nom du fichier)']
-    const description = record["Description de l'œuvre"] || record['Description de l\'œuvre']
+    const description = record["Description de l'œuvre"] || record["Description de l'œuvre"]
     const newName = record['Nouveau Nom WebP']
 
     const inputPath = path.join(IMAGE_DIR, originalFile)
@@ -96,7 +96,7 @@ async function processCreations() {
     // Create creation object
     const category = categorizeCreation(description)
     const slug = generateSlug(description)
-    
+
     // Extract year from filename (format: YYYYMMDD_HHMMSS.jpg)
     const yearMatch = originalFile.match(/^(\d{4})/)
     const year = yearMatch ? parseInt(yearMatch[1]) : new Date().getFullYear()
@@ -116,7 +116,7 @@ async function processCreations() {
       featured: i < 3, // First 3 are featured
       tags: generateTags(description),
       createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      updatedAt: new Date().toISOString(),
     }
 
     creations.push(creation)
@@ -154,7 +154,7 @@ function extractDimensions(description) {
   if (dimMatch) {
     return `${dimMatch[1]} x ${dimMatch[2]} cm`
   }
-  
+
   // Estimate based on type
   const descLower = description.toLowerCase()
   if (descLower.includes('table') || descLower.includes('grande')) {
@@ -163,7 +163,7 @@ function extractDimensions(description) {
   if (descLower.includes('peinture')) {
     return 'Format standard (40x50 cm)'
   }
-  
+
   return 'Variable'
 }
 
@@ -175,21 +175,21 @@ function generateTags(description) {
   if (descLower.includes('bois')) tags.push('bois')
   if (descLower.includes('racines')) tags.push('racines')
   if (descLower.includes('lierre')) tags.push('lierre')
-  
+
   // Type tags
   if (descLower.includes('peinture')) tags.push('peinture', 'art abstrait')
   if (descLower.includes('sculpture')) tags.push('sculpture')
   if (descLower.includes('composition')) tags.push('composition')
   if (descLower.includes('table')) tags.push('mobilier', 'fonctionnel')
   if (descLower.includes('décorative')) tags.push('décoration')
-  
+
   // Color tags
   if (descLower.includes('orange') || descLower.includes('jaune')) tags.push('couleurs chaudes')
   if (descLower.includes('bleu') || descLower.includes('vert')) tags.push('couleurs froides')
-  
+
   // General tags
   tags.push('artisanat', 'fait main', 'unique')
-  
+
   return [...new Set(tags)] // Remove duplicates
 }
 

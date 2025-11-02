@@ -3,6 +3,7 @@
 ## 🚀 Ce qui a été fait
 
 ### ✅ Infrastructure Technique
+
 - ✅ Branche `dev` créée et configurée
 - ✅ Upgrade vers **Next.js 15.0.3**
 - ✅ Material-UI v6 avec thème personnalisé
@@ -12,6 +13,7 @@
 - ✅ GitHub Actions CI/CD complet
 
 ### 🎨 Design & UX
+
 - ✅ **Mobile-first** avec Material Design 3
 - ✅ Thème vert nature professionnel
 - ✅ Animations Framer Motion fluides
@@ -20,6 +22,7 @@
 - ✅ Palette de couleurs harmonieuse
 
 ### 📱 Pages Créées
+
 1. **Homepage** (`/`)
    - Hero section avec gradient
    - Section features avec cards animées
@@ -47,6 +50,7 @@
    - Interface Material Design
 
 ### 🔧 Architecture
+
 ```
 app/
 ├── admin/              # Panel administration
@@ -60,7 +64,9 @@ app/
 ```
 
 ### 🚢 CI/CD Pipeline
+
 GitHub Actions configuré avec:
+
 - ✅ Quality check (TypeScript, ESLint, Prettier)
 - ✅ Tests automatisés
 - ✅ Build validation
@@ -69,6 +75,7 @@ GitHub Actions configuré avec:
 - ✅ Intégration Vercel
 
 ### 📦 Dépendances Installées
+
 ```json
 {
   "dependencies": {
@@ -91,6 +98,7 @@ GitHub Actions configuré avec:
 ```
 
 ### 🎯 Features Professionnelles
+
 - ✅ SEO optimisé avec metadata
 - ✅ Performance optimisée (static generation)
 - ✅ Accessibilité (Material Design guidelines)
@@ -127,6 +135,7 @@ npm run type-check    # Vérifier les types
 ## 📝 Prochaines Étapes
 
 ### Recommandations
+
 1. **Backend / API**
    - Ajouter une base de données (ex: PostgreSQL avec Prisma)
    - Créer des API routes dans `/app/api`
@@ -155,6 +164,7 @@ npm run type-check    # Vérifier les types
 ## 🔐 Configuration Vercel
 
 Pour déployer, ajouter ces secrets dans GitHub:
+
 ```
 VERCEL_TOKEN=xxx
 VERCEL_ORG_ID=xxx
@@ -164,6 +174,7 @@ VERCEL_PROJECT_ID=xxx
 ## 🎨 Personnalisation du Thème
 
 Le thème se trouve dans `app/theme/theme.ts`:
+
 - Couleurs primaires et secondaires
 - Typographie
 - Shadows et borders
@@ -181,6 +192,7 @@ Le thème se trouve dans `app/theme/theme.ts`:
 ## 🎉 Résultat
 
 Un site web **professionnel**, **performant** et **moderne** avec:
+
 - ✨ Design élégant et apaisant
 - 📱 100% responsive mobile-first
 - ⚡ Performance optimale

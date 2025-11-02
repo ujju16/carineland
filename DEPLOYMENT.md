@@ -5,6 +5,7 @@ Ce guide vous aidera à déployer le projet Carineland sur Vercel.
 ## 🚀 Méthode 1: Déploiement via GitHub (Recommandé)
 
 ### Prérequis
+
 - Un compte [Vercel](https://vercel.com)
 - Le projet pushé sur GitHub
 
@@ -21,6 +22,7 @@ Ce guide vous aidera à déployer le projet Carineland sur Vercel.
    - Cliquez sur "Import"
 
 3. **Configuration du projet**
+
    ```
    Project Name: carineland
    Framework Preset: Next.js
@@ -45,6 +47,7 @@ Ce guide vous aidera à déployer le projet Carineland sur Vercel.
 ## 🔄 Déploiement Automatique
 
 Après la configuration initiale:
+
 - Chaque push sur `main` déclenchera un déploiement automatique en production
 - Chaque push sur d'autres branches créera un aperçu de déploiement (preview)
 - Les pull requests auront également leurs propres aperçus
@@ -87,12 +90,14 @@ Le fichier `vercel.json` contient la configuration du déploiement:
 ## 🔒 Variables d'Environnement
 
 ### Via Dashboard Vercel
+
 1. Allez dans "Settings" → "Environment Variables"
 2. Ajoutez vos variables:
    - `NEXT_PUBLIC_SITE_URL`: URL de votre site
    - Autres variables selon vos besoins
 
 ### Via CLI
+
 ```bash
 vercel env add NEXT_PUBLIC_SITE_URL production
 ```
@@ -107,6 +112,7 @@ vercel env add NEXT_PUBLIC_SITE_URL production
 4. Suivez les instructions pour configurer les DNS
 
 ### Configuration DNS
+
 Ajoutez les enregistrements suivants chez votre registrar:
 
 ```
@@ -122,6 +128,7 @@ Value: cname.vercel-dns.com
 ## 🔍 Vérifications Post-Déploiement
 
 ### Checklist
+
 - [ ] Site accessible via l'URL Vercel
 - [ ] Toutes les pages fonctionnent (/, /about, /gallery)
 - [ ] Navigation fonctionne correctement
@@ -131,7 +138,9 @@ Value: cname.vercel-dns.com
 - [ ] GitHub Actions CI/CD actif
 
 ### Tests de performance
+
 Utilisez les outils suivants pour vérifier les performances:
+
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 - [PageSpeed Insights](https://pagespeed.web.dev/)
 - [GTmetrix](https://gtmetrix.com/)
@@ -139,11 +148,13 @@ Utilisez les outils suivants pour vérifier les performances:
 ## 📊 Monitoring et Analytics
 
 ### Vercel Analytics (inclus)
+
 - Allez dans "Analytics" dans le dashboard
 - Visualisez les métriques de performance
 - Suivez les Core Web Vitals
 
 ### Ajouter Google Analytics (optionnel)
+
 1. Obtenez votre ID GA4
 2. Ajoutez la variable d'environnement:
    ```
@@ -154,6 +165,7 @@ Utilisez les outils suivants pour vérifier les performances:
 ## 🔄 Rollback
 
 Si un déploiement pose problème:
+
 1. Allez dans "Deployments" dans le dashboard
 2. Trouvez le déploiement précédent qui fonctionnait
 3. Cliquez sur "..." → "Promote to Production"
@@ -161,6 +173,7 @@ Si un déploiement pose problème:
 ## 🐛 Dépannage
 
 ### Build échoue
+
 ```bash
 # Testez localement
 npm run build
@@ -169,10 +182,12 @@ npm run build
 ```
 
 ### Pages 404
+
 - Vérifiez la structure des dossiers dans `app/`
 - Assurez-vous que les fichiers `page.tsx` existent
 
 ### Problèmes de CSS
+
 - Vérifiez que tous les fichiers `.module.css` sont importés
 - Assurez-vous que `globals.css` est importé dans `layout.tsx`
 
@@ -185,10 +200,11 @@ npm run build
 ## 📧 Support
 
 En cas de problème:
+
 - Documentation Vercel: https://vercel.com/docs
 - Support Vercel: https://vercel.com/support
 - GitHub Issues du projet
 
 ---
 
-*Guide maintenu pour le projet Carineland*
+_Guide maintenu pour le projet Carineland_
