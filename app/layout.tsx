@@ -1,35 +1,37 @@
 import type { Metadata } from 'next'
-import { Montserrat, Lora } from 'next/font/google'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+import MUIRegistry from './lib/MUIRegistry'
 import Navigation from './components/Navigation'
 import './globals.css'
 
-const montserrat = Montserrat({ 
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-})
-
-const lora = Lora({ 
-  subsets: ['latin'],
-  variable: '--font-lora',
-  display: 'swap',
-})
-
 export const metadata: Metadata = {
   title: 'Carineland - Créations Artisanales',
-  description: 'Le Monde de Carine, créations artisanales à base de lierre et autres éléments de la nature.',
+  description:
+    'Le Monde de Carine, créations artisanales à base de lierre et autres éléments de la nature.',
+  keywords: ['artisanat', 'nature', 'lierre', 'créations', 'fait main'],
+  authors: [{ name: 'Carine', url: 'https://carineland.com' }],
+  creator: 'Carine',
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    url: 'https://carineland.com',
+    siteName: 'Carineland',
+    title: 'Carineland - Créations Artisanales',
+    description: 'Créations artisanales à base de lierre et autres éléments de la nature',
+  },
+  metadataBase: new URL('https://carineland.com'),
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body className={`${montserrat.variable} ${lora.variable}`}>
-        <Navigation />
-        {children}
+      <body>
+        <AppRouterCacheProvider>
+          <MUIRegistry>
+            <Navigation />
+            {children}
+          </MUIRegistry>
+        </AppRouterCacheProvider>
       </body>
     </html>
   )
