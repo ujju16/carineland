@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+build
+dist
+coverage
+*.config.js
+jest.setup.js
+scripts/*.js
+public
+.vercel
+.swc
