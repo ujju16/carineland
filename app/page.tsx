@@ -31,9 +31,11 @@ const MotionCard = motion.create(Card)
 
 export default function Home() {
   return (
-    <Box>
+    <Box component="main" role="main">
       {/* Hero Section */}
       <Box
+        component="section"
+        aria-label="Section d'accueil principale"
         sx={{
           background: 'linear-gradient(135deg, #2d5016 0%, #4a7c2a 100%)',
           color: 'white',
@@ -51,6 +53,7 @@ export default function Home() {
           >
             <Typography
               variant="h1"
+              component="h1"
               sx={{
                 mb: 3,
                 fontWeight: 800,
@@ -60,10 +63,10 @@ export default function Home() {
             >
               Carineland
             </Typography>
-            <Typography variant="h4" sx={{ mb: 2, opacity: 0.95, fontFamily: 'Lora' }}>
+            <Typography variant="h4" component="p" sx={{ mb: 2, opacity: 0.95, fontFamily: 'Lora' }}>
               Le Monde de Carine
             </Typography>
-            <Typography variant="h6" sx={{ mb: 6, opacity: 0.9, maxWidth: 600, mx: 'auto' }}>
+            <Typography variant="h6" component="p" sx={{ mb: 6, opacity: 0.9, maxWidth: 600, mx: 'auto' }}>
               Créations artisanales à base de lierre et autres éléments de la nature
             </Typography>
             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -72,7 +75,8 @@ export default function Home() {
                 href="/gallery"
                 variant="contained"
                 size="large"
-                endIcon={<ArrowForwardIcon />}
+                endIcon={<ArrowForwardIcon aria-hidden="true" />}
+                aria-label="Découvrir la galerie des créations"
                 sx={{
                   backgroundColor: 'white',
                   color: 'primary.main',
@@ -92,6 +96,7 @@ export default function Home() {
                 href="/about"
                 variant="outlined"
                 size="large"
+                aria-label="En savoir plus sur Carineland et son histoire"
                 sx={{
                   borderColor: 'white',
                   color: 'white',
@@ -110,6 +115,7 @@ export default function Home() {
           </MotionBox>
         </Container>
         <Box
+          aria-hidden="true"
           sx={{
             position: 'absolute',
             bottom: -50,
@@ -123,9 +129,10 @@ export default function Home() {
       </Box>
 
       {/* Features Section */}
-      <Container maxWidth="lg" sx={{ py: 12 }}>
+      <Container maxWidth="lg" sx={{ py: 12 }} component="section" aria-label="Nos avantages">
         <Typography
           variant="h2"
+          component="h2"
           textAlign="center"
           sx={{ mb: 8, color: 'primary.main', fontWeight: 700 }}
         >
@@ -139,6 +146,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
+                aria-label={feature.title}
                 sx={{
                   height: '100%',
                   textAlign: 'center',
@@ -152,6 +160,7 @@ export default function Home() {
               >
                 <CardContent>
                   <Box
+                    aria-hidden="true"
                     sx={{
                       color: 'primary.main',
                       mb: 2,
@@ -161,7 +170,7 @@ export default function Home() {
                   >
                     {feature.icon}
                   </Box>
-                  <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+                  <Typography variant="h5" component="h3" sx={{ mb: 2, fontWeight: 600 }}>
                     {feature.title}
                   </Typography>
                   <Typography variant="body1" color="text.secondary">
@@ -176,6 +185,8 @@ export default function Home() {
 
       {/* CTA Section */}
       <Box
+        component="section"
+        aria-label="Appel à l'action"
         sx={{
           backgroundColor: 'primary.main',
           color: 'white',
@@ -184,10 +195,10 @@ export default function Home() {
         }}
       >
         <Container maxWidth="md">
-          <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
+          <Typography variant="h3" component="h2" sx={{ mb: 3, fontWeight: 700 }}>
             Découvrez Mes Créations
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ mb: 4, opacity: 0.9 }}>
             Explorez la galerie et laissez-vous inspirer par la beauté de la nature
           </Typography>
           <Button
@@ -195,6 +206,7 @@ export default function Home() {
             href="/gallery"
             variant="contained"
             size="large"
+            aria-label="Accéder à la galerie complète des créations"
             sx={{
               backgroundColor: 'white',
               color: 'primary.main',

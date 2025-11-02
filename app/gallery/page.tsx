@@ -47,8 +47,9 @@ export default function GalleryPage() {
   })
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: 'background.default' }}>
+    <Box component="main" role="main" sx={{ minHeight: '100vh', backgroundColor: 'background.default' }}>
       <Box
+        component="header"
         sx={{
           backgroundColor: 'primary.main',
           color: 'white',
@@ -57,27 +58,35 @@ export default function GalleryPage() {
         }}
       >
         <Container maxWidth="lg">
-          <Typography variant="h2" sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}>
+          <Typography variant="h2" component="h1" sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}>
             Galerie de Créations
           </Typography>
-          <Typography variant="h6" sx={{ textAlign: 'center', opacity: 0.9 }}>
+          <Typography variant="h6" component="p" sx={{ textAlign: 'center', opacity: 0.9 }}>
             Découvrez {creationsData.length} créations artisanales inspirées de la nature
           </Typography>
         </Container>
       </Box>
 
       <Container maxWidth="lg" sx={{ pb: 8 }}>
-        <Box sx={{ mb: 4, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
+        <Box 
+          component="section"
+          aria-label="Filtres de recherche"
+          sx={{ mb: 4, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}
+        >
           <TextField
             placeholder="Rechercher une création..."
             variant="outlined"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            aria-label="Rechercher dans les créations"
+            inputProps={{
+              'aria-label': 'Champ de recherche',
+            }}
             sx={{ flexGrow: 1, minWidth: 250 }}
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
-                  <SearchIcon />
+                  <SearchIcon aria-hidden="true" />
                 </InputAdornment>
               ),
             }}
@@ -86,10 +95,17 @@ export default function GalleryPage() {
             value={filter}
             exclusive
             onChange={(_, newFilter) => newFilter && setFilter(newFilter)}
-            aria-label="filter creations"
+            aria-label="Filtrer les créations par catégorie"
+            role="radiogroup"
           >
             {categories.map(cat => (
-              <ToggleButton key={cat.value} value={cat.value}>
+              <ToggleButton 
+                key={cat.value} 
+                value={cat.value}
+                aria-label={`Filtrer par ${cat.label}`}
+                role="radio"
+                aria-checked={filter === cat.value}
+              >
                 {cat.label}
               </ToggleButton>
             ))}
@@ -97,19 +113,30 @@ export default function GalleryPage() {
         </Box>
 
         {filteredCreations.length === 0 ? (
-          <Box sx={{ textAlign: 'center', py: 8 }}>
+          <Box 
+            role="status" 
+            aria-live="polite"
+            sx={{ textAlign: 'center', py: 8 }}
+          >
             <Typography variant="h5" color="text.secondary">
               Aucune création trouvée
             </Typography>
           </Box>
         ) : (
-          <Grid container spacing={4}>
+          <Grid 
+            container 
+            spacing={4}
+            component="section"
+            aria-label={`${filteredCreations.length} créations affichées`}
+            role="list"
+          >
             {filteredCreations.map((creation: any, index: number) => (
-              <Grid item key={creation.id} xs={12} sm={6} md={4}>
+              <Grid item key={creation.id} xs={12} sm={6} md={4} role="listitem">
                 <MotionCard
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  aria-label={`Création: ${creation.title}`}
                   sx={{
                     height: '100%',
                     display: 'flex',
@@ -128,12 +155,14 @@ export default function GalleryPage() {
                       fill
                       style={{ objectFit: 'cover' }}
                       sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                      priority={index < 3}
                     />
                     {creation.featured && (
                       <Chip
                         label="Coup de cœur"
                         color="secondary"
                         size="small"
+                        aria-label="Cette création est un coup de cœur"
                         sx={{ position: 'absolute', top: 16, right: 16 }}
                       />
                     )}
@@ -146,7 +175,7 @@ export default function GalleryPage() {
                       {creation.description}
                     </Typography>
                     
-                    <Stack direction="row" spacing={1} sx={{ mb: 2 }}>
+                    <Stack direction="row" spacing={1} sx={{ mb: 2 }} aria-label="Informations sur la création">
                       <Chip 
                         label={creation.category} 
                         size="small" 
@@ -168,12 +197,13 @@ export default function GalleryPage() {
                       <strong>Dimensions :</strong> {creation.dimensions}
                     </Typography>
 
-                    <Stack direction="row" spacing={0.5} sx={{ mt: 2, flexWrap: 'wrap' }}>
+                    <Stack direction="row" spacing={0.5} sx={{ mt: 2, flexWrap: 'wrap' }} aria-label="Étiquettes">
                       {creation.tags.slice(0, 3).map((tag: string) => (
                         <Chip 
                           key={tag} 
                           label={tag} 
                           size="small" 
+                          aria-label={`Étiquette: ${tag}`}
                           sx={{ mb: 0.5 }}
                         />
                       ))}
@@ -185,6 +215,7 @@ export default function GalleryPage() {
                       variant="contained"
                       color={creation.available ? 'success' : 'error'}
                       disabled={!creation.available}
+                      aria-label={creation.available ? 'Cette création est disponible' : 'Cette création est vendue'}
                       sx={{
                         '&:hover': {
                           transform: 'scale(1.05)',
@@ -198,6 +229,7 @@ export default function GalleryPage() {
                     <Button 
                       size="small" 
                       variant="outlined"
+                      aria-label={`En savoir plus sur ${creation.title}`}
                       color="primary"
                       sx={{
                         '&:hover': {
