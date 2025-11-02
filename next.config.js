@@ -17,16 +17,6 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   generateEtags: true,
-  experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-  },
 }
 
 module.exports = nextConfig
