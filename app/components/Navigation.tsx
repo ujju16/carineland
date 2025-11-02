@@ -23,6 +23,7 @@ import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary'
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const pages = [
@@ -43,9 +44,12 @@ export default function Navigation() {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} role="navigation" aria-label="Menu mobile">
-      <Typography variant="h6" sx={{ my: 2, fontWeight: 700, color: 'primary.main' }}>
-        Carineland
-      </Typography>
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', my: 2, gap: 1 }}>
+        <Image src="/favicon-32x32.png" alt="Logo Carineland" width={32} height={32} />
+        <Typography variant="h6" sx={{ fontWeight: 700, color: 'primary.main' }}>
+          Carineland
+        </Typography>
+      </Box>
       <List component="nav" aria-label="Pages principales">
         {pages.map((page) => (
           <ListItem key={page.name} disablePadding>
@@ -104,27 +108,39 @@ export default function Navigation() {
               </IconButton>
             )}
 
-            <Typography
-              variant="h5"
-              noWrap
+            <Box
               component={Link}
               href="/"
               aria-label="Carineland - Retour à l'accueil"
               sx={{
                 mr: 2,
                 display: 'flex',
+                alignItems: 'center',
+                gap: 1,
                 flexGrow: isMobile ? 1 : 0,
-                fontWeight: 700,
-                color: 'primary.main',
                 textDecoration: 'none',
-                fontFamily: 'Lora',
                 '&:hover': {
-                  color: 'primary.dark',
+                  '& .logo-text': {
+                    color: 'primary.dark',
+                  },
                 },
               }}
             >
-              Carineland
-            </Typography>
+              <Image src="/favicon-32x32.png" alt="Logo Carineland" width={32} height={32} priority />
+              <Typography
+                variant="h5"
+                noWrap
+                className="logo-text"
+                sx={{
+                  fontWeight: 700,
+                  color: 'primary.main',
+                  fontFamily: 'Lora',
+                  transition: 'color 0.2s',
+                }}
+              >
+                Carineland
+              </Typography>
+            </Box>
 
             {!isMobile && (
               <Box component="nav" role="navigation" aria-label="Menu principal" sx={{ flexGrow: 1, display: 'flex', ml: 4 }}>
