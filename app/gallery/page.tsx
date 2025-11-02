@@ -21,7 +21,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import { motion } from 'framer-motion'
 
-const MotionCard = motion(Card)
+const MotionCard = motion.create(Card)
 
 const mockCreations = [
   {

@@ -26,8 +26,8 @@ const features = [
   },
 ]
 
-const MotionBox = motion(Box)
-const MotionCard = motion(Card)
+const MotionBox = motion.create(Box)
+const MotionCard = motion.create(Card)
 
 export default function Home() {
   return (

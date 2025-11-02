@@ -6,8 +6,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import EnergyBadgeIcon from '@mui/icons-material/EnergySavingsLeaf'
 import { motion } from 'framer-motion'
 
-const MotionBox = motion(Box)
-const MotionPaper = motion(Paper)
+const MotionBox = motion.create(Box)
+const MotionPaper = motion.create(Paper)
 
 export default function AboutPage() {
   return (
