@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from './test-utils'
 import Footer from '../app/components/Footer'
 
 jest.mock('next/link', () => {
