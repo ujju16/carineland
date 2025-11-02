@@ -36,6 +36,27 @@ jest.mock('framer-motion', () => {
   }
 })
 
+// Mock MUI theme and media queries
+jest.mock('@mui/material', () => {
+  const actual = jest.requireActual('@mui/material')
+  return {
+    ...actual,
+    useTheme: () => ({
+      breakpoints: {
+        down: () => false,
+        up: () => true,
+        between: () => false,
+      },
+      palette: {
+        mode: 'light',
+        primary: { main: '#1976d2' },
+        secondary: { main: '#dc004e' },
+      },
+    }),
+    useMediaQuery: () => false,
+  }
+})
+
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
