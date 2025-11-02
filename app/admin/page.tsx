@@ -12,14 +12,12 @@ import {
   CardContent,
   CardActions,
   IconButton,
-  Fab,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
   Grid,
   Chip,
-  Alert,
 } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add'
 import EditIcon from '@mui/icons-material/Edit'
@@ -75,10 +73,17 @@ export default function AdminPage() {
       const newCreation: Creation = {
         id: Date.now().toString(),
         title: formData.title || '',
+        slug: (formData.title || '').toLowerCase().replace(/\s+/g, '-'),
         description: formData.description || '',
         imageUrl: formData.imageUrl || '',
-        category: formData.category as Creation['category'],
+        imageAlt: formData.title || '',
+        category: formData.category || 'autre',
+        year: new Date().getFullYear(),
+        materials: [],
+        dimensions: 'Variable',
+        available: true,
         featured: formData.featured || false,
+        tags: [],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       }

@@ -1,11 +1,10 @@
 import { render, screen } from './test-utils'
 import Footer from '../app/components/Footer'
 
-jest.mock('next/link', () => {
-  return ({ children, href }: { children: React.ReactNode; href: string }) => {
-    return <a href={href}>{children}</a>
-  }
-})
+// eslint-disable-next-line react/display-name
+jest.mock('next/link', () => ({ children, href }: { children: React.ReactNode; href: string }) => (
+  <a href={href}>{children}</a>
+))
 
 describe('Footer Component', () => {
   it('renders footer sections', () => {

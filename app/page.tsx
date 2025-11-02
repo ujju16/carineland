@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Container, Typography, Grid, Card, CardContent, Button, Fab } from '@mui/material'
+import { Box, Container, Typography, Grid, Card, CardContent, Button } from '@mui/material'
 import { motion } from 'framer-motion'
 import NatureIcon from '@mui/icons-material/Nature'
 import FavoriteIcon from '@mui/icons-material/Favorite'

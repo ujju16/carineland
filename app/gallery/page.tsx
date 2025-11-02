@@ -21,6 +21,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import creationsData from '../data/creations.json'
+import type { Creation } from '../types'
 
 const MotionCard = motion.create(Card)
 
@@ -37,7 +38,7 @@ export default function GalleryPage() {
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState('all')
 
-  const filteredCreations = creationsData.filter((creation: any) => {
+  const filteredCreations = creationsData.filter((creation: Creation) => {
     const matchesSearch =
       creation.title.toLowerCase().includes(search.toLowerCase()) ||
       creation.description.toLowerCase().includes(search.toLowerCase()) ||
@@ -130,7 +131,7 @@ export default function GalleryPage() {
             aria-label={`${filteredCreations.length} créations affichées`}
             role="list"
           >
-            {filteredCreations.map((creation: any, index: number) => (
+            {filteredCreations.map((creation: Creation, index: number) => (
               <Grid item key={creation.id} xs={12} sm={6} md={4} role="listitem">
                 <MotionCard
                   initial={{ opacity: 0, y: 20 }}
