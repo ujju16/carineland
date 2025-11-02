@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Carineland",
+  "url": "https://carineland.com",
+  "logo": "https://carineland.com/logo.png",
+  "description": "Créations artisanales à base de lierre et autres éléments de la nature",
+  "founder": {
+    "@type": "Person",
+    "name": "Carine"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR"
+  },
+  "sameAs": [
+    "https://www.facebook.com/carineland",
+    "https://www.instagram.com/carineland"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "contact@carineland.com"
+  }
+}
