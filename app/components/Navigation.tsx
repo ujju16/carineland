@@ -128,9 +128,10 @@ export default function Navigation() {
                 alignItems: 'center',
                 flexGrow: isMobile ? 1 : 0,
                 textDecoration: 'none',
-                transition: 'all 0.3s ease',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                  transform: 'scale(1.1) rotate(5deg)',
+                  transform: 'scale(1.15)',
+                  filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15))',
                 },
               }}
             >
