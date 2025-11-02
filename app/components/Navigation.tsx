@@ -53,8 +53,8 @@ export default function Navigation() {
         <Image 
           src="/logo.png" 
           alt="Logo Carineland" 
-          width={60} 
-          height={60}
+          width={120} 
+          height={120}
           style={{ objectFit: 'contain' }}
         />
       </Box>
@@ -128,17 +128,17 @@ export default function Navigation() {
                 alignItems: 'center',
                 flexGrow: isMobile ? 1 : 0,
                 textDecoration: 'none',
-                transition: 'opacity 0.2s',
+                transition: 'all 0.3s ease',
                 '&:hover': {
-                  opacity: 0.8,
+                  transform: 'scale(1.1) rotate(5deg)',
                 },
               }}
             >
               <Image
                 src="/logo.png"
                 alt="Logo Carineland"
-                width={50}
-                height={50}
+                width={150}
+                height={150}
                 priority
                 style={{
                   objectFit: 'contain',
