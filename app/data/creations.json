@@ -8,21 +8,11 @@
     "imageUrl": "/creations/20241104_014920.jpg",
     "imageAlt": "Composition vinyles et objets en verre/bois",
     "year": 2024,
-    "materials": [
-      "bois flotté",
-      "vinyles",
-      "verre"
-    ],
+    "materials": ["bois flotté", "vinyles", "verre"],
     "dimensions": "Variable",
     "available": true,
     "featured": false,
-    "tags": [
-      "bois",
-      "composition",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["bois", "composition", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.064Z",
     "updatedAt": "2025-11-02T02:49:26.064Z"
   },
@@ -35,22 +25,11 @@
     "imageUrl": "/creations/20231024_211212.jpg",
     "imageAlt": "Table/tabouret en bois flotté/racines",
     "year": 2023,
-    "materials": [
-      "bois flotté",
-      "racines"
-    ],
+    "materials": ["bois flotté", "racines"],
     "dimensions": "Grande pièce (> 50cm)",
     "available": true,
     "featured": true,
-    "tags": [
-      "bois",
-      "racines",
-      "mobilier",
-      "fonctionnel",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["bois", "racines", "mobilier", "fonctionnel", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.062Z",
     "updatedAt": "2025-11-02T02:49:26.062Z"
   },
@@ -63,20 +42,11 @@
     "imageUrl": "/creations/20231024_211103.jpg",
     "imageAlt": "Grande pièce de bois flotté/racines seule",
     "year": 2023,
-    "materials": [
-      "bois flotté",
-      "racines"
-    ],
+    "materials": ["bois flotté", "racines"],
     "dimensions": "Grande pièce (> 50cm)",
     "available": true,
     "featured": true,
-    "tags": [
-      "bois",
-      "racines",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["bois", "racines", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.062Z",
     "updatedAt": "2025-11-02T02:49:26.062Z"
   },
@@ -89,20 +59,11 @@
     "imageUrl": "/creations/20230713_150857.jpg",
     "imageAlt": "Grande pièce de racines entrelacées avec lierre",
     "year": 2023,
-    "materials": [
-      "racines",
-      "lierre"
-    ],
+    "materials": ["racines", "lierre"],
     "dimensions": "Grande pièce (> 50cm)",
     "available": true,
     "featured": true,
-    "tags": [
-      "racines",
-      "lierre",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["racines", "lierre", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.062Z",
     "updatedAt": "2025-11-02T02:49:26.062Z"
   },
@@ -115,18 +76,11 @@
     "imageUrl": "/creations/20231024_211408.jpg",
     "imageAlt": "3 bases de racines pour projet",
     "year": 2023,
-    "materials": [
-      "racines"
-    ],
+    "materials": ["racines"],
     "dimensions": "Variable",
     "available": true,
     "featured": false,
-    "tags": [
-      "racines",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["racines", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.062Z",
     "updatedAt": "2025-11-02T02:49:26.063Z"
   },
@@ -139,19 +93,11 @@
     "imageUrl": "/creations/20230713_112615.jpg",
     "imageAlt": "Pièce de bois flotté sur support en contreplaqué",
     "year": 2023,
-    "materials": [
-      "bois flotté",
-      "contreplaqué"
-    ],
+    "materials": ["bois flotté", "contreplaqué"],
     "dimensions": "Variable",
     "available": true,
     "featured": false,
-    "tags": [
-      "bois",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["bois", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.063Z",
     "updatedAt": "2025-11-02T02:49:26.063Z"
   },
@@ -164,20 +110,11 @@
     "imageUrl": "/creations/20231021_201128.jpg",
     "imageAlt": "Peinture abstraite orange/jaune/marron (paysage surréaliste)",
     "year": 2023,
-    "materials": [
-      "peinture acrylique"
-    ],
+    "materials": ["peinture acrylique"],
     "dimensions": "Format standard (40x50 cm)",
     "available": true,
     "featured": false,
-    "tags": [
-      "peinture",
-      "art abstrait",
-      "couleurs chaudes",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["peinture", "art abstrait", "couleurs chaudes", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.063Z",
     "updatedAt": "2025-11-02T02:49:26.063Z"
   },
@@ -190,20 +127,11 @@
     "imageUrl": "/creations/20220920_083052.jpg",
     "imageAlt": "Composition décorative avec bois et objets",
     "year": 2022,
-    "materials": [
-      "bois flotté"
-    ],
+    "materials": ["bois flotté"],
     "dimensions": "Variable",
     "available": true,
     "featured": false,
-    "tags": [
-      "bois",
-      "composition",
-      "décoration",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["bois", "composition", "décoration", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.063Z",
     "updatedAt": "2025-11-02T02:49:26.063Z"
   },
@@ -216,19 +144,11 @@
     "imageUrl": "/creations/20220918_164250.jpg",
     "imageAlt": "Sculpture d'insecte en bois",
     "year": 2022,
-    "materials": [
-      "bois flotté"
-    ],
+    "materials": ["bois flotté"],
     "dimensions": "Variable",
     "available": true,
     "featured": false,
-    "tags": [
-      "bois",
-      "sculpture",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["bois", "sculpture", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.063Z",
     "updatedAt": "2025-11-02T02:49:26.063Z"
   },
@@ -241,20 +161,11 @@
     "imageUrl": "/creations/20221016_225547.jpg",
     "imageAlt": "Peinture abstraite bleue/verte (vagues/fumée)",
     "year": 2022,
-    "materials": [
-      "peinture acrylique"
-    ],
+    "materials": ["peinture acrylique"],
     "dimensions": "Format standard (40x50 cm)",
     "available": true,
     "featured": false,
-    "tags": [
-      "peinture",
-      "art abstrait",
-      "couleurs froides",
-      "artisanat",
-      "fait main",
-      "unique"
-    ],
+    "tags": ["peinture", "art abstrait", "couleurs froides", "artisanat", "fait main", "unique"],
     "createdAt": "2025-11-02T02:49:26.063Z",
     "updatedAt": "2025-11-02T02:49:26.063Z"
   }

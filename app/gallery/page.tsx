@@ -48,7 +48,11 @@ export default function GalleryPage() {
   })
 
   return (
-    <Box component="main" role="main" sx={{ minHeight: '100vh', backgroundColor: 'background.default' }}>
+    <Box
+      component="main"
+      role="main"
+      sx={{ minHeight: '100vh', backgroundColor: 'background.default' }}
+    >
       <Box
         component="header"
         sx={{
@@ -59,7 +63,11 @@ export default function GalleryPage() {
         }}
       >
         <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}>
+          <Typography
+            variant="h2"
+            component="h1"
+            sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}
+          >
             Galerie de Créations
           </Typography>
           <Typography variant="h6" component="p" sx={{ textAlign: 'center', opacity: 0.9 }}>
@@ -69,7 +77,7 @@ export default function GalleryPage() {
       </Box>
 
       <Container maxWidth="lg" sx={{ pb: 8 }}>
-        <Box 
+        <Box
           component="section"
           aria-label="Filtres de recherche"
           sx={{ mb: 4, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}
@@ -99,9 +107,9 @@ export default function GalleryPage() {
             aria-label="Filtrer les créations par catégorie"
             role="radiogroup"
           >
-            {categories.map(cat => (
-              <ToggleButton 
-                key={cat.value} 
+            {categories.map((cat) => (
+              <ToggleButton
+                key={cat.value}
                 value={cat.value}
                 aria-label={`Filtrer par ${cat.label}`}
                 role="radio"
@@ -114,18 +122,14 @@ export default function GalleryPage() {
         </Box>
 
         {filteredCreations.length === 0 ? (
-          <Box 
-            role="status" 
-            aria-live="polite"
-            sx={{ textAlign: 'center', py: 8 }}
-          >
+          <Box role="status" aria-live="polite" sx={{ textAlign: 'center', py: 8 }}>
             <Typography variant="h5" color="text.secondary">
               Aucune création trouvée
             </Typography>
           </Box>
         ) : (
-          <Grid 
-            container 
+          <Grid
+            container
             spacing={4}
             component="section"
             aria-label={`${filteredCreations.length} créations affichées`}
@@ -175,35 +179,45 @@ export default function GalleryPage() {
                     <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       {creation.description}
                     </Typography>
-                    
-                    <Stack direction="row" spacing={1} sx={{ mb: 2 }} aria-label="Informations sur la création">
-                      <Chip 
-                        label={creation.category} 
-                        size="small" 
-                        color="primary" 
+
+                    <Stack
+                      direction="row"
+                      spacing={1}
+                      sx={{ mb: 2 }}
+                      aria-label="Informations sur la création"
+                    >
+                      <Chip
+                        label={creation.category}
+                        size="small"
+                        color="primary"
                         variant="outlined"
                       />
-                      <Chip 
-                        label={creation.year} 
-                        size="small" 
-                        variant="outlined"
-                      />
+                      <Chip label={creation.year} size="small" variant="outlined" />
                     </Stack>
 
-                    <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1 }}>
+                    <Typography
+                      variant="caption"
+                      color="text.secondary"
+                      sx={{ display: 'block', mb: 1 }}
+                    >
                       <strong>Matériaux :</strong> {creation.materials.join(', ')}
                     </Typography>
-                    
+
                     <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }}>
                       <strong>Dimensions :</strong> {creation.dimensions}
                     </Typography>
 
-                    <Stack direction="row" spacing={0.5} sx={{ mt: 2, flexWrap: 'wrap' }} aria-label="Étiquettes">
+                    <Stack
+                      direction="row"
+                      spacing={0.5}
+                      sx={{ mt: 2, flexWrap: 'wrap' }}
+                      aria-label="Étiquettes"
+                    >
                       {creation.tags.slice(0, 3).map((tag: string) => (
-                        <Chip 
-                          key={tag} 
-                          label={tag} 
-                          size="small" 
+                        <Chip
+                          key={tag}
+                          label={tag}
+                          size="small"
                           aria-label={`Étiquette: ${tag}`}
                           sx={{ mb: 0.5 }}
                         />
@@ -211,12 +225,16 @@ export default function GalleryPage() {
                     </Stack>
                   </CardContent>
                   <CardActions sx={{ p: 2, pt: 0, gap: 1 }}>
-                    <Button 
-                      size="small" 
+                    <Button
+                      size="small"
                       variant="contained"
                       color={creation.available ? 'success' : 'error'}
                       disabled={!creation.available}
-                      aria-label={creation.available ? 'Cette création est disponible' : 'Cette création est vendue'}
+                      aria-label={
+                        creation.available
+                          ? 'Cette création est disponible'
+                          : 'Cette création est vendue'
+                      }
                       sx={{
                         '&:hover': {
                           transform: 'scale(1.05)',
@@ -227,8 +245,8 @@ export default function GalleryPage() {
                     >
                       {creation.available ? 'Disponible' : 'Vendu'}
                     </Button>
-                    <Button 
-                      size="small" 
+                    <Button
+                      size="small"
                       variant="outlined"
                       aria-label={`En savoir plus sur ${creation.title}`}
                       color="primary"

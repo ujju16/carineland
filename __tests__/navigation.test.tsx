@@ -9,7 +9,7 @@ jest.mock('next/link', () => ({ children, href }: { children: React.ReactNode; h
 describe('Navigation Component', () => {
   it('renders navigation links', () => {
     render(<Navigation />)
-    
+
     expect(screen.getByText('Carineland')).toBeInTheDocument()
     expect(screen.getByText('Accueil')).toBeInTheDocument()
     expect(screen.getByText('Galerie')).toBeInTheDocument()
@@ -18,7 +18,7 @@ describe('Navigation Component', () => {
 
   it('has correct navigation structure', () => {
     render(<Navigation />)
-    
+
     const nav = screen.getByRole('navigation')
     expect(nav).toBeInTheDocument()
   })

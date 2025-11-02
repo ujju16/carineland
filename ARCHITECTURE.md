@@ -91,6 +91,7 @@ carineland/
 ## 🎯 Conventions Next.js 16 App Router
 
 ### File-System Based Routing
+
 - `app/page.tsx` → `/`
 - `app/about/page.tsx` → `/about`
 - `app/gallery/page.tsx` → `/gallery`
@@ -98,6 +99,7 @@ carineland/
 - `app/legal/cookies/page.tsx` → `/legal/cookies`
 
 ### Special Files
+
 - **layout.tsx**: Layout partagé entre pages enfants
 - **page.tsx**: Composant de page (route publique)
 - **loading.tsx**: État de chargement (Suspense)
@@ -107,6 +109,7 @@ carineland/
 - **sitemap.ts**: Génération dynamique sitemap.xml
 
 ### Metadata API (Next.js 16)
+
 ```typescript
 // app/page.tsx
 export const metadata: Metadata = {
@@ -123,13 +126,12 @@ export const metadata: Metadata = {
 ## 🔧 Configuration Next.js 16
 
 ### next.config.js
+
 ```javascript
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'carineland.fr' },
-    ],
+    remotePatterns: [{ protocol: 'https', hostname: 'carineland.fr' }],
     formats: ['image/avif', 'image/webp'],
   },
   poweredByHeader: false,
@@ -138,6 +140,7 @@ const nextConfig = {
 ```
 
 ### Turbopack (Next.js 16)
+
 - **Dev mode**: `npm run dev` utilise Turbopack automatiquement
 - **Build**: Production optimisée avec Turbopack
 - **HMR**: < 100ms avec Turbopack
@@ -145,6 +148,7 @@ const nextConfig = {
 ## 📦 Composants Architecture
 
 ### Server Components (par défaut)
+
 ```typescript
 // app/page.tsx - Server Component
 export default async function HomePage() {
@@ -154,6 +158,7 @@ export default async function HomePage() {
 ```
 
 ### Client Components ('use client')
+
 ```typescript
 'use client' // Directive obligatoire
 import { useState } from 'react'
@@ -167,6 +172,7 @@ export default function InteractiveComponent() {
 ## 🎨 Material-UI Integration
 
 ### Emotion Cache (app/lib/MUIRegistry.tsx)
+
 ```typescript
 'use client'
 import { CacheProvider } from '@emotion/react'
@@ -180,6 +186,7 @@ export default function MUIRegistry({ children }) {
 ```
 
 ### Theme Provider (app/layout.tsx)
+
 ```typescript
 import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme/theme'
@@ -200,6 +207,7 @@ export default function RootLayout({ children }) {
 ## 🧪 Tests Architecture
 
 ### Jest Configuration
+
 ```javascript
 // jest.config.js
 module.exports = {
@@ -212,6 +220,7 @@ module.exports = {
 ```
 
 ### Test Structure
+
 ```
 __tests__/
 ├── components/
@@ -227,6 +236,7 @@ __tests__/
 ## 🚀 Performance Optimizations
 
 ### Image Optimization
+
 ```typescript
 import Image from 'next/image'
 
@@ -241,6 +251,7 @@ import Image from 'next/image'
 ```
 
 ### Font Optimization
+
 ```typescript
 import { Montserrat, Lora } from 'next/font/google'
 
@@ -249,6 +260,7 @@ const lora = Lora({ subsets: ['latin'] })
 ```
 
 ### Bundle Optimization
+
 - **Tree Shaking**: Imports optimisés
 - **Code Splitting**: Automatic avec App Router
 - **Dynamic Imports**: Pour composants lourds
@@ -256,6 +268,7 @@ const lora = Lora({ subsets: ['latin'] })
 ## 📊 SEO & Accessibility
 
 ### Structured Data (JSON-LD)
+
 ```typescript
 // app/lib/structured-data.ts
 export function generateCreationSchema(creation) {
@@ -269,6 +282,7 @@ export function generateCreationSchema(creation) {
 ```
 
 ### Accessibility Features
+
 - **ARIA labels**: Sur tous les éléments interactifs
 - **Skip links**: Navigation clavier
 - **Alt text**: Sur toutes les images
@@ -278,6 +292,7 @@ export function generateCreationSchema(creation) {
 ## 🔐 Security
 
 ### Headers (next.config.js)
+
 ```javascript
 async headers() {
   return [
@@ -295,6 +310,7 @@ async headers() {
 ## 📈 Monitoring & Analytics
 
 ### Lighthouse CI
+
 ```javascript
 // lighthouserc.js
 module.exports = {

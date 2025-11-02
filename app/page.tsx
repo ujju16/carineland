@@ -12,7 +12,8 @@ const features = [
   {
     icon: <NatureIcon sx={{ fontSize: 48 }} />,
     title: 'Nature Authentique',
-    description: 'Créations uniques réalisées avec des éléments naturels soigneusement sélectionnés',
+    description:
+      'Créations uniques réalisées avec des éléments naturels soigneusement sélectionnés',
   },
   {
     icon: <FavoriteIcon sx={{ fontSize: 48 }} />,
@@ -63,13 +64,25 @@ export default function Home() {
             >
               Carineland
             </Typography>
-            <Typography variant="h4" component="p" sx={{ mb: 2, opacity: 0.95, fontFamily: 'Lora' }}>
+            <Typography
+              variant="h4"
+              component="p"
+              sx={{ mb: 2, opacity: 0.95, fontFamily: 'Lora' }}
+            >
               Le Monde de Carine
             </Typography>
-            <Typography variant="h6" component="p" sx={{ mb: 6, opacity: 0.9, maxWidth: 600, mx: 'auto' }}>
+            <Typography
+              variant="h6"
+              component="p"
+              sx={{ mb: 6, opacity: 0.9, maxWidth: 600, mx: 'auto' }}
+            >
               Créations artisanales à base de lierre et autres éléments de la nature
             </Typography>
-            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }} role="group" aria-label="Actions principales">
+            <Box
+              sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}
+              role="group"
+              aria-label="Actions principales"
+            >
               <Button
                 component={Link}
                 href="/gallery"

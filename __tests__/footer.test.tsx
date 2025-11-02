@@ -9,7 +9,7 @@ jest.mock('next/link', () => ({ children, href }: { children: React.ReactNode; h
 describe('Footer Component', () => {
   it('renders footer sections', () => {
     render(<Footer />)
-    
+
     expect(screen.getByText('Carineland')).toBeInTheDocument()
     expect(screen.getByText('Navigation')).toBeInTheDocument()
     expect(screen.getByText('Informations Légales')).toBeInTheDocument()
@@ -17,7 +17,7 @@ describe('Footer Component', () => {
 
   it('contains legal links', () => {
     render(<Footer />)
-    
+
     expect(screen.getByText('Mentions Légales')).toBeInTheDocument()
     expect(screen.getByText('Politique de Confidentialité')).toBeInTheDocument()
     expect(screen.getByText('Gestion des Cookies')).toBeInTheDocument()
@@ -26,7 +26,7 @@ describe('Footer Component', () => {
 
   it('displays copyright and developer credit', () => {
     render(<Footer />)
-    
+
     const currentYear = new Date().getFullYear()
     expect(screen.getByText(new RegExp(`© ${currentYear} Carineland`))).toBeInTheDocument()
     expect(screen.getByText('@ujju16')).toBeInTheDocument()

@@ -106,19 +106,20 @@
   .title {
     font-size: 2rem;
   }
-  
+
   .subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero {
     padding: 3rem 1rem;
   }
-  
-  .about, .gallery {
+
+  .about,
+  .gallery {
     padding: 3rem 1rem;
   }
-  
+
   .grid {
     grid-template-columns: 1fr;
   }

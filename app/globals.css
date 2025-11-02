@@ -1,8 +1,8 @@
 :root {
-  --color-dark-green: #2F4F4F;
-  --color-beige: #F5F5DC;
-  --color-brown: #8B4513;
-  --color-white: #FFFFFF;
+  --color-dark-green: #2f4f4f;
+  --color-beige: #f5f5dc;
+  --color-brown: #8b4513;
+  --color-white: #ffffff;
   --font-heading: var(--font-montserrat);
   --font-body: var(--font-lora);
 }
@@ -25,7 +25,12 @@ body {
   font-family: var(--font-body), serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading), sans-serif;
 }
 

@@ -7,12 +7,14 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ## 🎯 Standards Implémentés
 
 ### WCAG 2.1 - Niveau AA
+
 - ✅ **Perceptible** : Le contenu est présentable de différentes façons
 - ✅ **Utilisable** : Navigation au clavier complète
 - ✅ **Compréhensible** : Texte lisible et prévisible
 - ✅ **Robuste** : Compatible avec les technologies d'assistance
 
 ### WAI-ARIA 1.2
+
 - ✅ Rôles sémantiques appropriés
 - ✅ États et propriétés ARIA
 - ✅ Navigation au clavier
@@ -25,6 +27,7 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ### 🧭 Navigation (`Navigation.tsx`)
 
 #### ARIA Labels & Roles
+
 ```typescript
 - role="navigation" sur AppBar
 - aria-label="Navigation principale"
@@ -35,12 +38,14 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ```
 
 #### Navigation Clavier
+
 - ✅ Tab pour naviguer entre les liens
 - ✅ Enter/Space pour activer
 - ✅ Escape pour fermer le menu mobile
 - ✅ Focus visible sur tous les éléments
 
 #### Lecteurs d'écran
+
 - Annonce de la page courante
 - Description des actions disponibles
 - État ouvert/fermé du menu mobile
@@ -51,6 +56,7 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ### 🦶 Footer (`Footer.tsx`)
 
 #### Structure Sémantique
+
 ```typescript
 - component="footer"
 - role="contentinfo"
@@ -60,8 +66,9 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ```
 
 #### Liens Accessibles
+
 - Descriptions claires sur chaque lien
-- Target="_blank" avec rel="noopener noreferrer"
+- Target="\_blank" avec rel="noopener noreferrer"
 - Indication "ouvre dans un nouvel onglet"
 - aria-hidden="true" sur les icônes décoratives
 
@@ -70,6 +77,7 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ### 🏠 Page d'Accueil (`page.tsx`)
 
 #### Structure Landmark
+
 ```typescript
 - component="main" role="main"
 - component="section" avec aria-label
@@ -77,11 +85,13 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ```
 
 #### Hero Section
+
 - ✅ h1 unique pour le titre principal
 - ✅ Descriptions claires sur les CTA
 - ✅ Éléments décoratifs marqués aria-hidden
 
 #### Features Cards
+
 - ✅ component="article" pour chaque carte
 - ✅ aria-label avec le titre de la feature
 - ✅ h3 pour les titres de cartes
@@ -92,6 +102,7 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ### 🖼️ Galerie (`gallery/page.tsx`)
 
 #### Structure & Recherche
+
 ```typescript
 - component="main" role="main"
 - aria-label="Filtres de recherche"
@@ -100,6 +111,7 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ```
 
 #### Filtres de Catégories
+
 ```typescript
 - role="radiogroup" sur ToggleButtonGroup
 - role="radio" sur chaque bouton
@@ -108,6 +120,7 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ```
 
 #### Liste de Créations
+
 ```typescript
 - role="list" sur le container Grid
 - role="listitem" sur chaque Grid item
@@ -116,6 +129,7 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ```
 
 #### Cartes de Créations
+
 ```typescript
 - component="article" pour chaque création
 - aria-label="Création: {titre}"
@@ -130,16 +144,18 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ## ⌨️ Navigation au Clavier
 
 ### Raccourcis Standards
-| Touche | Action |
-|--------|--------|
-| `Tab` | Naviguer vers l'avant |
-| `Shift + Tab` | Naviguer vers l'arrière |
-| `Enter` | Activer le lien/bouton |
-| `Space` | Activer le bouton |
-| `Escape` | Fermer le menu mobile/modal |
-| `↑ ↓` | Naviguer dans les listes |
+
+| Touche        | Action                      |
+| ------------- | --------------------------- |
+| `Tab`         | Naviguer vers l'avant       |
+| `Shift + Tab` | Naviguer vers l'arrière     |
+| `Enter`       | Activer le lien/bouton      |
+| `Space`       | Activer le bouton           |
+| `Escape`      | Fermer le menu mobile/modal |
+| `↑ ↓`         | Naviguer dans les listes    |
 
 ### Focus Management
+
 - ✅ Focus visible avec outline
 - ✅ Ordre de tabulation logique
 - ✅ Skip links (à implémenter)
@@ -150,14 +166,16 @@ Ce site respecte les normes **WCAG 2.1 niveau AA** pour garantir une expérience
 ## 🎨 Contraste et Couleurs
 
 ### Ratios de Contraste WCAG AA
-| Élément | Ratio | Statut |
-|---------|-------|--------|
-| Texte normal | ≥ 4.5:1 | ✅ |
-| Texte large (18pt+) | ≥ 3:1 | ✅ |
-| Éléments UI | ≥ 3:1 | ✅ |
-| Texte sur fond vert | ≥ 4.5:1 | ✅ |
+
+| Élément             | Ratio   | Statut |
+| ------------------- | ------- | ------ |
+| Texte normal        | ≥ 4.5:1 | ✅     |
+| Texte large (18pt+) | ≥ 3:1   | ✅     |
+| Éléments UI         | ≥ 3:1   | ✅     |
+| Texte sur fond vert | ≥ 4.5:1 | ✅     |
 
 ### Palette Accessible
+
 ```css
 Primary: #2d5016 (Vert foncé) - Contraste: 8.2:1
 Secondary: #ff6b6b (Rouge) - Contraste: 4.8:1
@@ -166,6 +184,7 @@ Text Secondary: #666666 - Contraste: 5.7:1
 ```
 
 ### Indication Visuelle
+
 - ✅ Pas uniquement par la couleur
 - ✅ Bordures sur les états actifs
 - ✅ Icônes + texte pour les actions
@@ -176,12 +195,14 @@ Text Secondary: #666666 - Contraste: 5.7:1
 ## 🔊 Lecteurs d'Écran
 
 ### Technologies Testées
+
 - ✅ **NVDA** (Windows)
 - ✅ **JAWS** (Windows)
 - ✅ **VoiceOver** (macOS/iOS)
 - ✅ **TalkBack** (Android)
 
 ### Annonces Contextuelles
+
 ```typescript
 // Messages dynamiques
 role="status" aria-live="polite"
@@ -194,6 +215,7 @@ aria-live="polite" aria-atomic="true"
 ```
 
 ### Labels Descriptifs
+
 - Navigation: "Navigation principale"
 - Recherche: "Champ de recherche"
 - Filtres: "Filtrer par catégorie"
@@ -205,11 +227,13 @@ aria-live="polite" aria-atomic="true"
 ## 📱 Responsive & Mobile
 
 ### Touch Targets
+
 - ✅ Taille minimale: **44x44 pixels**
 - ✅ Espacement entre éléments: **8px minimum**
 - ✅ Zones cliquables généreuses
 
 ### Gestes & Interactions
+
 - ✅ Pas de gestes complexes requis
 - ✅ Alternative à hover sur mobile
 - ✅ Scroll vertical uniquement
@@ -220,6 +244,7 @@ aria-live="polite" aria-atomic="true"
 ## 🖼️ Images & Médias
 
 ### Textes Alternatifs
+
 ```typescript
 // Images de créations
 alt="Titre de la création - Description visuelle"
@@ -232,6 +257,7 @@ alt="Description complète du contenu"
 ```
 
 ### Optimisation
+
 - ✅ Lazy loading après les 3 premières
 - ✅ priority sur images above-the-fold
 - ✅ Formats modernes (AVIF, WebP)
@@ -242,6 +268,7 @@ alt="Description complète du contenu"
 ## 🧪 Tests d'Accessibilité
 
 ### Outils Automatisés
+
 ```bash
 # Lighthouse Accessibility Audit
 npm run lighthouse
@@ -255,6 +282,7 @@ npm run test:a11y
 ```
 
 ### Tests Manuels
+
 - [ ] Navigation complète au clavier
 - [ ] Test avec lecteur d'écran
 - [ ] Test sans souris
@@ -267,12 +295,14 @@ npm run test:a11y
 ## 📊 Score Lighthouse
 
 ### Objectifs Accessibilité
+
 - 🎯 **Accessibilité**: ≥ 95/100
 - 🎯 **Performance**: ≥ 90/100
 - 🎯 **SEO**: ≥ 95/100
 - 🎯 **Best Practices**: ≥ 95/100
 
 ### Métriques Actuelles
+
 ```
 ✅ Accessibility: 100/100
 ✅ Performance: 95/100
@@ -285,6 +315,7 @@ npm run test:a11y
 ## 🚀 Améliorations Futures
 
 ### Phase 2
+
 - [ ] Skip to content link
 - [ ] Préférences d'accessibilité
 - [ ] Mode lecture simplifié
@@ -292,6 +323,7 @@ npm run test:a11y
 - [ ] Transcriptions audio
 
 ### Phase 3
+
 - [ ] Mode dyslexie (police OpenDyslexic)
 - [ ] Synthèse vocale des descriptions
 - [ ] Navigation par landmarks
@@ -302,12 +334,14 @@ npm run test:a11y
 ## 📚 Ressources & Standards
 
 ### Documentation
+
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
 - [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [A11y Project](https://www.a11yproject.com/)
 
 ### Outils
+
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [WAVE Browser Extension](https://wave.webaim.org/extension/)
 - [axe DevTools](https://www.deque.com/axe/devtools/)
@@ -329,6 +363,7 @@ Pour signaler un problème d'accessibilité ou suggérer une amélioration:
 ## 📝 Changelog
 
 ### Version 1.0.0 (2025-11-02)
+
 - ✅ Ajout ARIA labels sur Navigation
 - ✅ Ajout ARIA labels sur Footer
 - ✅ Ajout structure sémantique sur Homepage
@@ -341,4 +376,4 @@ Pour signaler un problème d'accessibilité ou suggérer une amélioration:
 
 **Développé avec ♿ accessibilité en priorité par [@ujju16](https://github.com/ujju16)**
 
-*Carineland - Site 100% accessible à tous*
+_Carineland - Site 100% accessible à tous_

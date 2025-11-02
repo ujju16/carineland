@@ -43,7 +43,12 @@ export default function Navigation() {
   }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} role="navigation" aria-label="Menu mobile">
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: 'center' }}
+      role="navigation"
+      aria-label="Menu mobile"
+    >
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', my: 2, gap: 1 }}>
         <Image src="/favicon-32x32.png" alt="Logo Carineland" width={32} height={32} />
         <Typography variant="h6" sx={{ fontWeight: 700, color: 'primary.main' }}>
@@ -69,7 +74,9 @@ export default function Navigation() {
                 },
               }}
             >
-              <Box sx={{ mr: 2, display: 'flex' }} aria-hidden="true">{page.icon}</Box>
+              <Box sx={{ mr: 2, display: 'flex' }} aria-hidden="true">
+                {page.icon}
+              </Box>
               <ListItemText primary={page.name} />
             </ListItemButton>
           </ListItem>
@@ -126,7 +133,13 @@ export default function Navigation() {
                 },
               }}
             >
-              <Image src="/favicon-32x32.png" alt="Logo Carineland" width={32} height={32} priority />
+              <Image
+                src="/favicon-32x32.png"
+                alt="Logo Carineland"
+                width={32}
+                height={32}
+                priority
+              />
               <Typography
                 variant="h5"
                 noWrap
@@ -143,7 +156,12 @@ export default function Navigation() {
             </Box>
 
             {!isMobile && (
-              <Box component="nav" role="navigation" aria-label="Menu principal" sx={{ flexGrow: 1, display: 'flex', ml: 4 }}>
+              <Box
+                component="nav"
+                role="navigation"
+                aria-label="Menu principal"
+                sx={{ flexGrow: 1, display: 'flex', ml: 4 }}
+              >
                 {pages.map((page) => (
                   <Button
                     key={page.name}
