@@ -157,8 +157,8 @@ export default function Navigation() {
               <Image
                 src="/logo.png"
                 alt="Logo Carineland"
-                width={64}
-                height={64}
+                width={100}
+                height={100}
                 priority
                 style={{
                   objectFit: 'contain',
