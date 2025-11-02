@@ -15,6 +15,16 @@ const customJestConfig = {
     '!app/**/*.d.ts',
     '!app/**/layout.tsx',
   ],
+  testMatch: [
+    '**/__tests__/**/*.test.[jt]s?(x)',
+  ],
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: {
+        jsx: 'react',
+      },
+    }],
+  },
 }
 
 module.exports = createJestConfig(customJestConfig)

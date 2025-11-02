@@ -3,6 +3,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import MUIRegistry from './lib/MUIRegistry'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import SkipLink from './components/SkipLink'
 import { generateMetadata as generateSEOMetadata } from './lib/seo'
 import './globals.css'
 
@@ -60,8 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <AppRouterCacheProvider>
           <MUIRegistry>
+            <SkipLink />
             <Navigation />
-            {children}
+            <main id="main-content">{children}</main>
             <Footer />
           </MUIRegistry>
         </AppRouterCacheProvider>

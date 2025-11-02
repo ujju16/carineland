@@ -6,10 +6,8 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Menu,
   Container,
   Button,
-  MenuItem,
   Drawer,
   List,
   ListItem,
@@ -44,17 +42,19 @@ export default function Navigation() {
   }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} role="navigation" aria-label="Menu mobile">
       <Typography variant="h6" sx={{ my: 2, fontWeight: 700, color: 'primary.main' }}>
         Carineland
       </Typography>
-      <List>
+      <List component="nav" aria-label="Pages principales">
         {pages.map((page) => (
           <ListItem key={page.name} disablePadding>
             <ListItemButton
               component={Link}
               href={page.path}
               selected={pathname === page.path}
+              aria-label={`Naviguer vers ${page.name}`}
+              aria-current={pathname === page.path ? 'page' : undefined}
               sx={{
                 '&.Mui-selected': {
                   backgroundColor: 'primary.light',
@@ -65,7 +65,7 @@ export default function Navigation() {
                 },
               }}
             >
-              <Box sx={{ mr: 2, display: 'flex' }}>{page.icon}</Box>
+              <Box sx={{ mr: 2, display: 'flex' }} aria-hidden="true">{page.icon}</Box>
               <ListItemText primary={page.name} />
             </ListItemButton>
           </ListItem>
@@ -79,6 +79,9 @@ export default function Navigation() {
       <AppBar
         position="sticky"
         elevation={0}
+        component="nav"
+        role="navigation"
+        aria-label="Navigation principale"
         sx={{
           backgroundColor: 'background.paper',
           borderBottom: '1px solid',
@@ -90,7 +93,9 @@ export default function Navigation() {
             {isMobile && (
               <IconButton
                 color="inherit"
-                aria-label="open drawer"
+                aria-label="Ouvrir le menu de navigation"
+                aria-expanded={mobileOpen}
+                aria-controls="mobile-navigation-drawer"
                 edge="start"
                 onClick={handleDrawerToggle}
                 sx={{ mr: 2, color: 'primary.main' }}
@@ -104,6 +109,7 @@ export default function Navigation() {
               noWrap
               component={Link}
               href="/"
+              aria-label="Carineland - Retour à l'accueil"
               sx={{
                 mr: 2,
                 display: 'flex',
@@ -121,13 +127,15 @@ export default function Navigation() {
             </Typography>
 
             {!isMobile && (
-              <Box sx={{ flexGrow: 1, display: 'flex', ml: 4 }}>
+              <Box component="nav" role="navigation" aria-label="Menu principal" sx={{ flexGrow: 1, display: 'flex', ml: 4 }}>
                 {pages.map((page) => (
                   <Button
                     key={page.name}
                     component={Link}
                     href={page.path}
                     startIcon={page.icon}
+                    aria-label={`Naviguer vers ${page.name}`}
+                    aria-current={pathname === page.path ? 'page' : undefined}
                     sx={{
                       my: 2,
                       color: pathname === page.path ? 'primary.main' : 'text.primary',
@@ -153,6 +161,8 @@ export default function Navigation() {
               <IconButton
                 component={Link}
                 href="/admin"
+                aria-label="Accéder à l'administration"
+                aria-current={pathname === '/admin' ? 'page' : undefined}
                 sx={{
                   color: pathname === '/admin' ? 'primary.main' : 'text.secondary',
                   '&:hover': {
@@ -171,6 +181,8 @@ export default function Navigation() {
         variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
+        id="mobile-navigation-drawer"
+        aria-label="Menu de navigation mobile"
         ModalProps={{
           keepMounted: true,
         }}

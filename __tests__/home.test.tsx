@@ -1,9 +1,11 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from './test-utils'
 import Home from '@/app/page'
 
 jest.mock('framer-motion', () => ({
   motion: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     section: ({ children, ...props }: any) => <section {...props}>{children}</section>,
   },
 }))

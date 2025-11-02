@@ -1,11 +1,18 @@
 export interface Creation {
   id: string
   title: string
+  slug: string
   description: string
   imageUrl: string
-  category: 'couronne' | 'composition' | 'decoration'
+  imageAlt: string
+  category: string
+  year: number
+  materials: string[]
+  dimensions: string
   price?: number
+  available: boolean
   featured: boolean
+  tags: string[]
   createdAt: string
   updatedAt: string
 }

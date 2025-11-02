@@ -12,14 +12,12 @@ import {
   CardContent,
   CardActions,
   IconButton,
-  Fab,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
   Grid,
   Chip,
-  Alert,
 } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add'
 import EditIcon from '@mui/icons-material/Edit'
@@ -75,10 +73,17 @@ export default function AdminPage() {
       const newCreation: Creation = {
         id: Date.now().toString(),
         title: formData.title || '',
+        slug: (formData.title || '').toLowerCase().replace(/\s+/g, '-'),
         description: formData.description || '',
         imageUrl: formData.imageUrl || '',
-        category: formData.category as Creation['category'],
+        imageAlt: formData.title || '',
+        category: formData.category || 'autre',
+        year: new Date().getFullYear(),
+        materials: [],
+        dimensions: 'Variable',
+        available: true,
         featured: formData.featured || false,
+        tags: [],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       }
@@ -94,17 +99,18 @@ export default function AdminPage() {
   }
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: 'background.default', py: 4 }}>
+    <Box component="main" role="main" sx={{ minHeight: '100vh', backgroundColor: 'background.default', py: 4 }}>
       <Container maxWidth="lg">
-        <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
+        <Box component="header" sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography variant="h3" component="h1" sx={{ fontWeight: 700, color: 'primary.main' }}>
             Administration
           </Typography>
           <Button
             variant="contained"
-            startIcon={<AddIcon />}
+            startIcon={<AddIcon aria-hidden="true" />}
             size="large"
             onClick={() => handleOpenDialog()}
+            aria-label="Ajouter une nouvelle création"
             sx={{ boxShadow: 3 }}
           >
             Nouvelle Création
@@ -112,23 +118,34 @@ export default function AdminPage() {
         </Box>
 
         {creations.length === 0 ? (
-          <Paper sx={{ p: 6, textAlign: 'center' }}>
-            <ImageIcon sx={{ fontSize: 80, color: 'text.secondary', mb: 2 }} />
-            <Typography variant="h5" gutterBottom>
+          <Paper sx={{ p: 6, textAlign: 'center' }} role="status" aria-live="polite">
+            <ImageIcon sx={{ fontSize: 80, color: 'text.secondary', mb: 2 }} aria-hidden="true" />
+            <Typography variant="h5" component="h2" gutterBottom>
               Aucune création pour le moment
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
               Commencez par ajouter votre première création
             </Typography>
-            <Button variant="contained" startIcon={<AddIcon />} onClick={() => handleOpenDialog()}>
+            <Button 
+              variant="contained" 
+              startIcon={<AddIcon aria-hidden="true" />} 
+              onClick={() => handleOpenDialog()}
+              aria-label="Ajouter votre première création"
+            >
               Ajouter une création
             </Button>
           </Paper>
         ) : (
-          <Grid container spacing={3}>
+          <Grid 
+            container 
+            spacing={3}
+            component="section"
+            aria-label={`${creations.length} créations dans l'administration`}
+            role="list"
+          >
             {creations.map((creation) => (
-              <Grid item xs={12} md={6} lg={4} key={creation.id}>
-                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <Grid item xs={12} md={6} lg={4} key={creation.id} role="listitem">
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} aria-label={`Création: ${creation.title}`}>
                   <Box
                     sx={{
                       height: 200,
@@ -141,19 +158,19 @@ export default function AdminPage() {
                     {creation.imageUrl ? (
                       <img
                         src={creation.imageUrl}
-                        alt={creation.title}
+                        alt={`Image de ${creation.title}`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : (
-                      <ImageIcon sx={{ fontSize: 60, color: 'grey.400' }} />
+                      <ImageIcon sx={{ fontSize: 60, color: 'grey.400' }} aria-label="Aucune image" />
                     )}
                   </Box>
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Box sx={{ display: 'flex', gap: 1, mb: 1 }}>
+                    <Box sx={{ display: 'flex', gap: 1, mb: 1 }} aria-label="Catégorie et statut">
                       <Chip label={creation.category} size="small" color="primary" />
                       {creation.featured && <Chip label="À la une" size="small" color="secondary" />}
                     </Box>
-                    <Typography variant="h6" gutterBottom>
+                    <Typography variant="h6" component="h3" gutterBottom>
                       {creation.title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -165,6 +182,7 @@ export default function AdminPage() {
                       size="small"
                       color="primary"
                       onClick={() => handleOpenDialog(creation)}
+                      aria-label={`Modifier ${creation.title}`}
                     >
                       <EditIcon />
                     </IconButton>
@@ -172,6 +190,7 @@ export default function AdminPage() {
                       size="small"
                       color="error"
                       onClick={() => handleDelete(creation.id)}
+                      aria-label={`Supprimer ${creation.title}`}
                     >
                       <DeleteIcon />
                     </IconButton>
@@ -183,17 +202,29 @@ export default function AdminPage() {
         )}
 
         {/* Dialog for Add/Edit */}
-        <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="sm" fullWidth>
-          <DialogTitle>
+        <Dialog 
+          open={openDialog} 
+          onClose={handleCloseDialog} 
+          maxWidth="sm" 
+          fullWidth
+          aria-labelledby="dialog-title"
+          aria-describedby="dialog-description"
+        >
+          <DialogTitle id="dialog-title">
             {editingCreation ? 'Modifier la création' : 'Nouvelle création'}
           </DialogTitle>
           <DialogContent>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
+            <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }} role="form" aria-label="Formulaire de création">
               <TextField
                 label="Titre"
                 fullWidth
+                required
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                inputProps={{
+                  'aria-label': 'Titre de la création',
+                  'aria-required': 'true',
+                }}
               />
               <TextField
                 label="Description"
@@ -202,12 +233,18 @@ export default function AdminPage() {
                 rows={4}
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                inputProps={{
+                  'aria-label': 'Description de la création',
+                }}
               />
               <TextField
                 label="URL de l'image"
                 fullWidth
                 value={formData.imageUrl}
                 onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
+                inputProps={{
+                  'aria-label': 'URL de l\'image',
+                }}
               />
               <TextField
                 select
@@ -217,6 +254,9 @@ export default function AdminPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, category: e.target.value as Creation['category'] })
                 }
+                inputProps={{
+                  'aria-label': 'Catégorie de la création',
+                }}
                 SelectProps={{
                   native: true,
                 }}
@@ -229,6 +269,8 @@ export default function AdminPage() {
                 <Button
                   variant={formData.featured ? 'contained' : 'outlined'}
                   onClick={() => setFormData({ ...formData, featured: !formData.featured })}
+                  aria-label={formData.featured ? 'Retirer de la une' : 'Mettre à la une'}
+                  aria-pressed={formData.featured}
                 >
                   {formData.featured ? 'À la une ✓' : 'Mettre à la une'}
                 </Button>
@@ -236,12 +278,13 @@ export default function AdminPage() {
             </Box>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleCloseDialog}>Annuler</Button>
+            <Button onClick={handleCloseDialog} aria-label="Annuler et fermer">Annuler</Button>
             <Button
               onClick={handleSave}
               variant="contained"
-              startIcon={<SaveIcon />}
+              startIcon={<SaveIcon aria-hidden="true" />}
               disabled={!formData.title || !formData.description}
+              aria-label={editingCreation ? 'Enregistrer les modifications' : 'Enregistrer la nouvelle création'}
             >
               Enregistrer
             </Button>
