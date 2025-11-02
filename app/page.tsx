@@ -69,7 +69,7 @@ export default function Home() {
             <Typography variant="h6" component="p" sx={{ mb: 6, opacity: 0.9, maxWidth: 600, mx: 'auto' }}>
               Créations artisanales à base de lierre et autres éléments de la nature
             </Typography>
-            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }} role="group" aria-label="Actions principales">
               <Button
                 component={Link}
                 href="/gallery"
