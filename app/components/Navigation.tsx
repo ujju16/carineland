@@ -49,11 +49,14 @@ export default function Navigation() {
       role="navigation"
       aria-label="Menu mobile"
     >
-      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', my: 2, gap: 1 }}>
-        <Image src="/favicon-32x32.png" alt="Logo Carineland" width={32} height={32} />
-        <Typography variant="h6" sx={{ fontWeight: 700, color: 'primary.main' }}>
-          Carineland
-        </Typography>
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', my: 2 }}>
+        <Image 
+          src="/logo.png" 
+          alt="Logo Carineland" 
+          width={60} 
+          height={60}
+          style={{ objectFit: 'contain' }}
+        />
       </Box>
       <List component="nav" aria-label="Pages principales">
         {pages.map((page) => (
@@ -123,36 +126,24 @@ export default function Navigation() {
                 mr: 2,
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1,
                 flexGrow: isMobile ? 1 : 0,
                 textDecoration: 'none',
+                transition: 'opacity 0.2s',
                 '&:hover': {
-                  '& .logo-text': {
-                    color: 'primary.dark',
-                  },
+                  opacity: 0.8,
                 },
               }}
             >
               <Image
-                src="/favicon-32x32.png"
+                src="/logo.png"
                 alt="Logo Carineland"
-                width={32}
-                height={32}
+                width={50}
+                height={50}
                 priority
-              />
-              <Typography
-                variant="h5"
-                noWrap
-                className="logo-text"
-                sx={{
-                  fontWeight: 700,
-                  color: 'primary.main',
-                  fontFamily: 'Lora',
-                  transition: 'color 0.2s',
+                style={{
+                  objectFit: 'contain',
                 }}
-              >
-                Carineland
-              </Typography>
+              />
             </Box>
 
             {!isMobile && (
