@@ -2,7 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['carineland.fr', 'www.carineland.fr'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'carineland.fr',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.carineland.fr',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
   },
   poweredByHeader: false,

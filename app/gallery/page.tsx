@@ -179,15 +179,36 @@ export default function GalleryPage() {
                       ))}
                     </Stack>
                   </CardContent>
-                  <CardActions sx={{ p: 2, pt: 0 }}>
+                  <CardActions sx={{ p: 2, pt: 0, gap: 1 }}>
                     <Button 
                       size="small" 
-                      color="primary"
+                      variant="contained"
+                      color={creation.available ? 'success' : 'error'}
                       disabled={!creation.available}
+                      sx={{
+                        '&:hover': {
+                          transform: 'scale(1.05)',
+                          boxShadow: 3,
+                        },
+                        transition: 'all 0.2s ease-in-out',
+                      }}
                     >
                       {creation.available ? 'Disponible' : 'Vendu'}
                     </Button>
-                    <Button size="small" color="primary">
+                    <Button 
+                      size="small" 
+                      variant="outlined"
+                      color="primary"
+                      sx={{
+                        '&:hover': {
+                          transform: 'scale(1.05)',
+                          backgroundColor: 'primary.main',
+                          color: 'white',
+                          boxShadow: 2,
+                        },
+                        transition: 'all 0.2s ease-in-out',
+                      }}
+                    >
                       En savoir plus
                     </Button>
                   </CardActions>
