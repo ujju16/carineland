@@ -78,6 +78,7 @@
 ## 📋 Badge Categories
 
 ### 🔧 Technology (14 badges)
+
 - Next.js 16.0.1
 - React 19.2.0
 - TypeScript 5.9.3
@@ -94,12 +95,14 @@
 - Sharp 0.34.4
 
 ### 🚀 Deployment & CI/CD (4 badges)
+
 - Vercel
 - GitHub Actions
 - CI/CD Status
 - Domain (carineland.fr)
 
 ### ✅ Quality & Performance (10 badges)
+
 - Code Quality (A+)
 - Lighthouse (95+)
 - Maintainability (A)
@@ -112,6 +115,7 @@
 - Turbopack Active
 
 ### 📊 Performance Metrics (10 badges)
+
 - Lighthouse Performance
 - Lighthouse Accessibility
 - Lighthouse Best Practices
@@ -124,6 +128,7 @@
 - TBT (< 300ms)
 
 ### 🔒 Compliance (9 badges)
+
 - RGPD Compliant
 - WCAG 2.1 AA
 - Accessibility (95+)
@@ -135,6 +140,7 @@
 - Robots.txt
 
 ### 📈 Repository Stats (10 badges)
+
 - Last Commit
 - Commit Activity
 - Contributors
@@ -147,6 +153,7 @@
 - Watchers
 
 ### 🏷️ Social & Branding (8 badges)
+
 - Made with Love ❤️
 - Dev by @ujju16
 - Website (carineland.fr)
@@ -158,35 +165,41 @@
 
 ## 📊 Badge Count Summary
 
-| Category | Count | Style |
-|----------|-------|-------|
-| Technology | 14 | for-the-badge |
-| Deployment | 4 | for-the-badge |
-| Quality | 10 | for-the-badge |
-| Performance | 10 | flat-square |
-| Compliance | 9 | for-the-badge |
-| Repository | 10 | flat-square |
-| Social | 8 | mixed |
-| **TOTAL** | **65** | - |
+| Category    | Count  | Style         |
+| ----------- | ------ | ------------- |
+| Technology  | 14     | for-the-badge |
+| Deployment  | 4      | for-the-badge |
+| Quality     | 10     | for-the-badge |
+| Performance | 10     | flat-square   |
+| Compliance  | 9      | for-the-badge |
+| Repository  | 10     | flat-square   |
+| Social      | 8      | mixed         |
+| **TOTAL**   | **65** | -             |
 
 ## 🎨 Badge Styles Available
 
 ### for-the-badge (Large, Bold)
+
 ```markdown
 ![Badge](https://img.shields.io/badge/Text-Value-color?style=for-the-badge&logo=icon&logoColor=white)
 ```
+
 **Best for**: Headers, main sections, technology stack
 
 ### flat-square (Compact, Professional)
+
 ```markdown
 ![Badge](https://img.shields.io/badge/Text-Value-color?style=flat-square&logo=icon&logoColor=white)
 ```
+
 **Best for**: Metrics, stats, inline badges
 
 ### flat (Default, Clean)
+
 ```markdown
 ![Badge](https://img.shields.io/badge/Text-Value-color?style=flat&logo=icon&logoColor=white)
 ```
+
 **Best for**: General purpose, mixed content
 
 ## 🔗 Useful Resources

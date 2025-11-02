@@ -20,10 +20,12 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ### 1. Page d'Accueil (`app/page.tsx`)
 
 #### Améliorations
+
 - ✅ Ajout de `role="group"` sur le conteneur des boutons d'action
 - ✅ `aria-label="Actions principales"` pour identifier le groupe de boutons
 
 #### Code modifié
+
 ```typescript
 <Box sx={{ display: 'flex', gap: 2 }} role="group" aria-label="Actions principales">
 ```
@@ -33,6 +35,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ### 2. Page À Propos (`app/about/page.tsx`)
 
 #### Améliorations majeures
+
 - ✅ Ajout de `component="main"` et `role="main"` sur le conteneur principal
 - ✅ En-tête marqué avec `component="header"` et `aria-label`
 - ✅ Titres H1 avec `component="h1"` pour sémantique correcte
@@ -42,13 +45,16 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 - ✅ `elevation` sur Paper pour meilleure perception visuelle
 
 #### Sections améliorées
+
 1. **Notre Histoire**
+
    ```typescript
    <Box component="section" aria-labelledby="notre-histoire">
      <Typography component="h2" id="notre-histoire">Notre Histoire</Typography>
    ```
 
 2. **Notre Passion**
+
    ```typescript
    <Box component="section" aria-labelledby="notre-passion">
      <Typography component="h2" id="notre-passion">Notre Passion</Typography>
@@ -65,6 +71,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ### 3. Page d'Administration (`app/admin/page.tsx`)
 
 #### Améliorations complètes
+
 - ✅ `component="main"` et `role="main"` sur le conteneur
 - ✅ En-tête avec `component="header"` et H1 sémantique
 - ✅ Boutons avec `aria-label` descriptifs détaillés
@@ -82,6 +89,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 #### Code des améliorations clés
 
 **En-tête avec actions**
+
 ```typescript
 <Box component="header">
   <Typography variant="h3" component="h1">Administration</Typography>
@@ -90,6 +98,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ```
 
 **État vide accessible**
+
 ```typescript
 <Paper role="status" aria-live="polite">
   <ImageIcon aria-hidden="true" />
@@ -99,6 +108,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ```
 
 **Grille de créations**
+
 ```typescript
 <Grid role="list" aria-label={`${creations.length} créations dans l'administration`}>
   <Grid role="listitem">
@@ -109,8 +119,9 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ```
 
 **Dialog avec accessibilité**
+
 ```typescript
-<Dialog 
+<Dialog
   aria-labelledby="dialog-title"
   aria-describedby="dialog-description"
 >
@@ -118,7 +129,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
     {editingCreation ? 'Modifier' : 'Nouvelle'} création
   </DialogTitle>
   <Box component="form" role="form" aria-label="Formulaire de création">
-    <TextField 
+    <TextField
       required
       inputProps={{
         'aria-label': 'Titre de la création',
@@ -133,6 +144,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ## 🔍 Normes WCAG 2.1 Respectées
 
 ### Niveau A (Obligatoire)
+
 - ✅ **1.3.1** Info et Relations - Sémantique HTML5 + ARIA
 - ✅ **2.1.1** Clavier - Tous les éléments accessibles au clavier
 - ✅ **2.4.1** Contournement - Skip Link existant
@@ -141,6 +153,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 - ✅ **4.1.2** Nom, Rôle, Valeur - ARIA complet
 
 ### Niveau AA (Recommandé)
+
 - ✅ **1.3.5** Finalité de saisie - Labels explicites
 - ✅ **2.4.6** En-têtes et étiquettes - H1-H6 + aria-labelledby
 - ✅ **2.4.7** Focus visible - MUI gère le focus
@@ -153,12 +166,14 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ## 📈 Impact sur l'Accessibilité
 
 ### Avant les modifications
+
 - Accessibilité partielle avec composants MUI de base
 - Manque de labels descriptifs
 - Pas de relations sémantiques explicites
 - Structure HTML correcte mais ARIA minimal
 
 ### Après les modifications
+
 - ✅ **Lecteurs d'écran** : Navigation complète et descriptions précises
 - ✅ **Navigation clavier** : Tous les éléments identifiés et accessibles
 - ✅ **Structure sémantique** : Relations claires entre headings et sections
@@ -167,6 +182,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 - ✅ **Conformité WCAG 2.1 AA** : Respect complet des normes
 
 ### Utilisateurs bénéficiaires
+
 - 👁️ **Personnes malvoyantes** : Lecteurs d'écran (NVDA, JAWS, VoiceOver)
 - ⌨️ **Mobilité réduite** : Navigation au clavier exclusive
 - 🧠 **Troubles cognitifs** : Structure claire et labels explicites
@@ -177,6 +193,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
 ## 🧪 Tests Recommandés
 
 ### Tests manuels
+
 1. **Navigation au clavier**
    - [ ] Tester Tab/Shift+Tab sur toutes les pages
    - [ ] Vérifier la visibilité du focus
@@ -194,6 +211,7 @@ Améliorer l'accessibilité du site Carineland pour les personnes en situation d
    - [ ] Ratio ≥ 3:1 pour texte large
 
 ### Tests automatisés
+
 ```bash
 # Lighthouse
 npm run lighthouse
@@ -210,6 +228,7 @@ npx pa11y http://localhost:3000
 ## 🚀 Déploiement
 
 ### Étapes avant merge
+
 1. ✅ Build réussi
 2. ⏳ Tests d'accessibilité
 3. ⏳ Revue de code
@@ -217,6 +236,7 @@ npx pa11y http://localhost:3000
 5. ⏳ Validation WCAG 2.1 AA
 
 ### Commandes
+
 ```bash
 # Build de production
 npm run build
@@ -236,12 +256,14 @@ npm test
 ## 📚 Documentation
 
 ### Fichiers mis à jour
+
 - ✅ `app/page.tsx` - Page d'accueil
 - ✅ `app/about/page.tsx` - Page À Propos
 - ✅ `app/admin/page.tsx` - Administration
 - ✅ `ACCESSIBILITY.md` - Documentation d'accessibilité complète (existante)
 
 ### Fichiers à consulter
+
 - `ACCESSIBILITY.md` - Guide complet d'accessibilité
 - `app/components/Navigation.tsx` - Navigation accessible (déjà implémentée)
 - `app/components/Footer.tsx` - Footer accessible (déjà implémenté)

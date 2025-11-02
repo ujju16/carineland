@@ -19,8 +19,8 @@ export default function RGPDPage() {
         </Typography>
 
         <Alert severity="info" sx={{ mb: 3 }}>
-          Carineland est conforme au Règlement Général sur la Protection des Données (RGPD)
-          entré en vigueur le 25 mai 2018.
+          Carineland est conforme au Règlement Général sur la Protection des Données (RGPD) entré en
+          vigueur le 25 mai 2018.
         </Alert>
 
         <Paper sx={{ p: 4, mb: 3 }}>
@@ -175,9 +175,8 @@ export default function RGPDPage() {
             Droit de réclamation
           </Typography>
           <Typography variant="body1" paragraph>
-            Si vous estimez que vos droits ne sont pas respectés, vous avez le droit de déposer
-            une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des
-            Libertés) :
+            Si vous estimez que vos droits ne sont pas respectés, vous avez le droit de déposer une
+            réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) :
           </Typography>
           <Typography variant="body1" component="div" sx={{ pl: 2 }}>
             <strong>CNIL</strong>
@@ -200,8 +199,8 @@ export default function RGPDPage() {
             Mise à jour de cette politique
           </Typography>
           <Typography variant="body1" paragraph>
-            Cette politique RGPD peut être mise à jour. La date de dernière mise à jour est
-            indiquée en haut de cette page.
+            Cette politique RGPD peut être mise à jour. La date de dernière mise à jour est indiquée
+            en haut de cette page.
           </Typography>
           <Typography variant="body1">
             Nous vous encourageons à consulter régulièrement cette page pour rester informé de nos

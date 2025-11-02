@@ -99,9 +99,16 @@ export default function AdminPage() {
   }
 
   return (
-    <Box component="main" role="main" sx={{ minHeight: '100vh', backgroundColor: 'background.default', py: 4 }}>
+    <Box
+      component="main"
+      role="main"
+      sx={{ minHeight: '100vh', backgroundColor: 'background.default', py: 4 }}
+    >
       <Container maxWidth="lg">
-        <Box component="header" sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box
+          component="header"
+          sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+        >
           <Typography variant="h3" component="h1" sx={{ fontWeight: 700, color: 'primary.main' }}>
             Administration
           </Typography>
@@ -126,9 +133,9 @@ export default function AdminPage() {
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
               Commencez par ajouter votre première création
             </Typography>
-            <Button 
-              variant="contained" 
-              startIcon={<AddIcon aria-hidden="true" />} 
+            <Button
+              variant="contained"
+              startIcon={<AddIcon aria-hidden="true" />}
               onClick={() => handleOpenDialog()}
               aria-label="Ajouter votre première création"
             >
@@ -136,8 +143,8 @@ export default function AdminPage() {
             </Button>
           </Paper>
         ) : (
-          <Grid 
-            container 
+          <Grid
+            container
             spacing={3}
             component="section"
             aria-label={`${creations.length} créations dans l'administration`}
@@ -145,7 +152,10 @@ export default function AdminPage() {
           >
             {creations.map((creation) => (
               <Grid item xs={12} md={6} lg={4} key={creation.id} role="listitem">
-                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} aria-label={`Création: ${creation.title}`}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                  aria-label={`Création: ${creation.title}`}
+                >
                   <Box
                     sx={{
                       height: 200,
@@ -162,13 +172,18 @@ export default function AdminPage() {
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : (
-                      <ImageIcon sx={{ fontSize: 60, color: 'grey.400' }} aria-label="Aucune image" />
+                      <ImageIcon
+                        sx={{ fontSize: 60, color: 'grey.400' }}
+                        aria-label="Aucune image"
+                      />
                     )}
                   </Box>
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Box sx={{ display: 'flex', gap: 1, mb: 1 }} aria-label="Catégorie et statut">
                       <Chip label={creation.category} size="small" color="primary" />
-                      {creation.featured && <Chip label="À la une" size="small" color="secondary" />}
+                      {creation.featured && (
+                        <Chip label="À la une" size="small" color="secondary" />
+                      )}
                     </Box>
                     <Typography variant="h6" component="h3" gutterBottom>
                       {creation.title}
@@ -202,10 +217,10 @@ export default function AdminPage() {
         )}
 
         {/* Dialog for Add/Edit */}
-        <Dialog 
-          open={openDialog} 
-          onClose={handleCloseDialog} 
-          maxWidth="sm" 
+        <Dialog
+          open={openDialog}
+          onClose={handleCloseDialog}
+          maxWidth="sm"
           fullWidth
           aria-labelledby="dialog-title"
           aria-describedby="dialog-description"
@@ -214,7 +229,12 @@ export default function AdminPage() {
             {editingCreation ? 'Modifier la création' : 'Nouvelle création'}
           </DialogTitle>
           <DialogContent>
-            <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }} role="form" aria-label="Formulaire de création">
+            <Box
+              component="form"
+              sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}
+              role="form"
+              aria-label="Formulaire de création"
+            >
               <TextField
                 label="Titre"
                 fullWidth
@@ -243,7 +263,7 @@ export default function AdminPage() {
                 value={formData.imageUrl}
                 onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
                 inputProps={{
-                  'aria-label': 'URL de l\'image',
+                  'aria-label': "URL de l'image",
                 }}
               />
               <TextField
@@ -278,13 +298,19 @@ export default function AdminPage() {
             </Box>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleCloseDialog} aria-label="Annuler et fermer">Annuler</Button>
+            <Button onClick={handleCloseDialog} aria-label="Annuler et fermer">
+              Annuler
+            </Button>
             <Button
               onClick={handleSave}
               variant="contained"
               startIcon={<SaveIcon aria-hidden="true" />}
               disabled={!formData.title || !formData.description}
-              aria-label={editingCreation ? 'Enregistrer les modifications' : 'Enregistrer la nouvelle création'}
+              aria-label={
+                editingCreation
+                  ? 'Enregistrer les modifications'
+                  : 'Enregistrer la nouvelle création'
+              }
             >
               Enregistrer
             </Button>

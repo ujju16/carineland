@@ -79,6 +79,7 @@ npm run type-check
 ## 🎨 Features
 
 ### ✨ Design
+
 - Mobile-first responsive
 - Material Design 3
 - Animations Framer Motion
@@ -86,6 +87,7 @@ npm run type-check
 - Typographie Montserrat + Lora
 
 ### 🔧 Fonctionnalités
+
 - Page d'accueil moderne
 - Galerie avec filtres
 - Page À propos
@@ -94,7 +96,9 @@ npm run type-check
 - SEO optimisé
 
 ### 🔐 Admin Panel
+
 Accès: `/admin`
+
 - Ajouter/Modifier/Supprimer des créations
 - Upload d'images
 - Catégorisation
@@ -103,11 +107,14 @@ Accès: `/admin`
 ## 🚢 Déploiement
 
 ### Vercel (Recommandé)
+
 Le site se déploie automatiquement via GitHub Actions :
+
 - **dev branch** → Preview deployment
 - **main branch** → Production
 
 ### Variables d'environnement requises
+
 ```env
 VERCEL_TOKEN=xxx
 VERCEL_ORG_ID=xxx
@@ -154,6 +161,7 @@ npm run optimize-images  # Optimiser toutes les images
 ```
 
 ### Résultats d'optimisation
+
 - **Réduction totale**: 43 MB → 3.6 MB (91.6% d'économie) 🎉
 - **Format**: Progressive JPEG avec MozJPEG
 - **Qualité**: 85 (optimal qualité/poids)
@@ -183,12 +191,14 @@ Voir [IMAGES_OPTIMIZATION.md](./IMAGES_OPTIMIZATION.md) pour plus de détails.
 ## 📊 Performance & Metrics
 
 ### Lighthouse Scores
+
 ![Lighthouse Score](https://img.shields.io/badge/Performance-95+-success?style=flat-square&logo=lighthouse)
 ![Accessibility](https://img.shields.io/badge/Accessibility-95+-success?style=flat-square&logo=lighthouse)
 ![Best Practices](https://img.shields.io/badge/Best%20Practices-95+-success?style=flat-square&logo=lighthouse)
 ![SEO](https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=lighthouse)
 
 ### Core Web Vitals
+
 - **First Contentful Paint (FCP)**: < 1.8s ⚡
 - **Largest Contentful Paint (LCP)**: < 2.5s ⚡
 - **Time to Interactive (TTI)**: < 3.8s ⚡
@@ -197,12 +207,14 @@ Voir [IMAGES_OPTIMIZATION.md](./IMAGES_OPTIMIZATION.md) pour plus de détails.
 - **Speed Index**: < 3.4s 🚀
 
 ### Image Optimization Impact
+
 - **Gallery Load**: 8-12s → 1-2s (10x faster) ⚡
 - **Total Size**: 43 MB → 3.6 MB (91.6% reduction) 📉
 - **Lighthouse**: 65 → 95 (+30 points) 🚀
 - **User Experience**: Dramatically improved 🎯
 
 ### Build Performance (Next.js 16 + Turbopack)
+
 - **Dev Server Start**: < 1s with Turbopack ⚡
 - **HMR (Hot Module Replacement)**: < 100ms 🔥
 - **Production Build**: Optimized with Turbopack 📦

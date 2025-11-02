@@ -17,6 +17,7 @@ app/
 ## 📋 Fichier Source
 
 **carineland.csv** contient la liste des créations avec :
+
 - Nom du fichier original
 - Description de l'œuvre
 - Nouveau nom WebP (non utilisé pour le moment)
@@ -30,6 +31,7 @@ npm run process-creations
 ```
 
 Ce script (`scripts/update-creations.js`) :
+
 1. Lit le fichier `carineland.csv`
 2. Extrait les métadonnées de chaque création
 3. Catégorise automatiquement les créations
@@ -39,6 +41,7 @@ Ce script (`scripts/update-creations.js`) :
 ### Données extraites
 
 Pour chaque création :
+
 - **id** : Identifiant unique
 - **title** : Titre extrait de la description
 - **slug** : URL-friendly slug
@@ -57,6 +60,7 @@ Pour chaque création :
 ## 🏷️ Catégorisation Automatique
 
 Le script catégorise selon les mots-clés :
+
 - **peinture** : "peinture"
 - **sculpture** : "bois", "racines", "insecte"
 - **composition** : "composition", "vinyles"
@@ -66,6 +70,7 @@ Le script catégorise selon les mots-clés :
 ## 🎨 Tags Générés
 
 Tags automatiques selon le contenu :
+
 - Matériaux : bois, racines, lierre, verre, vinyles
 - Types : peinture, sculpture, composition, mobilier
 - Couleurs : couleurs chaudes, couleurs froides
@@ -74,12 +79,14 @@ Tags automatiques selon le contenu :
 ## 📊 Résultat
 
 Actuellement **10 créations** :
+
 - 8 sculptures
 - 2 peintures
 
 ## 🖼️ Affichage
 
 La page `/gallery` utilise ces données pour :
+
 - Afficher toutes les créations avec images
 - Filtrer par catégorie
 - Rechercher par titre, description ou tags

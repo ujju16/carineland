@@ -64,8 +64,8 @@ export default function MentionsLegalesPage() {
             Propriété intellectuelle
           </Typography>
           <Typography variant="body1" paragraph>
-            Le site Carineland et l'ensemble de son contenu (textes, images, créations, design)
-            sont la propriété exclusive de Carine / Carineland.
+            Le site Carineland et l'ensemble de son contenu (textes, images, créations, design) sont
+            la propriété exclusive de Carine / Carineland.
           </Typography>
           <Typography variant="body1" paragraph>
             Toute reproduction, distribution, modification ou utilisation du contenu sans
@@ -78,8 +78,8 @@ export default function MentionsLegalesPage() {
             Responsabilité
           </Typography>
           <Typography variant="body1" paragraph>
-            L'éditeur s'efforce de fournir des informations exactes et à jour. Toutefois, il ne
-            peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à
+            L'éditeur s'efforce de fournir des informations exactes et à jour. Toutefois, il ne peut
+            garantir l'exactitude, la précision ou l'exhaustivité des informations mises à
             disposition sur ce site.
           </Typography>
           <Typography variant="body1" paragraph>

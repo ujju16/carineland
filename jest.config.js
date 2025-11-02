@@ -10,20 +10,17 @@ const customJestConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  collectCoverageFrom: [
-    'app/**/*.{js,jsx,ts,tsx}',
-    '!app/**/*.d.ts',
-    '!app/**/layout.tsx',
-  ],
-  testMatch: [
-    '**/__tests__/**/*.test.[jt]s?(x)',
-  ],
+  collectCoverageFrom: ['app/**/*.{js,jsx,ts,tsx}', '!app/**/*.d.ts', '!app/**/layout.tsx'],
+  testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: {
-        jsx: 'react',
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest',
+      {
+        tsconfig: {
+          jsx: 'react',
+        },
       },
-    }],
+    ],
   },
 }
 

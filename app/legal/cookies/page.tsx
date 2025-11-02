@@ -1,4 +1,15 @@
-import { Box, Container, Typography, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
+import {
+  Box,
+  Container,
+  Typography,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from '@mui/material'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -36,10 +47,18 @@ export default function CookiesPage() {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell><strong>Type</strong></TableCell>
-                  <TableCell><strong>Nom</strong></TableCell>
-                  <TableCell><strong>Finalité</strong></TableCell>
-                  <TableCell><strong>Durée</strong></TableCell>
+                  <TableCell>
+                    <strong>Type</strong>
+                  </TableCell>
+                  <TableCell>
+                    <strong>Nom</strong>
+                  </TableCell>
+                  <TableCell>
+                    <strong>Finalité</strong>
+                  </TableCell>
+                  <TableCell>
+                    <strong>Durée</strong>
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -70,7 +89,7 @@ export default function CookiesPage() {
           <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
             Types de cookies
           </Typography>
-          
+
           <Typography variant="h6" sx={{ mt: 3, mb: 1, fontWeight: 600 }}>
             1. Cookies techniques (nécessaires)
           </Typography>
@@ -95,23 +114,23 @@ export default function CookiesPage() {
           <Typography variant="body1" paragraph>
             Vous pouvez gérer les cookies directement depuis votre navigateur :
           </Typography>
-          
+
           <Typography variant="body1" component="div" sx={{ pl: 2 }}>
             <strong>Chrome :</strong>
             <br />
             Paramètres → Confidentialité et sécurité → Cookies et autres données de sites
-            <br /><br />
-            
+            <br />
+            <br />
             <strong>Firefox :</strong>
             <br />
             Options → Vie privée et sécurité → Cookies et données de sites
-            <br /><br />
-            
+            <br />
+            <br />
             <strong>Safari :</strong>
             <br />
             Préférences → Confidentialité → Cookies et données de sites web
-            <br /><br />
-            
+            <br />
+            <br />
             <strong>Edge :</strong>
             <br />
             Paramètres → Confidentialité, recherche et services → Cookies
@@ -137,8 +156,8 @@ export default function CookiesPage() {
             Durée de conservation
           </Typography>
           <Typography variant="body1" paragraph>
-            Les cookies techniques sont conservés pour la durée de votre session ou jusqu'à 13
-            mois maximum selon leur fonction spécifique.
+            Les cookies techniques sont conservés pour la durée de votre session ou jusqu'à 13 mois
+            maximum selon leur fonction spécifique.
           </Typography>
         </Paper>
 
