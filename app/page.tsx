@@ -210,21 +210,6 @@ export default function Home() {
           </Button>
         </Container>
       </Box>
-
-      {/* Footer */}
-      <Box sx={{ backgroundColor: 'background.paper', py: 4, textAlign: 'center' }}>
-        <Container maxWidth="lg">
-          <Typography variant="body2" color="text.secondary">
-            © 2025 Carineland - Tous droits réservés
-          </Typography>
-          <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
-            Développé avec ❤️ par{' '}
-            <Link href="https://github.com/ujju16" style={{ color: 'inherit' }}>
-              @ujju16
-            </Link>
-          </Typography>
-        </Container>
-      </Box>
     </Box>
   )
 }
