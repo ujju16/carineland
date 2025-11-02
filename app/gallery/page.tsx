@@ -7,7 +7,6 @@ import {
   Typography,
   Grid,
   Card,
-  CardMedia,
   CardContent,
   CardActions,
   Button,
@@ -16,50 +15,35 @@ import {
   ToggleButton,
   TextField,
   InputAdornment,
+  Stack,
 } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
-import FilterListIcon from '@mui/icons-material/FilterList'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import creationsData from '../data/creations.json'
 
 const MotionCard = motion.create(Card)
 
-const mockCreations = [
-  {
-    id: '1',
-    title: 'Couronne de Lierre Naturel',
-    description: 'Belle couronne artisanale en lierre frais',
-    imageUrl: '/placeholder-creation.jpg',
-    category: 'couronne',
-    featured: true,
-  },
-  {
-    id: '2',
-    title: 'Composition Florale',
-    description: 'Arrangement unique mêlant fleurs et végétaux',
-    imageUrl: '/placeholder-creation.jpg',
-    category: 'composition',
-    featured: false,
-  },
-  {
-    id: '3',
-    title: 'Décoration Murale',
-    description: 'Élément décoratif naturel pour votre intérieur',
-    imageUrl: '/placeholder-creation.jpg',
-    category: 'decoration',
-    featured: true,
-  },
+const categories = [
+  { value: 'all', label: 'Toutes' },
+  { value: 'sculpture', label: 'Sculptures' },
+  { value: 'peinture', label: 'Peintures' },
+  { value: 'composition', label: 'Compositions' },
+  { value: 'mobilier', label: 'Mobilier' },
+  { value: 'autre', label: 'Autres' },
 ]
 
 export default function GalleryPage() {
-  const [filter, setFilter] = useState<string>('all')
   const [search, setSearch] = useState('')
+  const [filter, setFilter] = useState('all')
 
-  const filteredCreations = mockCreations.filter((creation) => {
-    const matchesFilter = filter === 'all' || creation.category === filter
+  const filteredCreations = creationsData.filter((creation: any) => {
     const matchesSearch =
       creation.title.toLowerCase().includes(search.toLowerCase()) ||
-      creation.description.toLowerCase().includes(search.toLowerCase())
-    return matchesFilter && matchesSearch
+      creation.description.toLowerCase().includes(search.toLowerCase()) ||
+      creation.tags.some((tag: string) => tag.toLowerCase().includes(search.toLowerCase()))
+    const matchesFilter = filter === 'all' || creation.category === filter
+    return matchesSearch && matchesFilter
   })
 
   return (
@@ -77,7 +61,7 @@ export default function GalleryPage() {
             Galerie de Créations
           </Typography>
           <Typography variant="h6" sx={{ textAlign: 'center', opacity: 0.9 }}>
-            Découvrez mes créations artisanales inspirées de la nature
+            Découvrez {creationsData.length} créations artisanales inspirées de la nature
           </Typography>
         </Container>
       </Box>
@@ -104,10 +88,11 @@ export default function GalleryPage() {
             onChange={(_, newFilter) => newFilter && setFilter(newFilter)}
             aria-label="filter creations"
           >
-            <ToggleButton value="all">Tout</ToggleButton>
-            <ToggleButton value="couronne">Couronnes</ToggleButton>
-            <ToggleButton value="composition">Compositions</ToggleButton>
-            <ToggleButton value="decoration">Décorations</ToggleButton>
+            {categories.map(cat => (
+              <ToggleButton key={cat.value} value={cat.value}>
+                {cat.label}
+              </ToggleButton>
+            ))}
           </ToggleButtonGroup>
         </Box>
 
@@ -119,74 +104,91 @@ export default function GalleryPage() {
           </Box>
         ) : (
           <Grid container spacing={4}>
-            {filteredCreations.map((creation, index) => (
-              <Grid item xs={12} sm={6} md={4} key={creation.id}>
+            {filteredCreations.map((creation: any, index: number) => (
+              <Grid item key={creation.id} xs={12} sm={6} md={4}>
                 <MotionCard
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   sx={{
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    transition: 'all 0.3s ease',
                     '&:hover': {
                       transform: 'translateY(-8px)',
-                      boxShadow: '0 12px 28px rgba(45, 80, 22, 0.2)',
+                      boxShadow: 8,
+                      transition: 'all 0.3s',
                     },
                   }}
                 >
-                  <Box
-                    sx={{
-                      position: 'relative',
-                      paddingTop: '75%',
-                      backgroundColor: 'grey.200',
-                      overflow: 'hidden',
-                    }}
-                  >
+                  <Box sx={{ position: 'relative', width: '100%', height: 300 }}>
+                    <Image
+                      src={creation.imageUrl}
+                      alt={creation.imageAlt}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                    />
                     {creation.featured && (
                       <Chip
-                        label="À la une"
+                        label="Coup de cœur"
                         color="secondary"
                         size="small"
-                        sx={{ position: 'absolute', top: 16, right: 16, zIndex: 1 }}
+                        sx={{ position: 'absolute', top: 16, right: 16 }}
                       />
                     )}
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        backgroundColor: 'grey.300',
-                      }}
-                    >
-                      <Typography variant="h6" color="text.secondary">
-                        Image à venir
-                      </Typography>
-                    </Box>
                   </Box>
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Chip
-                      label={creation.category}
-                      size="small"
-                      color="primary"
-                      sx={{ mb: 1 }}
-                    />
-                    <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
+                    <Typography gutterBottom variant="h5" component="h3" sx={{ fontWeight: 600 }}>
                       {creation.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       {creation.description}
                     </Typography>
+                    
+                    <Stack direction="row" spacing={1} sx={{ mb: 2 }}>
+                      <Chip 
+                        label={creation.category} 
+                        size="small" 
+                        color="primary" 
+                        variant="outlined"
+                      />
+                      <Chip 
+                        label={creation.year} 
+                        size="small" 
+                        variant="outlined"
+                      />
+                    </Stack>
+
+                    <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1 }}>
+                      <strong>Matériaux :</strong> {creation.materials.join(', ')}
+                    </Typography>
+                    
+                    <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }}>
+                      <strong>Dimensions :</strong> {creation.dimensions}
+                    </Typography>
+
+                    <Stack direction="row" spacing={0.5} sx={{ mt: 2, flexWrap: 'wrap' }}>
+                      {creation.tags.slice(0, 3).map((tag: string) => (
+                        <Chip 
+                          key={tag} 
+                          label={tag} 
+                          size="small" 
+                          sx={{ mb: 0.5 }}
+                        />
+                      ))}
+                    </Stack>
                   </CardContent>
-                  <CardActions sx={{ p: 2 }}>
+                  <CardActions sx={{ p: 2, pt: 0 }}>
+                    <Button 
+                      size="small" 
+                      color="primary"
+                      disabled={!creation.available}
+                    >
+                      {creation.available ? 'Disponible' : 'Vendu'}
+                    </Button>
                     <Button size="small" color="primary">
-                      Voir plus
+                      En savoir plus
                     </Button>
                   </CardActions>
                 </MotionCard>

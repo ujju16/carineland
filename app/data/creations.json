@@ -1,0 +1,261 @@
+[
+  {
+    "id": "creation-10",
+    "title": "Composition vinyles et objets en verre/bois",
+    "slug": "composition-vinyles-et-objets-en-verrebois",
+    "description": "Composition vinyles et objets en verre/bois",
+    "category": "sculpture",
+    "imageUrl": "/creations/20241104_014920.jpg",
+    "imageAlt": "Composition vinyles et objets en verre/bois",
+    "year": 2024,
+    "materials": [
+      "bois flotté",
+      "vinyles",
+      "verre"
+    ],
+    "dimensions": "Variable",
+    "available": true,
+    "featured": false,
+    "tags": [
+      "bois",
+      "composition",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.064Z",
+    "updatedAt": "2025-11-02T02:49:26.064Z"
+  },
+  {
+    "id": "creation-1",
+    "title": "Table/tabouret en bois flotté/racines",
+    "slug": "tabletabouret-en-bois-flotteracines",
+    "description": "Table/tabouret en bois flotté/racines",
+    "category": "sculpture",
+    "imageUrl": "/creations/20231024_211212.jpg",
+    "imageAlt": "Table/tabouret en bois flotté/racines",
+    "year": 2023,
+    "materials": [
+      "bois flotté",
+      "racines"
+    ],
+    "dimensions": "Grande pièce (> 50cm)",
+    "available": true,
+    "featured": true,
+    "tags": [
+      "bois",
+      "racines",
+      "mobilier",
+      "fonctionnel",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.062Z",
+    "updatedAt": "2025-11-02T02:49:26.062Z"
+  },
+  {
+    "id": "creation-2",
+    "title": "Grande pièce de bois flotté/racines seule",
+    "slug": "grande-piece-de-bois-flotteracines-seule",
+    "description": "Grande pièce de bois flotté/racines seule",
+    "category": "sculpture",
+    "imageUrl": "/creations/20231024_211103.jpg",
+    "imageAlt": "Grande pièce de bois flotté/racines seule",
+    "year": 2023,
+    "materials": [
+      "bois flotté",
+      "racines"
+    ],
+    "dimensions": "Grande pièce (> 50cm)",
+    "available": true,
+    "featured": true,
+    "tags": [
+      "bois",
+      "racines",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.062Z",
+    "updatedAt": "2025-11-02T02:49:26.062Z"
+  },
+  {
+    "id": "creation-3",
+    "title": "Grande pièce de racines entrelacées avec lierre",
+    "slug": "grande-piece-de-racines-entrelacees-avec-lierre",
+    "description": "Grande pièce de racines entrelacées avec lierre",
+    "category": "sculpture",
+    "imageUrl": "/creations/20230713_150857.jpg",
+    "imageAlt": "Grande pièce de racines entrelacées avec lierre",
+    "year": 2023,
+    "materials": [
+      "racines",
+      "lierre"
+    ],
+    "dimensions": "Grande pièce (> 50cm)",
+    "available": true,
+    "featured": true,
+    "tags": [
+      "racines",
+      "lierre",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.062Z",
+    "updatedAt": "2025-11-02T02:49:26.062Z"
+  },
+  {
+    "id": "creation-4",
+    "title": "3 bases de racines pour projet",
+    "slug": "3-bases-de-racines-pour-projet",
+    "description": "3 bases de racines pour projet",
+    "category": "sculpture",
+    "imageUrl": "/creations/20231024_211408.jpg",
+    "imageAlt": "3 bases de racines pour projet",
+    "year": 2023,
+    "materials": [
+      "racines"
+    ],
+    "dimensions": "Variable",
+    "available": true,
+    "featured": false,
+    "tags": [
+      "racines",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.062Z",
+    "updatedAt": "2025-11-02T02:49:26.063Z"
+  },
+  {
+    "id": "creation-5",
+    "title": "Pièce de bois flotté sur support en contreplaqué",
+    "slug": "piece-de-bois-flotte-sur-support-en-contreplaque",
+    "description": "Pièce de bois flotté sur support en contreplaqué",
+    "category": "sculpture",
+    "imageUrl": "/creations/20230713_112615.jpg",
+    "imageAlt": "Pièce de bois flotté sur support en contreplaqué",
+    "year": 2023,
+    "materials": [
+      "bois flotté",
+      "contreplaqué"
+    ],
+    "dimensions": "Variable",
+    "available": true,
+    "featured": false,
+    "tags": [
+      "bois",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.063Z",
+    "updatedAt": "2025-11-02T02:49:26.063Z"
+  },
+  {
+    "id": "creation-8",
+    "title": "Peinture abstraite orange/jaune/marron",
+    "slug": "peinture-abstraite-orangejaunemarron-paysage-surrealiste",
+    "description": "Peinture abstraite orange/jaune/marron (paysage surréaliste)",
+    "category": "peinture",
+    "imageUrl": "/creations/20231021_201128.jpg",
+    "imageAlt": "Peinture abstraite orange/jaune/marron (paysage surréaliste)",
+    "year": 2023,
+    "materials": [
+      "peinture acrylique"
+    ],
+    "dimensions": "Format standard (40x50 cm)",
+    "available": true,
+    "featured": false,
+    "tags": [
+      "peinture",
+      "art abstrait",
+      "couleurs chaudes",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.063Z",
+    "updatedAt": "2025-11-02T02:49:26.063Z"
+  },
+  {
+    "id": "creation-6",
+    "title": "Composition décorative avec bois et objets",
+    "slug": "composition-decorative-avec-bois-et-objets",
+    "description": "Composition décorative avec bois et objets",
+    "category": "sculpture",
+    "imageUrl": "/creations/20220920_083052.jpg",
+    "imageAlt": "Composition décorative avec bois et objets",
+    "year": 2022,
+    "materials": [
+      "bois flotté"
+    ],
+    "dimensions": "Variable",
+    "available": true,
+    "featured": false,
+    "tags": [
+      "bois",
+      "composition",
+      "décoration",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.063Z",
+    "updatedAt": "2025-11-02T02:49:26.063Z"
+  },
+  {
+    "id": "creation-7",
+    "title": "Sculpture d'insecte en bois",
+    "slug": "sculpture-dinsecte-en-bois",
+    "description": "Sculpture d'insecte en bois",
+    "category": "sculpture",
+    "imageUrl": "/creations/20220918_164250.jpg",
+    "imageAlt": "Sculpture d'insecte en bois",
+    "year": 2022,
+    "materials": [
+      "bois flotté"
+    ],
+    "dimensions": "Variable",
+    "available": true,
+    "featured": false,
+    "tags": [
+      "bois",
+      "sculpture",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.063Z",
+    "updatedAt": "2025-11-02T02:49:26.063Z"
+  },
+  {
+    "id": "creation-9",
+    "title": "Peinture abstraite bleue/verte",
+    "slug": "peinture-abstraite-bleueverte-vaguesfumee",
+    "description": "Peinture abstraite bleue/verte (vagues/fumée)",
+    "category": "peinture",
+    "imageUrl": "/creations/20221016_225547.jpg",
+    "imageAlt": "Peinture abstraite bleue/verte (vagues/fumée)",
+    "year": 2022,
+    "materials": [
+      "peinture acrylique"
+    ],
+    "dimensions": "Format standard (40x50 cm)",
+    "available": true,
+    "featured": false,
+    "tags": [
+      "peinture",
+      "art abstrait",
+      "couleurs froides",
+      "artisanat",
+      "fait main",
+      "unique"
+    ],
+    "createdAt": "2025-11-02T02:49:26.063Z",
+    "updatedAt": "2025-11-02T02:49:26.063Z"
+  }
+]
