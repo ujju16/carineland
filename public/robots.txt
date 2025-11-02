@@ -10,4 +10,4 @@ Disallow: /api/
 Disallow: /*.old.tsx$
 
 # Sitemap
-Sitemap: https://carineland.com/sitemap.xml
+Sitemap: https://carineland.fr/sitemap.xml

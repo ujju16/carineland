@@ -166,8 +166,8 @@ Keywords: à propos, histoire, artisan, passion nature, écologique, développem
   "og:site_name": "Carineland",
   "og:title": "Carineland - Créations Artisanales Naturelles",
   "og:description": "Créations artisanales uniques à base de lierre",
-  "og:url": "https://carineland.com",
-  "og:image": "https://carineland.com/og-image.jpg",
+  "og:url": "https://carineland.fr",
+  "og:image": "https://carineland.fr/og-image.jpg",
   "og:image:width": "1200",
   "og:image:height": "630"
 }
@@ -179,7 +179,7 @@ Keywords: à propos, histoire, artisan, passion nature, écologique, développem
   "og:type": "product",
   "og:title": "[Nom Création] - Carineland",
   "og:description": "[Description de la création]",
-  "og:url": "https://carineland.com/gallery/[id]",
+  "og:url": "https://carineland.fr/gallery/[id]",
   "og:image": "[URL image création]",
   "og:price:amount": "[Prix]",
   "og:price:currency": "EUR",
@@ -202,7 +202,7 @@ Disallow: /api/
 Disallow: /*.old.tsx$
 
 # Sitemap
-Sitemap: https://carineland.com/sitemap.xml
+Sitemap: https://carineland.fr/sitemap.xml
 ```
 
 ## 🗺️ Sitemap Structure
@@ -212,28 +212,28 @@ Sitemap: https://carineland.com/sitemap.xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage - Priorité maximale -->
   <url>
-    <loc>https://carineland.com/</loc>
+    <loc>https://carineland.fr/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Galerie - Mise à jour quotidienne -->
   <url>
-    <loc>https://carineland.com/gallery</loc>
+    <loc>https://carineland.fr/gallery</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- À Propos - Stable -->
   <url>
-    <loc>https://carineland.com/about</loc>
+    <loc>https://carineland.fr/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Créations individuelles (dynamique) -->
   <url>
-    <loc>https://carineland.com/gallery/[creation-id]</loc>
+    <loc>https://carineland.fr/gallery/[creation-id]</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -248,8 +248,8 @@ Sitemap: https://carineland.com/sitemap.xml
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Carineland",
-  "url": "https://carineland.com",
-  "logo": "https://carineland.com/logo.png",
+  "url": "https://carineland.fr",
+  "logo": "https://carineland.fr/logo.png",
   "description": "Créations artisanales à base de lierre et nature",
   "founder": {
     "@type": "Person",
@@ -293,19 +293,19 @@ Sitemap: https://carineland.com/sitemap.xml
       "@type": "ListItem",
       "position": 1,
       "name": "Accueil",
-      "item": "https://carineland.com"
+      "item": "https://carineland.fr"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Galerie",
-      "item": "https://carineland.com/gallery"
+      "item": "https://carineland.fr/gallery"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "[Création]",
-      "item": "https://carineland.com/gallery/[id]"
+      "item": "https://carineland.fr/gallery/[id]"
     }
   ]
 }
