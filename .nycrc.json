@@ -1,9 +1,6 @@
 {
   "all": true,
-  "include": [
-    "app/**/*.{js,jsx,ts,tsx}",
-    "components/**/*.{js,jsx,ts,tsx}"
-  ],
+  "include": ["app/**/*.{js,jsx,ts,tsx}", "components/**/*.{js,jsx,ts,tsx}"],
   "exclude": [
     "**/*.test.{js,jsx,ts,tsx}",
     "**/*.spec.{js,jsx,ts,tsx}",
@@ -11,12 +8,7 @@
     "**/node_modules/**",
     "coverage/**"
   ],
-  "reporter": [
-    "text",
-    "html",
-    "lcov",
-    "json"
-  ],
+  "reporter": ["text", "html", "lcov", "json"],
   "report-dir": "./coverage",
   "sourceMap": true,
   "instrument": true
