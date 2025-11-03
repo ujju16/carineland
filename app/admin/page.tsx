@@ -24,6 +24,7 @@ import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
 import SaveIcon from '@mui/icons-material/Save'
 import ImageIcon from '@mui/icons-material/Image'
+import Image from 'next/image'
 import { Creation } from '@/app/types'
 
 export default function AdminPage() {
@@ -166,10 +167,11 @@ export default function AdminPage() {
                     }}
                   >
                     {creation.imageUrl ? (
-                      <img
+                      <Image
                         src={creation.imageUrl}
                         alt={`Image de ${creation.title}`}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        fill
+                        style={{ objectFit: 'cover' }}
                       />
                     ) : (
                       <ImageIcon

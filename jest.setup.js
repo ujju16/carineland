@@ -1,6 +1,21 @@
 import '@testing-library/jest-dom'
 import React from 'react'
 
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+})
+
 // Polyfill pour React.act avec React 19
 if (!React.act) {
   React.act = (callback) => {
@@ -15,18 +30,26 @@ if (!React.act) {
 // Mock framer-motion for tests - pass through components without animation
 jest.mock('framer-motion', () => {
   const React = require('react')
+  const actualReact = jest.requireActual('react')
   return {
     motion: {
-      create: (Component) => Component, // Just return the component without animation
-      div: 'div',
-      section: 'section',
-      header: 'header',
-      nav: 'nav',
-      footer: 'footer',
-      button: 'button',
-      span: 'span',
-      img: 'img',
-      a: 'a',
+      create: (Component) => {
+        // Return a functional component that wraps the original component
+        const MotionWrapper = actualReact.forwardRef((props, ref) => {
+          return actualReact.createElement(Component, { ...props, ref })
+        })
+        MotionWrapper.displayName = `Motion(${Component.displayName || Component.name || 'Component'})`
+        return MotionWrapper
+      },
+      div: ({ children, ...props }) => actualReact.createElement('div', props, children),
+      section: ({ children, ...props }) => actualReact.createElement('section', props, children),
+      header: ({ children, ...props }) => actualReact.createElement('header', props, children),
+      nav: ({ children, ...props }) => actualReact.createElement('nav', props, children),
+      footer: ({ children, ...props }) => actualReact.createElement('footer', props, children),
+      button: ({ children, ...props }) => actualReact.createElement('button', props, children),
+      span: ({ children, ...props }) => actualReact.createElement('span', props, children),
+      img: ({ children, ...props }) => actualReact.createElement('img', props, children),
+      a: ({ children, ...props }) => actualReact.createElement('a', props, children),
     },
     AnimatePresence: ({ children }) => children,
     useAnimation: () => ({
