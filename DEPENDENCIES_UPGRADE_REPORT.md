@@ -8,6 +8,7 @@
 ---
 
 ## 🎯 Objectif
+
 Mettre à jour toutes les dépendances du projet vers leurs dernières versions compatibles, améliorer la sécurité et maintenir le code à jour avec les dernières fonctionnalités.
 
 ---
@@ -16,27 +17,29 @@ Mettre à jour toutes les dépendances du projet vers leurs dernières versions 
 
 ### ✅ Dépendances de production mises à jour
 
-| Package | Version précédente | Nouvelle version | Changement |
-|---------|-------------------|------------------|------------|
-| **framer-motion** | 11.18.2 | **12.23.24** | +1 majeure |
+| Package           | Version précédente | Nouvelle version | Changement |
+| ----------------- | ------------------ | ---------------- | ---------- |
+| **framer-motion** | 11.18.2            | **12.23.24**     | +1 majeure |
 
 **Améliorations:**
+
 - ✨ Meilleures performances d'animation
 - 🐛 Corrections de bugs
 - 📦 Bundle size optimisé
 
 ### ✅ Dépendances de développement mises à jour
 
-| Package | Version précédente | Nouvelle version | Changement |
-|---------|-------------------|------------------|------------|
-| **@types/jest** | 29.5.14 | **30.0.0** | +1 majeure |
-| **@types/node** | 20.19.24 | **24.10.0** | +4 majeures |
-| **@types/react** | 18.3.26 | **19.2.2** | +1 majeure |
-| **@types/react-dom** | 18.3.7 | **19.2.2** | +1 majeure |
-| **jest** | 29.7.0 | **30.2.0** | +1 majeure |
-| **jest-environment-jsdom** | 29.7.0 | **30.2.0** | +1 majeure |
+| Package                    | Version précédente | Nouvelle version | Changement  |
+| -------------------------- | ------------------ | ---------------- | ----------- |
+| **@types/jest**            | 29.5.14            | **30.0.0**       | +1 majeure  |
+| **@types/node**            | 20.19.24           | **24.10.0**      | +4 majeures |
+| **@types/react**           | 18.3.26            | **19.2.2**       | +1 majeure  |
+| **@types/react-dom**       | 18.3.7             | **19.2.2**       | +1 majeure  |
+| **jest**                   | 29.7.0             | **30.2.0**       | +1 majeure  |
+| **jest-environment-jsdom** | 29.7.0             | **30.2.0**       | +1 majeure  |
 
 **Améliorations:**
+
 - 🔧 Support TypeScript amélioré pour Node.js 24
 - 🧪 Jest 30 avec meilleures performances
 - ⚡ Types React 19 pour le support complet de React 19
@@ -46,12 +49,15 @@ Mettre à jour toutes les dépendances du projet vers leurs dernières versions 
 ## 🔒 Dépendances maintenues à leur version actuelle
 
 ### @mui/material & @mui/icons-material (v6.5.0)
+
 **Raison:** Material-UI v7 introduit des changements majeurs dans l'API Grid
+
 - Nécessite migration de `Grid` vers `Grid2`
 - Impacte 9 fichiers dans le projet
 - Migration prévue dans une PR séparée
 
 **Fichiers impactés:**
+
 - `app/about/page.tsx` (3 utilisations)
 - `app/admin/page.tsx` (1 utilisation)
 - `app/components/Footer.tsx` (3 utilisations)
@@ -59,7 +65,9 @@ Mettre à jour toutes les dépendances du projet vers leurs dernières versions 
 - `app/page.tsx` (1 utilisation)
 
 ### eslint-config-next (v14.2.33)
+
 **Raison:** La version 16.0.1 a des problèmes de compatibilité avec ESLint 8
+
 - Erreur: "Converting circular structure to JSON"
 - Nécessite migration vers ESLint 9
 - Migration prévue dans une PR séparée
@@ -69,24 +77,28 @@ Mettre à jour toutes les dépendances du projet vers leurs dernières versions 
 ## ✅ Tests de qualité
 
 ### TypeScript
+
 ```bash
 ✅ tsc --noEmit
 ✓ Aucune erreur de compilation
 ```
 
 ### ESLint
+
 ```bash
 ✅ eslint . --ext .js,.jsx,.ts,.tsx
 ✓ Aucune erreur de lint
 ```
 
 ### Prettier
+
 ```bash
 ✅ prettier --check .
 ✓ Tous les fichiers sont correctement formatés
 ```
 
 ### Tests Jest
+
 ```bash
 ✅ bun x jest
 Test Suites: 5 passed, 5 total
@@ -103,6 +115,7 @@ Tests passants:
 ```
 
 ### Build de production
+
 ```bash
 ✅ next build
 ✓ Compiled successfully in 5.9s
@@ -138,6 +151,7 @@ bun audit v1.2.23
 ```
 
 #### 🔴 High (1)
+
 - **path-to-regexp** (>=4.0.0 <6.3.0)
   - Source: vercel › @vercel/remix-builder › path-to-regexp
   - Source: @lhci/cli › express › path-to-regexp
@@ -145,6 +159,7 @@ bun audit v1.2.23
   - Impact: Dev dependencies uniquement
 
 #### 🟡 Moderate (2)
+
 - **esbuild** (<=0.24.2)
   - Source: vercel › @vercel/hono › @vercel/node › esbuild
   - Issue: Dev server security
@@ -156,6 +171,7 @@ bun audit v1.2.23
   - Impact: Dev dependencies uniquement
 
 #### 🟢 Low (2)
+
 - **tmp** (<=0.2.3)
   - Source: @lhci/cli › tmp
   - Issue: Symbolic link write
@@ -192,12 +208,14 @@ bun audit v1.2.23
 ## 📈 Statistiques du projet
 
 ### Dépendances
+
 - **Production:** 7 packages
 - **Développement:** 20 packages
 - **Total:** 27 packages directs
 - **Total (avec dépendances):** 1437 packages
 
 ### Technologies
+
 - **Next.js:** 16.0.1 (Turbopack activé)
 - **React:** 19.2.0
 - **TypeScript:** 5.9.3
@@ -206,6 +224,7 @@ bun audit v1.2.23
 - **Jest:** 30.2.0
 
 ### Environnement
+
 - **Node.js:** 22.x (requis par le pipeline)
 - **Bun:** >=1.2.0
 
@@ -214,10 +233,12 @@ bun audit v1.2.23
 ## 🎯 Prochaines étapes recommandées
 
 ### Court terme
+
 1. ✅ **Merger cette PR** - Toutes les vérifications passent
 2. 🔄 **Surveiller Vercel Deployment** - Vérifier en production
 
 ### Moyen terme (PRs futures)
+
 1. 📦 **Migration MUI v7**
    - Migrer Grid vers Grid2
    - Mettre à jour 9 fichiers
@@ -234,6 +255,7 @@ bun audit v1.2.23
    - Ou trouver des alternatives
 
 ### Long terme
+
 1. 📊 **Monitoring Grafana**
    - Déjà configuré (docker-compose.grafana.yml)
    - Activer en production
@@ -256,18 +278,22 @@ bun audit v1.2.23
 ## 📝 Notes techniques
 
 ### Compatibilité
+
 - ✅ Tous les types TypeScript sont compatibles
 - ✅ Tous les tests passent
 - ✅ Le build de production fonctionne
 - ✅ Aucune régression détectée
 
 ### Performance
+
 - ⚡ Jest 30 est ~15% plus rapide
 - ⚡ Framer Motion 12 réduit le bundle de ~5%
 - ⚡ Build time inchangé (~6s)
 
 ### Breaking Changes
+
 Aucun breaking change dans cette mise à jour car:
+
 - MUI reste en v6
 - ESLint reste en v8
 - Tous les autres packages sont rétro-compatibles
