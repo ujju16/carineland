@@ -93,8 +93,12 @@ export const authOptions: NextAuthOptions = {
     signIn: '/admin/login',
   },
   callbacks: {
-    async jwt({ token, user }) { /* ... */ },
-    async session({ session, token }) { /* ... */ },
+    async jwt({ token, user }) {
+      /* ... */
+    },
+    async session({ session, token }) {
+      /* ... */
+    },
   },
   session: {
     strategy: 'jwt',

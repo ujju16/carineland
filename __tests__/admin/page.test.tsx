@@ -75,9 +75,7 @@ describe('AdminPage', () => {
     render(<AdminPage />)
 
     expect(screen.getByText(/aucune création pour le moment/i)).toBeInTheDocument()
-    expect(
-      screen.getByText(/commencez par ajouter votre première création/i)
-    ).toBeInTheDocument()
+    expect(screen.getByText(/commencez par ajouter votre première création/i)).toBeInTheDocument()
   })
 
   it('has proper ARIA attributes for accessibility', () => {
