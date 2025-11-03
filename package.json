@@ -20,9 +20,9 @@
     "process-creations": "node scripts/update-creations.js",
     "optimize-images": "node scripts/optimize-images.js",
     "vercel-build": "next build",
-    "monitoring:up": "docker-compose -f docker-compose.grafana.yml up -d",
-    "monitoring:down": "docker-compose -f docker-compose.grafana.yml down",
-    "monitoring:logs": "docker-compose -f docker-compose.grafana.yml logs -f"
+    "monitoring:up": "docker compose -f docker-compose.grafana.yml up -d",
+    "monitoring:down": "docker compose -f docker-compose.grafana.yml down",
+    "monitoring:logs": "docker compose -f docker-compose.grafana.yml logs -f"
   },
   "engines": {
     "bun": ">=1.2.0"
