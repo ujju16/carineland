@@ -10,49 +10,49 @@
 
 ### 🚀 **Tech Stack**
 
-![Next.js](https://img.shields.io/badge/Next.js-16.0.1-000000?style=flat&logo=next.js&logoColor=white&labelColor=000000)
-![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat&logo=react&logoColor=white&labelColor=20232a)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat&logo=typescript&logoColor=white&labelColor=3178C6)
-![Material-UI](https://img.shields.io/badge/MUI-6.5.0-007FFF?style=flat&logo=mui&logoColor=white&labelColor=007FFF)
-![Bun](https://img.shields.io/badge/Bun-1.2+-fbf0df?style=flat&logo=bun&logoColor=000&labelColor=fbf0df)
+![Next.js](https://img.shields.io/badge/Next.js-16.0.1-black?style=flat&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?style=flat&logo=typescript&logoColor=white)
+![Material-UI](https://img.shields.io/badge/MUI-6.5.0-007FFF?style=flat&logo=mui&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-1.2+-black?style=flat&logo=bun&logoColor=white)
 
 ### 🔄 **CI/CD & Deployment**
 
-![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci.yml?branch=main&style=flat&label=CI%2FCD&logo=github-actions&logoColor=white&labelColor=2088FF)
-![Vercel](https://img.shields.io/badge/Vercel-Production-000000?style=flat&logo=vercel&logoColor=white&labelColor=000000)
-![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-FF4785?style=flat&logo=turborepo&logoColor=white&labelColor=FF4785)
+![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci.yml?branch=main&style=flat&label=CI%2FCD&logo=github-actions)
+![Vercel](https://github.com/ujju16/carineland/actions/workflows/ci.yml/badge.svg?branch=main)
+![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-red?style=flat&logo=turborepo&logoColor=white)
 
 ### 📊 **Quality & Performance**
 
-![Code Quality](https://img.shields.io/badge/Quality-A+-00C853?style=flat&logo=codacy&logoColor=white&labelColor=00C853)
-![Lighthouse](https://img.shields.io/badge/Lighthouse-95+-00C853?style=flat&logo=lighthouse&logoColor=white&labelColor=00C853)
-![Test Coverage](https://img.shields.io/badge/Coverage-85%25-00C853?style=flat&logo=jest&logoColor=white&labelColor=00C853)
-![Security](https://img.shields.io/badge/Security-No_Issues-00C853?style=flat&logo=snyk&logoColor=white&labelColor=00C853)
+![Code Quality](https://img.shields.io/codeclimate/maintainability/ujju16/carineland?style=flat&logo=codeclimate)
+![Lighthouse](https://img.shields.io/badge/Lighthouse-95+-brightgreen?style=flat&logo=lighthouse&logoColor=white)
+![Test Coverage](https://img.shields.io/badge/Coverage-85%25-brightgreen?style=flat&logo=jest&logoColor=white)
+![Security](https://img.shields.io/snyk/vulnerabilities/github/ujju16/carineland?style=flat&logo=snyk)
 
 ### ♿ **Accessibility & Compliance**
 
-![WCAG 2.1](https://img.shields.io/badge/WCAG-2.1_AA-4CAF50?style=flat&logo=accessible-icon&logoColor=white&labelColor=4CAF50)
-![RGPD](https://img.shields.io/badge/RGPD-Compliant-4CAF50?style=flat&logo=gdpr&logoColor=white&labelColor=4CAF50)
-![SEO](https://img.shields.io/badge/SEO-100-4CAF50?style=flat&logo=google&logoColor=white&labelColor=4CAF50)
-![Mobile First](https://img.shields.io/badge/Mobile-First-4CAF50?style=flat&logo=mobile&logoColor=white&labelColor=4CAF50)
+![WCAG 2.1](https://img.shields.io/badge/WCAG-2.1_AA-green?style=flat&logo=accessible-icon&logoColor=white)
+![RGPD](https://img.shields.io/badge/RGPD-Compliant-green?style=flat&logo=gdpr&logoColor=white)
+![SEO](https://img.shields.io/badge/SEO-100-green?style=flat&logo=google&logoColor=white)
+![Mobile First](https://img.shields.io/badge/Mobile-First-green?style=flat&logo=mobile&logoColor=white)
 
 ### 📈 **Monitoring & Metrics**
 
-![Grafana](https://img.shields.io/badge/Grafana-Ready-F46800?style=flat&logo=grafana&logoColor=white&labelColor=F46800)
-![Prometheus](https://img.shields.io/badge/Prometheus-Active-E6522C?style=flat&logo=prometheus&logoColor=white&labelColor=E6522C)
-![Dependencies](https://img.shields.io/badge/Dependencies-Up_to_date-00C853?style=flat&logo=dependabot&logoColor=white&labelColor=00C853)
+![Grafana](https://img.shields.io/badge/Grafana-Ready-orange?style=flat&logo=grafana&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-Active-red?style=flat&logo=prometheus&logoColor=white)
+![Dependencies](https://img.shields.io/librariesio/github/ujju16/carineland?style=flat&logo=dependabot)
 
 ### 📝 **Project Info**
 
-![License](https://img.shields.io/badge/License-MIT-FFC107?style=flat&logo=opensourceinitiative&logoColor=white&labelColor=FFC107)
-![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-00C853?style=flat&logo=github&logoColor=white&labelColor=00C853)
-![Last Commit](https://img.shields.io/github/last-commit/ujju16/carineland?style=flat&logo=github&logoColor=white&labelColor=181717)
+![License](https://img.shields.io/github/license/ujju16/carineland?style=flat&color=yellow&logo=opensourceinitiative)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=github)
+![Last Commit](https://img.shields.io/github/last-commit/ujju16/carineland?style=flat&logo=github)
 
 ---
 
-![Made with Love](https://img.shields.io/badge/Made_with-❤️-FF4081?style=flat&labelColor=FF4081)
-![Dev by @ujju16](https://img.shields.io/badge/Dev_by-@ujju16-181717?style=flat&logo=github&logoColor=white&labelColor=181717)
-![Made in France](https://img.shields.io/badge/Made_in-France_🇫🇷-0055A4?style=flat&labelColor=0055A4)
+![Made with Love](https://img.shields.io/badge/Made_with-❤️-red?style=flat)
+![Dev by @ujju16](https://img.shields.io/badge/Dev_by-@ujju16-black?style=flat&logo=github)
+![Made in France](https://img.shields.io/badge/Made_in-France_🇫🇷-blue?style=flat)
 
 </div>
 
