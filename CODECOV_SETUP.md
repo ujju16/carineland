@@ -7,6 +7,7 @@
 Le projet est maintenant intégré avec **Codecov** pour le tracking de la couverture de code.
 
 #### Fichiers configurés:
+
 - ✅ `codecov.yml` - Configuration Codecov
 - ✅ `.github/workflows/ci.yml` - Upload automatique des rapports
 - ✅ `jest.config.js` - Génération des rapports de coverage
@@ -23,6 +24,7 @@ Les badges suivants ont été ajoutés au README.md:
 ```
 
 #### Badge Sunburst
+
 Le **Sunburst Graph** offre une visualisation interactive de la couverture de code par dossier/fichier.
 
 ### 3. Coverage Actuel
