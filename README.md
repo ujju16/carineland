@@ -35,7 +35,7 @@
 
 <div align="left">
 
-[![Code Coverage](https://img.shields.io/codecov/c/github/ujju16/carineland/main?style=flat&logo=codecov&logoColor=white&token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
+[![codecov](https://codecov.io/gh/ujju16/carineland/branch/main/graph/badge.svg?token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/ujju16/carineland?style=flat&logo=codeclimate&logoColor=white)](https://codeclimate.com/github/ujju16/carineland/maintainability)
 [![Code Climate Tech Debt](https://img.shields.io/codeclimate/tech-debt/ujju16/carineland?style=flat&logo=codeclimate&logoColor=white)](https://codeclimate.com/github/ujju16/carineland)
 [![Lighthouse CI](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/lighthouse.yml?branch=main&style=flat&label=Lighthouse&logo=lighthouse&logoColor=white)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
