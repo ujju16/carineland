@@ -1,37 +1,54 @@
 # Carineland - Site Artisanal Pro 🌿
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.0.1-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Material-UI](https://img.shields.io/badge/Material--UI-6.5.0-007FFF?style=flat-square&logo=mui&logoColor=white)](https://mui.com/)
-[![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
-[![Bun](https://img.shields.io/badge/Bun-1.2+-fbf0df?style=flat-square&logo=bun&logoColor=black)](https://bun.sh/)
+<div align="center">
 
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
-[![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-FF4785?style=flat-square&logo=turborepo&logoColor=white)](https://turbo.build/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square&logo=github)](https://github.com/ujju16/carineland/pulls)
+## 🚀 Tech Stack
 
-[![CI/CD](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci.yml?branch=main&style=flat-square&label=CI/CD&logo=github-actions)](https://github.com/ujju16/carineland/actions)
-[![Code Quality](https://img.shields.io/badge/Quality-A+-success?style=flat-square&logo=codacy&logoColor=white)](https://github.com/ujju16/carineland)
-[![Lighthouse](https://img.shields.io/badge/Lighthouse-95+-success?style=flat-square&logo=lighthouse&logoColor=white)](https://github.com/ujju16/carineland)
-[![Security](https://img.shields.io/badge/Security-No%20vulnerabilities-success?style=flat-square&logo=snyk&logoColor=white)](https://github.com/ujju16/carineland)
+[![Next.js](https://img.shields.io/badge/Next.js-16.0.1-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Material-UI](https://img.shields.io/badge/MUI-6.5.0-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
+[![Bun](https://img.shields.io/badge/Bun-1.2+-fbf0df?style=for-the-badge&logo=bun&logoColor=black)](https://bun.sh/)
 
-[![Maintainability](https://img.shields.io/badge/Maintainability-A-success?style=flat-square&logo=codefactor&logoColor=white)](https://github.com/ujju16/carineland)
-[![Test Coverage](https://img.shields.io/badge/Coverage-85%25-brightgreen?style=flat-square&logo=jest&logoColor=white)](https://github.com/ujju16/carineland)
-[![Dependencies](https://img.shields.io/badge/Dependencies-Up%20to%20date-success?style=flat-square&logo=dependabot&logoColor=white)](https://github.com/ujju16/carineland)
-[![Last Commit](https://img.shields.io/github/last-commit/ujju16/carineland?style=flat-square&logo=github&logoColor=white)](https://github.com/ujju16/carineland/commits/main)
+## 🔄 CI/CD & Deployment
 
-[![RGPD Compliant](https://img.shields.io/badge/RGPD-Compliant-success?style=flat-square&logo=gdpr&logoColor=white)](https://www.cnil.fr/)
-[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1-success?style=flat-square&logo=accessible-icon&logoColor=white)](https://www.w3.org/WAI/WCAG21/quickref/)
-[![Mobile First](https://img.shields.io/badge/Mobile-First-success?style=flat-square&logo=mobile&logoColor=white)](https://github.com/ujju16/carineland)
-[![SEO Optimized](https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=google&logoColor=white)](https://github.com/ujju16/carineland)
+[![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci.yml?branch=main&style=for-the-badge&label=CI/CD&logo=github-actions&logoColor=white)](https://github.com/ujju16/carineland/actions)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel&logoColor=white)](https://carineland.fr)
+[![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-FF4785?style=for-the-badge&logo=turborepo&logoColor=white)](https://turbo.build/)
 
-[![Monitoring](https://img.shields.io/badge/Monitoring-Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)](http://localhost:3001)
-[![Metrics](https://img.shields.io/badge/Metrics-Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)](http://localhost:9090)
+## 📊 Quality & Performance
 
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)](https://github.com/ujju16)
-[![Dev by](https://img.shields.io/badge/Dev%20by-@ujju16-blue?style=flat-square&logo=github&logoColor=white)](https://github.com/ujju16)
-[![Made in France](https://img.shields.io/badge/Made%20in-France%20🇫🇷-0055A4?style=flat-square)](https://github.com/ujju16/carineland)
+[![Code Quality](https://img.shields.io/badge/Quality-A+-success?style=for-the-badge&logo=codacy&logoColor=white)](https://github.com/ujju16/carineland)
+[![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-95+-00C853?style=for-the-badge&logo=lighthouse&logoColor=white)](https://github.com/ujju16/carineland)
+[![Test Coverage](https://img.shields.io/badge/Coverage-85%25-brightgreen?style=for-the-badge&logo=jest&logoColor=white)](https://github.com/ujju16/carineland)
+[![Security](https://img.shields.io/badge/Security-No%20Issues-00C853?style=for-the-badge&logo=snyk&logoColor=white)](https://github.com/ujju16/carineland)
+
+## ♿ Accessibility & Compliance
+
+[![WCAG 2.1](https://img.shields.io/badge/WCAG-2.1%20AA-4CAF50?style=for-the-badge&logo=accessible-icon&logoColor=white)](https://www.w3.org/WAI/WCAG21/quickref/)
+[![RGPD](https://img.shields.io/badge/RGPD-Compliant-4CAF50?style=for-the-badge&logo=gdpr&logoColor=white)](https://www.cnil.fr/)
+[![SEO](https://img.shields.io/badge/SEO-100-00C853?style=for-the-badge&logo=google&logoColor=white)](https://github.com/ujju16/carineland)
+[![Mobile First](https://img.shields.io/badge/Mobile-First-00C853?style=for-the-badge&logo=mobile&logoColor=white)](https://github.com/ujju16/carineland)
+
+## 📈 Monitoring & Metrics
+
+[![Grafana](https://img.shields.io/badge/Grafana-Ready-F46800?style=for-the-badge&logo=grafana&logoColor=white)](http://localhost:3001)
+[![Prometheus](https://img.shields.io/badge/Prometheus-Active-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)](http://localhost:9090)
+[![Dependencies](https://img.shields.io/badge/Dependencies-Up%20to%20date-00C853?style=for-the-badge&logo=dependabot&logoColor=white)](https://github.com/ujju16/carineland)
+
+## 📝 Project Info
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&logo=github)](https://github.com/ujju16/carineland/pulls)
+[![Last Commit](https://img.shields.io/github/last-commit/ujju16/carineland?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ujju16/carineland/commits/main)
+
+---
+
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-FF4081?style=for-the-badge)](https://github.com/ujju16)
+[![Dev by @ujju16](https://img.shields.io/badge/Dev%20by-@ujju16-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ujju16)
+[![Made in France](https://img.shields.io/badge/Made%20in-France%20🇫🇷-0055A4?style=for-the-badge)](https://github.com/ujju16/carineland)
+
+</div>
 
 ---
 
