@@ -35,12 +35,13 @@
 
 <div align="left">
   
-[![codecov](https://codecov.io/gh/ujju16/carineland/branch/main/graph/badge.svg?token=YOUR_TOKEN)](https://codecov.io/gh/ujju16/carineland)
+[![codecov](https://codecov.io/gh/ujju16/carineland/branch/main/graph/badge.svg?token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
+[![Code Coverage](https://img.shields.io/codecov/c/github/ujju16/carineland/main?style=for-the-badge&logo=codecov&logoColor=white&labelColor=1e293b&color=22c55e&token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
+[![Coverage Sunburst](https://codecov.io/gh/ujju16/carineland/graphs/sunburst.svg?token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/ujju16/carineland?style=for-the-badge&logo=codeclimate&logoColor=white&labelColor=1e293b&color=22c55e)](https://codeclimate.com/github/ujju16/carineland/maintainability)
 [![Code Climate Tech Debt](https://img.shields.io/codeclimate/tech-debt/ujju16/carineland?style=for-the-badge&logo=codeclimate&logoColor=white&labelColor=1e293b&color=f59e0b)](https://codeclimate.com/github/ujju16/carineland)
 [![Lighthouse CI](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/lighthouse.yml?branch=main&style=for-the-badge&label=Lighthouse&logo=lighthouse&logoColor=white&labelColor=1e293b&color=f97316)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
 [![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-22c55e?style=for-the-badge&logo=lighthouse&logoColor=white&labelColor=1e293b)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
-[![Test Coverage](https://img.shields.io/badge/Coverage-85%25-22c55e?style=for-the-badge&logo=jest&logoColor=white&labelColor=1e293b)](https://codecov.io/gh/ujju16/carineland)
 [![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/ujju16/carineland?style=for-the-badge&logo=snyk&logoColor=white&labelColor=1e293b&color=4c1d95)](https://snyk.io/test/github/ujju16/carineland)
 
 </div>
