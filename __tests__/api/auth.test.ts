@@ -1,8 +1,3 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import { signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
-import AdminLoginPage from '@/app/admin/login/page'
-
 import { GET, POST, authOptions } from '@/app/api/auth/[...nextauth]/route'
 
 describe('Auth API', () => {
