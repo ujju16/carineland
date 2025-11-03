@@ -19,6 +19,7 @@ Le projet **Carineland** a été entièrement migré vers **Bun** comme runtime 
    - ✅ `.gitignore` mis à jour pour ignorer les artefacts
 
 3. **Scripts package.json**
+
    ```json
    {
      "dev": "next dev --turbo",
@@ -44,12 +45,12 @@ Le projet **Carineland** a été entièrement migré vers **Bun** comme runtime 
 
 ### 🎯 Résultats de Performance
 
-| Métrique | npm | Bun | Amélioration |
-|----------|-----|-----|--------------|
-| Installation (cache vide) | ~30s | ~8s | **3.75x** |
-| Installation (avec cache) | ~12s | ~2s | **6x** |
-| Build | ~30s | ~25s | **1.2x** |
-| Scripts | ~1.5s | ~0.3s | **5x** |
+| Métrique                  | npm   | Bun   | Amélioration |
+| ------------------------- | ----- | ----- | ------------ |
+| Installation (cache vide) | ~30s  | ~8s   | **3.75x**    |
+| Installation (avec cache) | ~12s  | ~2s   | **6x**       |
+| Build                     | ~30s  | ~25s  | **1.2x**     |
+| Scripts                   | ~1.5s | ~0.3s | **5x**       |
 
 ### ✅ Tests de Qualité
 
@@ -208,24 +209,28 @@ open http://localhost:3001
 ## ✨ Résumé des Améliorations
 
 ### 🚀 Performance
+
 - ✅ Installation des dépendances **4x plus rapide**
 - ✅ Exécution des scripts **5x plus rapide**
 - ✅ CI/CD optimisé
 - ✅ Expérience développeur améliorée
 
 ### 📊 Monitoring
+
 - ✅ Stack Grafana + Prometheus configurée
 - ✅ Dashboards de monitoring système
 - ✅ Métriques en temps réel
 - ✅ Alerting possible (à configurer)
 
 ### 📝 Documentation
+
 - ✅ Guide de migration Bun complet
 - ✅ Documentation Grafana détaillée
 - ✅ Tous les fichiers README mis à jour
 - ✅ Quick start guide actualisé
 
 ### 🔒 Qualité
+
 - ✅ Tous les tests passent
 - ✅ Lint & Format OK
 - ✅ Type check OK
@@ -236,6 +241,7 @@ open http://localhost:3001
 ## 🎓 Commandes à Retenir
 
 ### Développement quotidien
+
 ```bash
 bun install           # Installer les dépendances
 bun run dev          # Lancer le dev server
@@ -244,6 +250,7 @@ bun run build        # Build production
 ```
 
 ### Monitoring
+
 ```bash
 bun run monitoring:up      # Démarrer Grafana
 bun run monitoring:down    # Arrêter Grafana
@@ -251,6 +258,7 @@ bun run monitoring:logs    # Voir les logs
 ```
 
 ### Git
+
 ```bash
 git add .
 git commit -m "feat: description"
