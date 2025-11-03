@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&logo=github)](https://github.com/ujju16/carineland/pulls)
 
-[![CI/CD](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci-cd.yml?branch=main&style=for-the-badge&label=CI/CD&logo=github-actions)](https://github.com/ujju16/carineland/actions)
+[![CI/CD](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci.yml?branch=main&style=for-the-badge&label=CI/CD&logo=github-actions)](https://github.com/ujju16/carineland/actions)
 [![Code Quality](https://img.shields.io/badge/Quality-A+-success?style=for-the-badge&logo=codacy&logoColor=white)](https://github.com/ujju16/carineland)
 [![Lighthouse](https://img.shields.io/badge/Lighthouse-95+-success?style=for-the-badge&logo=lighthouse&logoColor=white)](https://github.com/ujju16/carineland)
 [![Security](https://img.shields.io/badge/Security-No%20vulnerabilities-success?style=for-the-badge&logo=snyk&logoColor=white)](https://github.com/ujju16/carineland)
