@@ -25,7 +25,7 @@
 ### 📊 **Quality & Performance**
 
 ![Code Quality](https://img.shields.io/codeclimate/maintainability/ujju16/carineland?style=flat&logo=codeclimate)
-![Lighthouse](https://img.shields.io/badge/Lighthouse-95+-brightgreen?style=flat&logo=lighthouse&logoColor=white)
+![Lighthouse CI](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/lighthouse.yml?branch=main&style=flat&label=Lighthouse&logo=lighthouse&logoColor=white)
 ![Test Coverage](https://img.shields.io/badge/Coverage-85%25-brightgreen?style=flat&logo=jest&logoColor=white)
 ![Security](https://img.shields.io/snyk/vulnerabilities/github/ujju16/carineland?style=flat&logo=snyk)
 
