@@ -1,10 +1,27 @@
 import { render, screen, waitFor } from '@testing-library/react'
-import { useSession } from 'next-auth/react'
+import { useSession, SessionProvider } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import AdminPage from '@/app/admin/page'
 
-jest.mock('next-auth/react')
-jest.mock('next/navigation')
+jest.mock('next-auth/react', () => ({
+  ...jest.requireActual('next-auth/react'),
+  useSession: jest.fn(),
+  signOut: jest.fn(),
+}))
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn(),
+}))
+
+const theme = createTheme()
+
+const renderWithTheme = (component: React.ReactElement) => {
+  return render(
+    <SessionProvider session={null}>
+      <ThemeProvider theme={theme}>{component}</ThemeProvider>
+    </SessionProvider>
+  )
+}
 
 describe('AdminPage', () => {
   const mockPush = jest.fn()
@@ -25,7 +42,7 @@ describe('AdminPage', () => {
       update: jest.fn(),
     })
 
-    render(<AdminPage />)
+    renderWithTheme(<AdminPage />)
 
     expect(screen.getByRole('progressbar')).toBeInTheDocument()
   })
@@ -37,7 +54,7 @@ describe('AdminPage', () => {
       update: jest.fn(),
     })
 
-    render(<AdminPage />)
+    renderWithTheme(<AdminPage />)
 
     await waitFor(() => {
       expect(mockPush).toHaveBeenCalledWith('/admin/login')
@@ -54,7 +71,7 @@ describe('AdminPage', () => {
       update: jest.fn(),
     })
 
-    render(<AdminPage />)
+    renderWithTheme(<AdminPage />)
 
     expect(screen.getByRole('heading', { name: /administration/i })).toBeInTheDocument()
     expect(screen.getByText(/connecté en tant que admin/i)).toBeInTheDocument()
@@ -72,7 +89,7 @@ describe('AdminPage', () => {
       update: jest.fn(),
     })
 
-    render(<AdminPage />)
+    renderWithTheme(<AdminPage />)
 
     expect(screen.getByText(/aucune création pour le moment/i)).toBeInTheDocument()
     expect(screen.getByText(/commencez par ajouter votre première création/i)).toBeInTheDocument()
@@ -88,7 +105,7 @@ describe('AdminPage', () => {
       update: jest.fn(),
     })
 
-    render(<AdminPage />)
+    renderWithTheme(<AdminPage />)
 
     const main = screen.getByRole('main')
     expect(main).toBeInTheDocument()

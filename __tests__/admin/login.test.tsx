@@ -1,10 +1,26 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import { signIn } from 'next-auth/react'
+import { signIn, SessionProvider } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import AdminLoginPage from '@/app/admin/login/page'
 
-jest.mock('next-auth/react')
-jest.mock('next/navigation')
+jest.mock('next-auth/react', () => ({
+  ...jest.requireActual('next-auth/react'),
+  signIn: jest.fn(),
+}))
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn(),
+}))
+
+const theme = createTheme()
+
+const renderWithTheme = (component: React.ReactElement) => {
+  return render(
+    <SessionProvider session={null}>
+      <ThemeProvider theme={theme}>{component}</ThemeProvider>
+    </SessionProvider>
+  )
+}
 
 describe('AdminLoginPage', () => {
   const mockPush = jest.fn()
@@ -20,7 +36,7 @@ describe('AdminLoginPage', () => {
   })
 
   it('renders login form correctly', () => {
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     expect(screen.getByRole('heading', { name: /administration/i })).toBeInTheDocument()
     expect(screen.getByLabelText(/nom d'utilisateur/i)).toBeInTheDocument()
@@ -29,14 +45,14 @@ describe('AdminLoginPage', () => {
   })
 
   it('disables submit button when fields are empty', () => {
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     const submitButton = screen.getByRole('button', { name: /se connecter/i })
     expect(submitButton).toBeDisabled()
   })
 
   it('enables submit button when fields are filled', () => {
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     const usernameInput = screen.getByLabelText(/nom d'utilisateur/i)
     const passwordInput = screen.getByLabelText(/^mot de passe$/i)
@@ -49,7 +65,7 @@ describe('AdminLoginPage', () => {
   })
 
   it('toggles password visibility', () => {
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     const passwordInput = screen.getByLabelText(/^mot de passe$/i)
     const toggleButton = screen.getByLabelText(/afficher le mot de passe/i)
@@ -72,7 +88,7 @@ describe('AdminLoginPage', () => {
       code: undefined,
     })
 
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     const usernameInput = screen.getByLabelText(/nom d'utilisateur/i)
     const passwordInput = screen.getByLabelText(/^mot de passe$/i)
@@ -105,7 +121,7 @@ describe('AdminLoginPage', () => {
       code: 'credentials',
     })
 
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     const usernameInput = screen.getByLabelText(/nom d'utilisateur/i)
     const passwordInput = screen.getByLabelText(/^mot de passe$/i)
@@ -138,7 +154,7 @@ describe('AdminLoginPage', () => {
         )
     )
 
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     const usernameInput = screen.getByLabelText(/nom d'utilisateur/i)
     const passwordInput = screen.getByLabelText(/^mot de passe$/i)
@@ -154,7 +170,7 @@ describe('AdminLoginPage', () => {
   })
 
   it('has proper ARIA attributes for accessibility', () => {
-    render(<AdminLoginPage />)
+    renderWithTheme(<AdminLoginPage />)
 
     const form = screen.getByRole('form')
     expect(form).toHaveAttribute('aria-label', 'Formulaire de connexion administrateur')
