@@ -70,6 +70,13 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
+      - name: Upload coverage to Qlty
+        uses: qltysh/qlty-action/coverage@v2
+        if: always()
+        with:
+          token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+          files: coverage/lcov.info
+
   build:
     name: Build Application
     runs-on: ubuntu-latest
