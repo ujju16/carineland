@@ -40,7 +40,7 @@
 
 ![Grafana](https://img.shields.io/badge/Grafana-Ready-orange?style=flat&logo=grafana&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-Active-red?style=flat&logo=prometheus&logoColor=white)
-![Dependencies](https://img.shields.io/librariesio/github/ujju16/carineland?style=flat&logo=dependabot)
+![Dependencies](https://img.shields.io/badge/Dependencies-Up_to_date-brightgreen?style=flat&logo=dependabot&logoColor=white)
 
 ### 📝 **Project Info**
 
