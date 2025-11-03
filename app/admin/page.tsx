@@ -1,6 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
+import { signOut } from 'next-auth/react'
 import {
   Box,
   Container,
@@ -24,10 +27,14 @@ import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
 import SaveIcon from '@mui/icons-material/Save'
 import ImageIcon from '@mui/icons-material/Image'
+import LogoutIcon from '@mui/icons-material/Logout'
+import CircularProgress from '@mui/material/CircularProgress'
 import Image from 'next/image'
 import { Creation } from '@/app/types'
 
 export default function AdminPage() {
+  const { data: session, status } = useSession()
+  const router = useRouter()
   const [creations, setCreations] = useState<Creation[]>([])
   const [openDialog, setOpenDialog] = useState(false)
   const [editingCreation, setEditingCreation] = useState<Partial<Creation> | null>(null)
@@ -38,6 +45,31 @@ export default function AdminPage() {
     category: 'couronne',
     featured: false,
   })
+
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/admin/login')
+    }
+  }, [status, router])
+
+  if (status === 'loading') {
+    return (
+      <Box
+        sx={{
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <CircularProgress size={60} />
+      </Box>
+    )
+  }
+
+  if (status === 'unauthenticated') {
+    return null
+  }
 
   const handleOpenDialog = (creation?: Creation) => {
     if (creation) {
@@ -110,19 +142,36 @@ export default function AdminPage() {
           component="header"
           sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
         >
-          <Typography variant="h3" component="h1" sx={{ fontWeight: 700, color: 'primary.main' }}>
-            Administration
-          </Typography>
-          <Button
-            variant="contained"
-            startIcon={<AddIcon aria-hidden="true" />}
-            size="large"
-            onClick={() => handleOpenDialog()}
-            aria-label="Ajouter une nouvelle création"
-            sx={{ boxShadow: 3 }}
-          >
-            Nouvelle Création
-          </Button>
+          <Box>
+            <Typography variant="h3" component="h1" sx={{ fontWeight: 700, color: 'primary.main' }}>
+              Administration
+            </Typography>
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
+              Connecté en tant que {session?.user?.name}
+            </Typography>
+          </Box>
+          <Box sx={{ display: 'flex', gap: 2 }}>
+            <Button
+              variant="contained"
+              startIcon={<AddIcon aria-hidden="true" />}
+              size="large"
+              onClick={() => handleOpenDialog()}
+              aria-label="Ajouter une nouvelle création"
+              sx={{ boxShadow: 3 }}
+            >
+              Nouvelle Création
+            </Button>
+            <Button
+              variant="outlined"
+              startIcon={<LogoutIcon aria-hidden="true" />}
+              size="large"
+              onClick={() => signOut({ callbackUrl: '/admin/login' })}
+              aria-label="Se déconnecter"
+              color="secondary"
+            >
+              Déconnexion
+            </Button>
+          </Box>
         </Box>
 
         {creations.length === 0 ? (

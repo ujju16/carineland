@@ -1,18 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Administration - Carineland',
-  description: 'Panel dadministration pour gérer les créations',
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-    },
-  },
-}
+import SessionProvider from '@/app/components/SessionProvider'
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return <SessionProvider>{children}</SessionProvider>
 }

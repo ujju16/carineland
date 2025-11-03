@@ -16,6 +16,7 @@ const customJestConfig = {
     '!app/**/layout.tsx',
     '!app/globals.css',
     '!app/**/page.module.css',
+    '!app/api/auth/**',
   ],
   coverageThreshold: {
     global: {
@@ -27,6 +28,9 @@ const customJestConfig = {
   },
   coverageReporters: ['json', 'lcov', 'text', 'clover', 'json-summary'],
   testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(next-auth|@auth|@panva|preact-render-to-string|preact|oauth4webapi)/)',
+  ],
   transform: {
     '^.+\\.(ts|tsx)$': [
       'ts-jest',
