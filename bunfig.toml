@@ -1,0 +1,17 @@
+[install]
+# Production dependencies only for production builds
+production = false
+
+# Use exact versions
+exact = false
+
+# Cache configuration
+cache = true
+
+[test]
+# Test configuration
+preload = ["./jest.setup.js"]
+
+[run]
+# Script aliases
+shell = "system"

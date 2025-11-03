@@ -32,5 +32,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# bun
+# Grafana & Prometheus data
+grafana/storage/
+prometheus/data/
+audit-report.json
+
+# package managers
 bun.lock
+package-lock.json
+yarn.lock
+.npmrc

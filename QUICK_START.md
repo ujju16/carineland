@@ -5,7 +5,7 @@
 ### 1️⃣ Lancer le site en développement
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Ouvrir http://localhost:3000 (ou le port indiqué)
@@ -59,22 +59,22 @@ Ouvrir http://localhost:3000 (ou le port indiqué)
 
 ```bash
 # Développement
-npm run dev              # Serveur de dev avec hot reload
+bun run dev              # Serveur de dev avec hot reload
 
 # Build & Production
-npm run build            # Build optimisé
-npm start                # Serveur production
+bun run build            # Build optimisé
+bun start                # Serveur production
 
 # Code Quality
-npm run lint             # Vérifier ESLint
-npm run lint:fix         # Corriger automatiquement
-npm run format           # Formatter avec Prettier
-npm run type-check       # Vérifier TypeScript
+bun run lint             # Vérifier ESLint
+bun run lint:fix         # Corriger automatiquement
+bun run format           # Formatter avec Prettier
+bun run type-check       # Vérifier TypeScript
 
 # Tests
-npm test                 # Lancer les tests
-npm run test:watch       # Mode watch
-npm run test:coverage    # Avec coverage
+bun test                 # Lancer les tests
+bun run test:watch       # Mode watch
+bun run test:coverage    # Avec coverage
 ```
 
 ---
@@ -160,9 +160,9 @@ VERCEL_PROJECT_ID=xxx
 ### Le build échoue
 
 ```bash
-rm -rf .next node_modules
-npm install --legacy-peer-deps
-npm run build
+rm -rf .next node_modules bun.lock
+bun install
+bun run build
 ```
 
 ### Port déjà utilisé
@@ -179,7 +179,7 @@ lsof -ti:3000 | xargs kill -9
 ### Types TypeScript incorrects
 
 ```bash
-npm run type-check
+bun run type-check
 ```
 
 ---

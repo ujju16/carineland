@@ -4,7 +4,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Material-UI](https://img.shields.io/badge/Material--UI-6.5.0-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
 [![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Bun](https://img.shields.io/badge/Bun-1.2+-fbf0df?style=for-the-badge&logo=bun&logoColor=black)](https://bun.sh/)
 
 [![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-FF4785?style=for-the-badge&logo=turborepo&logoColor=white)](https://turbo.build/)
@@ -26,18 +26,22 @@
 [![Mobile First](https://img.shields.io/badge/Mobile-First-success?style=for-the-badge&logo=mobile&logoColor=white)](https://github.com/ujju16/carineland)
 [![SEO Optimized](https://img.shields.io/badge/SEO-100-success?style=for-the-badge&logo=google&logoColor=white)](https://github.com/ujju16/carineland)
 
+[![Monitoring](https://img.shields.io/badge/Monitoring-Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)](http://localhost:3001)
+[![Metrics](https://img.shields.io/badge/Metrics-Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)](http://localhost:9090)
+
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)](https://github.com/ujju16)
 [![Dev by](https://img.shields.io/badge/Dev%20by-@ujju16-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ujju16)
 [![Made in France](https://img.shields.io/badge/Made%20in-France%20🇫🇷-0055A4?style=for-the-badge)](https://github.com/ujju16/carineland)
 
 ---
 
-Site professionnel Next.js 15 pour les créations artisanales de Carine, avec Material Design, animations et mode admin.
+Site professionnel Next.js 16 pour les créations artisanales de Carine, avec Material Design, animations et mode admin.
 
 ## 🚀 Stack Technique
 
 - **Framework**: Next.js 16.0.1 (App Router + Turbopack)
-- **Runtime**: React 19.2.0 + React DOM 19.2.0
+- **Runtime**: Bun 1.2+ (Fast JavaScript runtime)
+- **React**: React 19.2.0 + React DOM 19.2.0
 - **UI Library**: Material-UI v6.5.0
 - **Animations**: Framer Motion 11.18.2
 - **Styling**: Emotion 11.14.0 + Material Design
@@ -47,33 +51,41 @@ Site professionnel Next.js 15 pour les créations artisanales de Carine, avec Ma
 - **Quality**: ESLint 8 + Prettier 3 + Husky 9
 - **Lighthouse**: Performance & Accessibility Audits
 - **Build Tool**: Turbopack (Next.js 16 built-in)
+- **Monitoring**: Grafana + Prometheus + Node Exporter
 
 ## 📦 Installation
 
+**Prérequis**: [Bun](https://bun.sh/) 1.2+
+
 ```bash
-npm install --legacy-peer-deps
+bun install
 ```
 
 ## 🛠️ Commandes
 
 ```bash
 # Développement
-npm run dev
+bun run dev
 
 # Build production
-npm run build
+bun run build
 
 # Tests
-npm test
-npm run test:watch
-npm run test:coverage
+bun test
+bun run test:watch
+bun run test:coverage
 
 # Quality
-npm run lint
-npm run lint:fix
-npm run format
-npm run format:check
-npm run type-check
+bun run lint
+bun run lint:fix
+bun run format
+bun run format:check
+bun run type-check
+
+# Monitoring
+bun run monitoring:up    # Démarrer Grafana & Prometheus
+bun run monitoring:down  # Arrêter le monitoring
+bun run monitoring:logs  # Voir les logs
 ```
 
 ## 🎨 Features
@@ -170,6 +182,30 @@ npm run optimize-images  # Optimiser toutes les images
 
 Voir [IMAGES_OPTIMIZATION.md](./IMAGES_OPTIMIZATION.md) pour plus de détails.
 
+## 📊 Monitoring
+
+Le projet inclut un système de monitoring complet avec Grafana et Prometheus :
+
+```bash
+npm run monitoring:up    # Démarrer les services
+```
+
+### Services disponibles
+
+- **Grafana**: http://localhost:3001 (admin/carineland2025)
+- **Prometheus**: http://localhost:9090
+- **Node Exporter**: http://localhost:9100/metrics
+
+### Métriques surveillées
+
+- CPU Usage & Load Average
+- Memory Usage & Swap
+- Disk I/O & Space
+- Network Traffic
+- System Uptime
+
+Voir [GRAFANA_MONITORING.md](./GRAFANA_MONITORING.md) pour plus de détails.
+
 ## 🏆 Features
 
 - ✅ **Next.js 16** avec App Router et Turbopack
@@ -187,6 +223,7 @@ Voir [IMAGES_OPTIMIZATION.md](./IMAGES_OPTIMIZATION.md) pour plus de détails.
 - ✅ **Admin Panel** pour gestion des créations
 - ✅ **Image Optimization** avec Sharp et Next.js Image
 - ✅ **Code Quality** avec ESLint, Prettier, Husky, TypeScript
+- ✅ **Monitoring** avec Grafana, Prometheus et Node Exporter
 
 ## 📊 Performance & Metrics
 
