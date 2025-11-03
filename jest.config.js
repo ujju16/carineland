@@ -37,6 +37,20 @@ const customJestConfig = {
       },
     ],
   },
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        outputDirectory: './coverage',
+        outputName: 'junit.xml',
+        classNameTemplate: '{filepath}',
+        titleTemplate: '{title}',
+        ancestorSeparator: ' › ',
+        usePathForSuiteName: true,
+      },
+    ],
+  ],
 }
 
 module.exports = createJestConfig(customJestConfig)

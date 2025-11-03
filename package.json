@@ -36,6 +36,7 @@
     "@mui/material-nextjs": "^7.3.3",
     "csv-parse": "^6.1.0",
     "framer-motion": "12.23.24",
+    "jest-junit": "^16.0.0",
     "next": "^16.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

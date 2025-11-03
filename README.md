@@ -12,11 +12,11 @@
 
 <div align="left">
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.0.1-000000?style=for-the-badge&logo=next.js&logoColor=white&labelColor=1e293b)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=1e293b)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=1e293b)](https://www.typescriptlang.org/)
-[![Material-UI](https://img.shields.io/badge/MUI-6.5.0-007FFF?style=for-the-badge&logo=mui&logoColor=white&labelColor=1e293b)](https://mui.com/)
-[![Bun](https://img.shields.io/badge/Bun-1.2+-000000?style=for-the-badge&logo=bun&logoColor=white&labelColor=1e293b)](https://bun.sh/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.0.1-000000?style=for-the-badge&logo=next.js&logoColor=white&labelColor=1e293b&borderRadius=10)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=1e293b&borderRadius=10)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=1e293b&borderRadius=10)](https://www.typescriptlang.org/)
+[![Material-UI](https://img.shields.io/badge/MUI-6.5.0-007FFF?style=for-the-badge&logo=mui&logoColor=white&labelColor=1e293b&borderRadius=10)](https://mui.com/)
+[![Bun](https://img.shields.io/badge/Bun-1.2+-000000?style=for-the-badge&logo=bun&logoColor=white&labelColor=1e293b&borderRadius=10)](https://bun.sh/)
 
 </div>
 
@@ -24,10 +24,10 @@
 
 <div align="left">
 
-[![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci.yml?branch=main&style=for-the-badge&label=CI%2FCD&logo=github-actions&logoColor=white&labelColor=1e293b&color=22c55e)](https://github.com/ujju16/carineland/actions/workflows/ci.yml)
-[![Vercel](https://img.shields.io/badge/Vercel-Production-000000?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1e293b)](https://carineland.fr)
-[![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-ef4444?style=for-the-badge&logo=turborepo&logoColor=white&labelColor=1e293b)](https://turbo.build/)
-[![Deploy Status](https://img.shields.io/badge/Deploy-Active-22c55e?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1e293b)](https://carineland.fr)
+[![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/ci.yml?branch=main&style=for-the-badge&label=CI%2FCD&logo=github-actions&logoColor=white&labelColor=1e293b&color=22c55e&borderRadius=10)](https://github.com/ujju16/carineland/actions/workflows/ci.yml)
+[![Vercel](https://img.shields.io/badge/Vercel-Production-000000?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1e293b&borderRadius=10)](https://carineland.fr)
+[![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-ef4444?style=for-the-badge&logo=turborepo&logoColor=white&labelColor=1e293b&borderRadius=10)](https://turbo.build/)
+[![Deploy Status](https://img.shields.io/badge/Deploy-Active-22c55e?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1e293b&borderRadius=10)](https://carineland.fr)
 
 </div>
 
@@ -35,12 +35,12 @@
 
 <div align="left">
 
-[![Code Coverage](https://img.shields.io/codecov/c/github/ujju16/carineland/main?style=for-the-badge&logo=codecov&logoColor=white&labelColor=1e293b&color=22c55e&token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/ujju16/carineland?style=for-the-badge&logo=codeclimate&logoColor=white&labelColor=1e293b&color=22c55e)](https://codeclimate.com/github/ujju16/carineland/maintainability)
-[![Code Climate Tech Debt](https://img.shields.io/codeclimate/tech-debt/ujju16/carineland?style=for-the-badge&logo=codeclimate&logoColor=white&labelColor=1e293b&color=f59e0b)](https://codeclimate.com/github/ujju16/carineland)
-[![Lighthouse CI](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/lighthouse.yml?branch=main&style=for-the-badge&label=Lighthouse&logo=lighthouse&logoColor=white&labelColor=1e293b&color=f97316)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
-[![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-22c55e?style=for-the-badge&logo=lighthouse&logoColor=white&labelColor=1e293b)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
-[![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/ujju16/carineland?style=for-the-badge&logo=snyk&logoColor=white&labelColor=1e293b&color=4c1d95)](https://snyk.io/test/github/ujju16/carineland)
+[![Code Coverage](https://img.shields.io/codecov/c/github/ujju16/carineland/main?style=for-the-badge&logo=codecov&logoColor=white&labelColor=1e293b&color=22c55e&token=HYL2CAnaE6&borderRadius=10)](https://codecov.io/gh/ujju16/carineland)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/ujju16/carineland?style=for-the-badge&logo=codeclimate&logoColor=white&labelColor=1e293b&color=22c55e&borderRadius=10)](https://codeclimate.com/github/ujju16/carineland/maintainability)
+[![Code Climate Tech Debt](https://img.shields.io/codeclimate/tech-debt/ujju16/carineland?style=for-the-badge&logo=codeclimate&logoColor=white&labelColor=1e293b&color=f59e0b&borderRadius=10)](https://codeclimate.com/github/ujju16/carineland)
+[![Lighthouse CI](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/lighthouse.yml?branch=main&style=for-the-badge&label=Lighthouse&logo=lighthouse&logoColor=white&labelColor=1e293b&color=f97316&borderRadius=10)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
+[![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-22c55e?style=for-the-badge&logo=lighthouse&logoColor=white&labelColor=1e293b&borderRadius=10)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
+[![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/ujju16/carineland?style=for-the-badge&logo=snyk&logoColor=white&labelColor=1e293b&color=4c1d95&borderRadius=10)](https://snyk.io/test/github/ujju16/carineland)
 
 </div>
 
@@ -56,11 +56,11 @@
 
 <div align="left">
 
-[![WCAG 2.1](https://img.shields.io/badge/WCAG-2.1_AA-22c55e?style=for-the-badge&logo=accessible-icon&logoColor=white&labelColor=1e293b)](https://www.w3.org/WAI/WCAG21/quickref/)
-[![RGPD](https://img.shields.io/badge/RGPD-Compliant-22c55e?style=for-the-badge&logo=gdpr&logoColor=white&labelColor=1e293b)](https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on)
-[![SEO](https://img.shields.io/badge/SEO-100-22c55e?style=for-the-badge&logo=google&logoColor=white&labelColor=1e293b)](https://developers.google.com/search)
-[![Mobile First](https://img.shields.io/badge/Mobile-First-22c55e?style=for-the-badge&logo=mobile&logoColor=white&labelColor=1e293b)](https://web.dev/mobile/)
-[![ARIA](https://img.shields.io/badge/ARIA-Compliant-22c55e?style=for-the-badge&logo=w3c&logoColor=white&labelColor=1e293b)](https://www.w3.org/WAI/ARIA/)
+[![WCAG 2.1](https://img.shields.io/badge/WCAG-2.1_AA-22c55e?style=for-the-badge&logo=accessible-icon&logoColor=white&labelColor=1e293b&borderRadius=10)](https://www.w3.org/WAI/WCAG21/quickref/)
+[![RGPD](https://img.shields.io/badge/RGPD-Compliant-22c55e?style=for-the-badge&logo=gdpr&logoColor=white&labelColor=1e293b&borderRadius=10)](https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on)
+[![SEO](https://img.shields.io/badge/SEO-100-22c55e?style=for-the-badge&logo=google&logoColor=white&labelColor=1e293b&borderRadius=10)](https://developers.google.com/search)
+[![Mobile First](https://img.shields.io/badge/Mobile-First-22c55e?style=for-the-badge&logo=mobile&logoColor=white&labelColor=1e293b&borderRadius=10)](https://web.dev/mobile/)
+[![ARIA](https://img.shields.io/badge/ARIA-Compliant-22c55e?style=for-the-badge&logo=w3c&logoColor=white&labelColor=1e293b&borderRadius=10)](https://www.w3.org/WAI/ARIA/)
 
 </div>
 
@@ -68,10 +68,10 @@
 
 <div align="left">
 
-[![Grafana](https://img.shields.io/badge/Grafana-Ready-f97316?style=for-the-badge&logo=grafana&logoColor=white&labelColor=1e293b)](https://grafana.com/)
-[![Prometheus](https://img.shields.io/badge/Prometheus-Active-ef4444?style=for-the-badge&logo=prometheus&logoColor=white&labelColor=1e293b)](https://prometheus.io/)
-[![Dependencies](https://img.shields.io/badge/Dependencies-Up_to_date-22c55e?style=for-the-badge&logo=dependabot&logoColor=white&labelColor=1e293b)](https://github.com/ujju16/carineland/network/dependencies)
-[![Node Exporter](https://img.shields.io/badge/Node_Exporter-Active-22c55e?style=for-the-badge&logo=prometheus&logoColor=white&labelColor=1e293b)](https://prometheus.io/docs/guides/node-exporter/)
+[![Grafana](https://img.shields.io/badge/Grafana-Ready-f97316?style=for-the-badge&logo=grafana&logoColor=white&labelColor=1e293b&borderRadius=10)](https://grafana.com/)
+[![Prometheus](https://img.shields.io/badge/Prometheus-Active-ef4444?style=for-the-badge&logo=prometheus&logoColor=white&labelColor=1e293b&borderRadius=10)](https://prometheus.io/)
+[![Dependencies](https://img.shields.io/badge/Dependencies-Up_to_date-22c55e?style=for-the-badge&logo=dependabot&logoColor=white&labelColor=1e293b&borderRadius=10)](https://github.com/ujju16/carineland/network/dependencies)
+[![Node Exporter](https://img.shields.io/badge/Node_Exporter-Active-22c55e?style=for-the-badge&logo=prometheus&logoColor=white&labelColor=1e293b&borderRadius=10)](https://prometheus.io/docs/guides/node-exporter/)
 
 </div>
 
@@ -79,10 +79,10 @@
 
 <div align="left">
 
-[![License](https://img.shields.io/github/license/ujju16/carineland?style=for-the-badge&color=f59e0b&logo=opensourceinitiative&logoColor=white&labelColor=1e293b)](https://github.com/ujju16/carineland/blob/main/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-22c55e?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b)](https://github.com/ujju16/carineland/pulls)
-[![Last Commit](https://img.shields.io/github/last-commit/ujju16/carineland?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b&color=8b5cf6)](https://github.com/ujju16/carineland/commits/main)
-[![Issues](https://img.shields.io/github/issues/ujju16/carineland?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b&color=3b82f6)](https://github.com/ujju16/carineland/issues)
+[![License](https://img.shields.io/github/license/ujju16/carineland?style=for-the-badge&color=f59e0b&logo=opensourceinitiative&logoColor=white&labelColor=1e293b&borderRadius=10)](https://github.com/ujju16/carineland/blob/main/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-22c55e?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b&borderRadius=10)](https://github.com/ujju16/carineland/pulls)
+[![Last Commit](https://img.shields.io/github/last-commit/ujju16/carineland?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b&color=8b5cf6&borderRadius=10)](https://github.com/ujju16/carineland/commits/main)
+[![Issues](https://img.shields.io/github/issues/ujju16/carineland?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b&color=3b82f6&borderRadius=10)](https://github.com/ujju16/carineland/issues)
 
 </div>
 
@@ -90,9 +90,9 @@
 
 <div align="center">
 
-[![Made with Love](https://img.shields.io/badge/Made_with-❤️-ef4444?style=for-the-badge&labelColor=1e293b)](https://github.com/ujju16/carineland)
-[![Dev by @ujju16](https://img.shields.io/badge/Dev_by-@ujju16-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b)](https://github.com/ujju16)
-[![Made in France](https://img.shields.io/badge/Made_in-France_🇫🇷-3b82f6?style=for-the-badge&labelColor=1e293b)](https://fr.wikipedia.org/wiki/France)
+[![Made with Love](https://img.shields.io/badge/Made_with-❤️-ef4444?style=for-the-badge&labelColor=1e293b&borderRadius=10)](https://github.com/ujju16/carineland)
+[![Dev by @ujju16](https://img.shields.io/badge/Dev_by-@ujju16-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b&borderRadius=10)](https://github.com/ujju16)
+[![Made in France](https://img.shields.io/badge/Made_in-France_🇫🇷-3b82f6?style=for-the-badge&labelColor=1e293b&borderRadius=10)](https://fr.wikipedia.org/wiki/France)
 
 </div>
 
