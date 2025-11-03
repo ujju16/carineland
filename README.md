@@ -35,12 +35,13 @@
 
 <div align="left">
 
-[![codecov](https://codecov.io/gh/ujju16/carineland/branch/main/graph/badge.svg?token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
+[![codecov](https://img.shields.io/codecov/c/github/ujju16/carineland/main?style=flat&logo=codecov&logoColor=white&token=HYL2CAnaE6)](https://codecov.io/gh/ujju16/carineland)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/ujju16/carineland?style=flat&logo=codeclimate&logoColor=white)](https://codeclimate.com/github/ujju16/carineland/maintainability)
 [![Code Climate Tech Debt](https://img.shields.io/codeclimate/tech-debt/ujju16/carineland?style=flat&logo=codeclimate&logoColor=white)](https://codeclimate.com/github/ujju16/carineland)
 [![Lighthouse CI](https://img.shields.io/github/actions/workflow/status/ujju16/carineland/lighthouse.yml?branch=main&style=flat&label=Lighthouse&logo=lighthouse&logoColor=white)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
 [![Lighthouse Performance](https://img.shields.io/badge/Performance-95+-22c55e?style=flat&logo=lighthouse&logoColor=white)](https://github.com/ujju16/carineland/actions/workflows/lighthouse.yml)
 [![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/ujju16/carineland?style=flat&logo=snyk&logoColor=white)](https://snyk.io/test/github/ujju16/carineland)
+[![Qlty Analysis](https://img.shields.io/badge/Qlty-Integrated-8b5cf6?style=flat&logo=quality&logoColor=white)](https://github.com/ujju16/carineland/actions/workflows/ci.yml)
 
 </div>
 
