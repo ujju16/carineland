@@ -1,0 +1,88 @@
+name: Vercel Deployments
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Vercel
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install Vercel CLI
+        run: bun install --global vercel@latest
+
+      - name: Pull Vercel Environment Information (Production)
+        if: github.ref == 'refs/heads/main'
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Pull Vercel Environment Information (Preview)
+        if: github.ref == 'refs/heads/dev' || github.event_name == 'pull_request'
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts (Production)
+        if: github.ref == 'refs/heads/main'
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts (Preview)
+        if: github.ref == 'refs/heads/dev' || github.event_name == 'pull_request'
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel (Production)
+        if: github.ref == 'refs/heads/main'
+        id: deploy-production
+        run: |
+          DEPLOYMENT_URL=$(vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }})
+          echo "url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+          echo "### 🚀 Production Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "Deployed to: $DEPLOYMENT_URL" >> $GITHUB_STEP_SUMMARY
+
+      - name: Deploy to Vercel (Preview - Dev)
+        if: github.ref == 'refs/heads/dev'
+        id: deploy-dev
+        run: |
+          DEPLOYMENT_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --meta branch=dev --meta env=development)
+          vercel alias set $DEPLOYMENT_URL dev-carineland.vercel.app --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ secrets.VERCEL_ORG_ID }} || true
+          echo "url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+          echo "### 🔧 Development Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "Deployed to: $DEPLOYMENT_URL" >> $GITHUB_STEP_SUMMARY
+          echo "Alias: dev-carineland.vercel.app" >> $GITHUB_STEP_SUMMARY
+
+      - name: Deploy to Vercel (Preview - PR)
+        if: github.event_name == 'pull_request'
+        id: deploy-pr
+        run: |
+          DEPLOYMENT_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --meta pr=${{ github.event.pull_request.number }})
+          echo "url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+          echo "### 👀 Preview Deployment (PR #${{ github.event.pull_request.number }})" >> $GITHUB_STEP_SUMMARY
+          echo "Deployed to: $DEPLOYMENT_URL" >> $GITHUB_STEP_SUMMARY
+
+      - name: Comment PR with deployment URL
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🚀 **Preview Deployment Ready!**\n\n✅ Deployed to: ${{ steps.deploy-pr.outputs.url }}'
+            })

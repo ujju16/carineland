@@ -3,5 +3,19 @@
   "devCommand": "bun run dev",
   "installCommand": "bun install",
   "framework": "nextjs",
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "env": {
+    "NEXTAUTH_URL": "@nextauth_url",
+    "NEXTAUTH_SECRET": "@nextauth_secret",
+    "ADMIN_USERNAME": "@admin_username",
+    "ADMIN_PASSWORD": "@admin_password",
+    "NEXT_PUBLIC_STRAPI_URL": "@strapi_url"
+  },
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "silent": false,
+    "autoJobCancelation": true
+  },
+  "alias": ["carineland.fr", "www.carineland.fr"]
 }

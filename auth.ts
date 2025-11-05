@@ -1,17 +1,23 @@
-import NextAuth from 'next-auth'
+import NextAuth, { type User } from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
+      id: 'credentials',
+      name: 'Credentials',
       credentials: {
         username: { label: "Nom d'utilisateur", type: 'text' },
         password: { label: 'Mot de passe', type: 'password' },
       },
-      async authorize(credentials) {
+      authorize: async (credentials): Promise<User | null> => {
+        if (!credentials?.username || !credentials?.password) {
+          return null
+        }
+
         if (
-          credentials?.username === process.env.ADMIN_USERNAME &&
-          credentials?.password === process.env.ADMIN_PASSWORD
+          credentials.username === process.env.ADMIN_USERNAME &&
+          credentials.password === process.env.ADMIN_PASSWORD
         ) {
           return {
             id: '1',
@@ -28,14 +34,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     error: '/admin/login',
   },
   callbacks: {
-    async jwt({ token, user }) {
+    jwt: async ({ token, user }) => {
       if (user) {
         token.id = user.id
       }
       return token
     },
-    async session({ session, token }) {
-      if (session?.user) {
+    session: async ({ session, token }) => {
+      if (session?.user && token.id) {
         session.user.id = token.id as string
       }
       return session
@@ -46,4 +52,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     maxAge: 30 * 24 * 60 * 60,
   },
   secret: process.env.NEXTAUTH_SECRET,
+  trustHost: true,
 })
