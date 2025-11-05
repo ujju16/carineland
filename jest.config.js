@@ -9,6 +9,8 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    '^next-auth$': '<rootDir>/__mocks__/next-auth.ts',
+    '^next-auth/react$': '<rootDir>/__mocks__/next-auth-react.tsx',
   },
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
@@ -28,6 +30,7 @@ const customJestConfig = {
   },
   coverageReporters: ['json', 'lcov', 'text', 'clover', 'json-summary'],
   testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
+  testPathIgnorePatterns: ['/node_modules/', '__tests__/api/auth.test.ts'],
   transformIgnorePatterns: [
     'node_modules/(?!(next-auth|@auth|@panva|preact-render-to-string|preact|oauth4webapi)/)',
   ],

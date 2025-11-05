@@ -3,14 +3,16 @@
 ## ✅ Problèmes Résolus
 
 ### 1. NextAuth v5 avec Next.js 16
+
 - **Problème**: Erreurs `Function.prototype.apply` et JSON parse
-- **Solution**: 
+- **Solution**:
   - Ajout de types explicites pour `User`
   - Configuration `trustHost: true` pour NextAuth
   - Typage correct de la fonction `authorize`
   - Amélioration des callbacks JWT et session
 
 ### 2. Déploiement Vercel
+
 - **Problème**: Variables d'environnement manquantes
 - **Solution**:
   - Configuration via Vercel CLI de toutes les variables
@@ -18,6 +20,7 @@
   - Configuration pour Production, Preview et Development
 
 ### 3. Workflow GitHub Actions
+
 - **Nouveau**: Workflow dédié `vercel-deploy.yml`
 - **Fonctionnalités**:
   - Déploiement Production sur `main`
@@ -28,11 +31,13 @@
 ## 📊 État Actuel
 
 ### Workflows
+
 - ✅ **Vercel Deployments**: PASSED (1m19s)
 - 🔄 **CI/CD Pipeline**: Running
 - 🔄 **Lighthouse CI**: Running
 
 ### Serveur de Développement
+
 - ✅ Démarre correctement sur port personnalisé
 - ✅ Routes accessibles (`/admin/login` fonctionne)
 - ✅ Next.js 16.0.1 avec Turbopack actif
@@ -41,6 +46,7 @@
 ## 🔧 Configuration Vercel
 
 ### Variables d'Environnement (Configurées ✅)
+
 ```
 Production:
 - NEXTAUTH_URL: https://carineland.fr
@@ -60,16 +66,19 @@ Development:
 ## 🎯 URLs de Déploiement
 
 ### Production
+
 - **Domaine principal**: https://carineland.fr
 - **Branch**: main
 - **Status**: ✅ Déployé
 
 ### Development
+
 - **URL**: dev-carineland.vercel.app (alias configuré)
 - **Branch**: dev
 - **Status**: En attente de push sur dev
 
 ### Preview
+
 - **URLs**: Générées automatiquement par PR
 - **Format**: `carineland-git-<branch>-ujju16s-projects.vercel.app`
 - **Status**: Prêt pour les PR
@@ -93,12 +102,14 @@ Development:
 ## 🐛 Problèmes Connus
 
 ### Tests Jest
+
 - **Issue**: Import ESM de `next-auth` dans tests
 - **Impact**: Tests admin/auth échouent
 - **Priorité**: Moyenne (n'affecte pas la production)
 - **Solution**: Configuration Jest pour transformer `next-auth`
 
 ### Warning NODE_ENV
+
 - **Issue**: Variable NODE_ENV custom détectée
 - **Impact**: Mineur - warning uniquement
 - **Solution**: Vérifier `.env.local` et retirer `NODE_ENV=development`
@@ -123,6 +134,7 @@ Development:
 ## 🎉 Résumé
 
 Le site est maintenant **correctement déployé** avec:
+
 - ✅ NextAuth fonctionnel
 - ✅ Variables d'environnement sécurisées
 - ✅ Workflow CI/CD automatisé
