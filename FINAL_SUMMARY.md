@@ -5,12 +5,14 @@
 ### 1. **NextAuth v5 + Next.js 16 - Erreurs corrigées**
 
 #### Problème Initial
+
 ```
 TypeError: Function.prototype.apply was called on #<Object>, which is an object and not a function
 JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
 ```
 
 #### Solution Implémentée
+
 ```typescript
 // auth.ts - Configuration corrigée
 import NextAuth, { type User } from 'next-auth'
@@ -41,6 +43,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 ```
 
 **Points Clés:**
+
 - Type `User` explicite dans `authorize`
 - Option `trustHost: true` pour compatibilité production
 - Validation des credentials avant traitement
@@ -62,6 +65,7 @@ Via Vercel CLI pour **tous les environnements** (Production, Preview, Developmen
 #### Workflow GitHub Actions - `vercel-deploy.yml`
 
 **Déploiement Production (main):**
+
 ```yaml
 - Build avec Vercel CLI
 - Deploy --prod sur https://carineland.fr
@@ -69,6 +73,7 @@ Via Vercel CLI pour **tous les environnements** (Production, Preview, Developmen
 ```
 
 **Déploiement Development (dev):**
+
 ```yaml
 - Build Preview
 - Deploy avec metadata branch=dev
@@ -77,6 +82,7 @@ Via Vercel CLI pour **tous les environnements** (Production, Preview, Developmen
 ```
 
 **Déploiement Preview (PR):**
+
 ```yaml
 - Build Preview
 - Deploy avec metadata pr=<number>
@@ -96,50 +102,58 @@ Via Vercel CLI pour **tous les environnements** (Production, Preview, Developmen
 ```
 
 **Warning non-critique:**
+
 - `NODE_ENV` custom détecté (mineur)
 
 ## 📊 État des Déploiements
 
 ### Production (main)
+
 - **URL**: https://carineland.fr
 - **Status**: ✅ DÉPLOYÉ
 - **Workflow**: ✓ Passed
 - **Auth**: ✅ Fonctionnel
 
 ### Development (dev)
+
 - **URL**: dev-carineland.vercel.app (alias)
 - **Status**: 🔄 En cours de déploiement
 - **Branch**: Synchronisée avec main
 - **Workflow**: Running
 
 ### Preview (PR)
+
 - **Status**: ✅ Prêt
 - **Feature**: Commentaires automatiques activés
 
 ## 📁 Fichiers Créés/Modifiés
 
 ### Nouveaux Fichiers
+
 1. `DEPLOYMENT_SETUP.md` - Guide complet Vercel
 2. `DEPLOYMENT_STATUS_REPORT.md` - État détaillé
 3. `.github/workflows/vercel-deploy.yml` - Workflow CD
 
 ### Fichiers Modifiés
+
 1. `auth.ts` - Fix NextAuth v5 + typage
 2. `vercel.json` - Configuration simplifiée
 3. `.env.local` - Variables mise à jour
 
 ## 🎯 URLs et Accès
 
-| Environnement | URL | Credentials |
-|--------------|-----|-------------|
-| **Production** | https://carineland.fr/admin/login | admin / CarinelandAdmin2024! |
-| **Development** | dev-carineland.vercel.app/admin/login | (mêmes) |
-| **Preview** | Généré par PR | (mêmes) |
+| Environnement   | URL                                   | Credentials                  |
+| --------------- | ------------------------------------- | ---------------------------- |
+| **Production**  | https://carineland.fr/admin/login     | admin / CarinelandAdmin2024! |
+| **Development** | dev-carineland.vercel.app/admin/login | (mêmes)                      |
+| **Preview**     | Généré par PR                         | (mêmes)                      |
 
 ## ⚠️ Points d'Attention
 
 ### Tests Jest (Non-bloquant)
+
 **Problème:** Import ESM de `next-auth` dans tests
+
 ```
 SyntaxError: Cannot use import statement outside a module
 ```
@@ -149,6 +163,7 @@ SyntaxError: Cannot use import statement outside a module
 **Priorité:** Moyenne (prod non affectée)
 
 ### Pipeline CI/CD
+
 - **Lint**: ✅ Passe
 - **Tests**: ⚠️ Échouent (problème Jest/NextAuth)
 - **Build**: ✅ Passe
@@ -162,11 +177,11 @@ graph LR
     A --> C[Vercel Build]
     C --> D[Deploy Production]
     D --> E[carineland.fr ✅]
-    
+
     F[Push dev] --> G[Vercel Build]
     G --> H[Deploy Preview]
     H --> I[dev-carineland.vercel.app ✅]
-    
+
     J[Create PR] --> K[Vercel Build]
     K --> L[Deploy Preview]
     L --> M[Comment PR avec URL ✅]
@@ -175,12 +190,14 @@ graph LR
 ## ✨ Améliorations Implémentées
 
 ### Sécurité 🔒
+
 - ✅ Variables sensibles sur Vercel (pas dans code)
 - ✅ Secret NextAuth sécurisé et long
 - ✅ Passwords hashés (via NextAuth)
 - ✅ HTTPS forcé en production
 
 ### DevOps 🔧
+
 - ✅ Workflow CI/CD séparé pour Vercel
 - ✅ Déploiements nommés et tracés
 - ✅ Alias automatiques (dev branch)
@@ -188,11 +205,13 @@ graph LR
 - ✅ Build caching via Vercel
 
 ### Monitoring 📊
+
 - ✅ GitHub Actions summary
 - ✅ Vercel deployment logs
 - ✅ URLs de déploiement dans PR
 
 ### Documentation 📚
+
 - ✅ Guide setup complet
 - ✅ Troubleshooting
 - ✅ Instructions CLI
@@ -201,18 +220,21 @@ graph LR
 ## 🎊 Commandes de Test
 
 ### Test Local
+
 ```bash
 bun run dev
 # → http://localhost:3000/admin/login
 ```
 
 ### Test Production
+
 ```bash
 curl https://carineland.fr/admin/login
 # → Page de login accessible
 ```
 
 ### Test Dev Preview
+
 ```bash
 curl https://dev-carineland.vercel.app/admin/login
 # → (Quand déployé)
