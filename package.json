@@ -36,7 +36,7 @@
     "@mui/material-nextjs": "^7.3.3",
     "bcryptjs": "^3.0.3",
     "csv-parse": "^6.1.0",
-    "framer-motion": "12.23.24",
+    "framer-motion": "12.23.25",
     "jest-junit": "^16.0.0",
     "jsonwebtoken": "^9.0.2",
     "next": "^16.0.1",
